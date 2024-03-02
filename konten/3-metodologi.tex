@@ -1,0 +1,66 @@
+\chapter{METODOLOGI}
+
+% Ubah konten-konten berikut sesuai dengan isi dari metodologi
+
+\section{Data dan Peralatan}
+
+\textbf{Data}
+
+Data yang digunakan dalam penelitian ini adalah data yang diperoleh dari Diabetic Retinopathy Analisis Grand challenge.
+
+% Contoh input gambar dengan format *.jpg
+\begin{figure} [H] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.2]{gambar/exampleimage.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Contoh Data Citra Retina}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:citraRetina}
+\end{figure}
+
+\textbf{Peralatan}
+
+Dalam penelitian ini, penulis menggunakan komputer dengan sistem operasi Windows 11 dengan spesifikasi sebagai berikut:
+\begin{itemize}
+  \item Processor: Intel Core i5 12400F
+  \item RAM: 16GB 3200MHz
+  \item GPU: NVIDIA GeForce RTX 3060 Ti 8GB
+\end{itemize}
+
+\emph{Software} yang digunakan dalam penelitian ini adalah sebagai berikut:
+\begin{itemize}
+  \item Jupyter Notebook
+  \item Visual Studio Code
+\end{itemize}
+
+\section{Metode yang digunakan}
+
+
+% Contoh input gambar dengan format *.jpg
+\begin{figure} [H] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.5]{gambar/diagramMethod.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Diagram blok metodologi}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:diagramMethod}
+\end{figure}
+
+% Contoh penggunaan referensi dari gambar yang diinputkan
+\subsection{Akuisisi Data}
+Data yang digunakan dalam penelitian ini adalah data yang diperoleh dari Diabetic Retinopathy Analisis Grand challenge. Data yang digunakan adalah data citra retina yang sudah diberi label berupa tingkat keparahan penyakit retinopati diabetik.
+
+\subsection{Pra-pemrosesan Data}
+Pra-pemrosesan data dilakukan untuk mempersiapkan data sebelum dilakukan proses pelatihan model. Pra-pemrosesan data yang dilakukan adalah konversi citra retina dari format .jpeg menjadi .png. Hal ini dilakukan karena format .png memiliki ukuran yang lebih kecil dibandingkan dengan format .jpeg. Selain itu, format .png juga tidak mengurangi kualitas citra retina. Pra-pemrosesan data juga dilakukan untuk membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model sedangkan data uji digunakan untuk menguji model.
+
+\subsection{Pemilihan Model ResNet}
+Pemilihan model ResNet dilakukan dengan membandingkan performa model ResNet-34, ResNet-50, dan ResNet-101. Performa model ResNet-34, ResNet-50, dan ResNet-101 dibandingkan dengan melihat nilai akurasi, \emph{loss}, dan \emph{val\_loss}.
+
+\subsection{Pelatihan Model}
+Pelatihan model dilakukan dengan menggunakan metode \emph{transfer learning}. Metode \emph{transfer learning} dilakukan dengan menggunakan model ResNet yang sudah dipilih dan sudah dilatih dengan dataset ImageNet.
+
+\subsection{Pengujian dan Evaluasi}
+Pengujian dan evaluasi dilakukan dengan menggunakan data uji. Pengujian dan evaluasi dilakukan dengan melihat nilai akurasi, \emph{loss}, dan \emph{val\_loss}. Selain itu, pengujian dan evaluasi juga dilakukan dengan melihat \emph{confusion matrix} dari model yang sudah dilatih. \emph{Confusion matrix} digunakan untuk melihat performa model dalam memprediksi tingkat keparahan penyakit retinopati diabetik.
+
+\subsection{Gradient-weighted Class Activation Mapping}
+Grad-CAM digunakan untuk mengetahui faktor-faktor yang mempengaruhi model dalam memprediksi tingkat keparahan penyakit retinopati diabetik. Grad-CAM bekerja dengan menghitung gradien output model terhadap input, dan kemudian menggunakan gradien tersebut untuk memprediksi area input yang paling berkontribusi pada output model.
