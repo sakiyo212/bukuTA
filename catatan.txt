@@ -1,0 +1,21 @@
+-tambahkan kondisi dataset (sudah di-assess quality-nya)
+-balancing
+1. default weight & class distribution
+2. trimming
+3. class-weight tuning
+
+variasi model pre-trained
+resnet-18
+resnet-34
+resnet-50
+resnet-101
+resnet-152
+
+target
+1. finish code for evaluation -> get result from DRAC website
+2. Evaluate accurracy for each models
+3. Do gradcam evaluations
+
+
+gap: Using OCT-A instead of fundus image
+comparingg all resnet that available in pytorch

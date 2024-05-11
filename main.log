@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.16)  27 FEB 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.16)  11 MAY 2024 15:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/satri/OneDrive/Documents/TA/proposalta-satrio/main.tex
-(c:/Users/satri/OneDrive/Documents/TA/proposalta-satrio/main.tex
+**c:/Users/satri/Documents/bukuTA/main.tex
+(c:/Users/satri/Documents/bukuTA/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07> (c:/texlive/2022/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
@@ -766,7 +766,11 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 ) (./pustaka/variables.tex) (./pustaka/tanda-hubung.tex)
 \@quotelevel=\count437
 \@quotereset=\count438
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `tb:HasilTrainClassWeight' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 137.
@@ -947,7 +951,7 @@ LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 13.67995pt on input line 20.
 )
-<sampul/gambar/sampul-luar-tipis.png, id=136, 2107.875pt x 2981.1375pt>
+<sampul/gambar/sampul-luar-tipis.png, id=148, 2107.875pt x 2981.1375pt>
 File: sampul/gambar/sampul-luar-tipis.png Graphic file (type png)
 <use sampul/gambar/sampul-luar-tipis.png>
 Package pdftex.def Info: sampul/gambar/sampul-luar-tipis.png  used on input line 38.
@@ -981,7 +985,7 @@ LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <14.4> not available
 ] [8
 
 ] (./main.toc
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1728) has occurred while \output is active []
 
  [9
 
@@ -1032,50 +1036,84 @@ Overfull \hbox (7.52768pt too wide) in paragraph at lines 9--10
 []\OT1/txr/m/n/12 Data yang di-gu-nakan dalam peneli-tian ini adalah data yang diper-oleh dari Di-a-betic Retinopa-
  []
 
-<gambar/exampleimage.png, id=289, 1027.84pt x 1027.84pt>
+<gambar/exampleimage.png, id=323, 1027.84pt x 1027.84pt>
 File: gambar/exampleimage.png Graphic file (type png)
 <use gambar/exampleimage.png>
-Package pdftex.def Info: gambar/exampleimage.png  used on input line 14.
+Package pdftex.def Info: gambar/exampleimage.png  used on input line 13.
 (pdftex.def)             Requested size: 205.56436pt x 205.56436pt.
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 25.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 24.
 (c:/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<gambar/diagramMethod.png, id=290, 570.63188pt x 438.8897pt>
+<gambar/diagramMethod.png, id=324, 570.63188pt x 438.8897pt>
 File: gambar/diagramMethod.png Graphic file (type png)
 <use gambar/diagramMethod.png>
-Package pdftex.def Info: gambar/diagramMethod.png  used on input line 42.
+Package pdftex.def Info: gambar/diagramMethod.png  used on input line 43.
 (pdftex.def)             Requested size: 285.31525pt x 219.4443pt.
-
-Underfull \vbox (badness 2197) has occurred while \output is active []
-
  [5
 
 
  <./gambar/exampleimage.png (PNG copy)>]
-Overfull \hbox (7.52768pt too wide) in paragraph at lines 51--52
+Overfull \hbox (7.52768pt too wide) in paragraph at lines 52--53
 []\OT1/txr/m/n/12 Data yang di-gu-nakan dalam peneli-tian ini adalah data yang diper-oleh dari Di-a-betic Retinopa-
  []
 
 
-Overfull \hbox (4.69568pt too wide) in paragraph at lines 54--55
+Overfull \hbox (4.69568pt too wide) in paragraph at lines 55--56
 []\OT1/txr/m/n/12 Pra-pemrosesan data di-lakukan un-tuk mem-per-si-ap-kan data se-belum di-lakukan proses pelati-
  []
 
-)
-Overfull \hbox (5.57918pt too wide) in paragraph at lines 66--192
+[6 <./gambar/diagramMethod.png>])
+Overfull \hbox (5.57918pt too wide) in paragraph at lines 67--192
 \OT1/txr/m/n/12 mem-prediksi tingkat kepara-han penyakit retinopati di-a-betik. Grad-CAM bek-erja den-gan menghi-
  []
 
-[6 <./gambar/diagramMethod.png>] [7] [8
+[7] [8
 
 ] (./konten/4-hasil.tex
 Chapter 4.
-) [9
+<gambar/TrainingGraphResNet18.png, id=346, 453.19313pt x 224.33812pt>
+File: gambar/TrainingGraphResNet18.png Graphic file (type png)
+<use gambar/TrainingGraphResNet18.png>
+Package pdftex.def Info: gambar/TrainingGraphResNet18.png  used on input line 8.
+(pdftex.def)             Requested size: 362.555pt x 179.47073pt.
+<gambar/TrainingGraphResNet34.png, id=347, 453.19313pt x 224.33812pt>
+File: gambar/TrainingGraphResNet34.png Graphic file (type png)
+<use gambar/TrainingGraphResNet34.png>
+Package pdftex.def Info: gambar/TrainingGraphResNet34.png  used on input line 13.
+(pdftex.def)             Requested size: 362.555pt x 179.47073pt.
+<gambar/TrainingGraphResNet50.png, id=348, 453.19313pt x 224.33812pt>
+File: gambar/TrainingGraphResNet50.png Graphic file (type png)
+<use gambar/TrainingGraphResNet50.png>
+Package pdftex.def Info: gambar/TrainingGraphResNet50.png  used on input line 18.
+(pdftex.def)             Requested size: 362.555pt x 179.47073pt.
+<gambar/TrainingGraphResNet101.png, id=349, 453.19313pt x 224.33812pt>
+File: gambar/TrainingGraphResNet101.png Graphic file (type png)
+<use gambar/TrainingGraphResNet101.png>
+Package pdftex.def Info: gambar/TrainingGraphResNet101.png  used on input line 23.
+(pdftex.def)             Requested size: 362.555pt x 179.47073pt.
 
-] [10
+Underfull \vbox (badness 5504) has occurred while \output is active []
 
-] (./konten/5-jadwal.tex
+ [9
+
+ <./gambar/TrainingGraphResNet18.png> <./gambar/TrainingGraphResNet34.png>]
+<gambar/TrainingGraphResNet152.png, id=356, 453.19313pt x 224.33812pt>
+File: gambar/TrainingGraphResNet152.png Graphic file (type png)
+<use gambar/TrainingGraphResNet152.png>
+Package pdftex.def Info: gambar/TrainingGraphResNet152.png  used on input line 28.
+(pdftex.def)             Requested size: 362.555pt x 179.47073pt.
+ [10 <./gambar/TrainingGraphResNet50.png> <./gambar/TrainingGraphResNet101.png> <./gambar/TrainingGraphResNet152.png>]
+<gambar/confusionMatrixResnet18class-weighted.png, id=364, 384.6872pt x 328.97906pt>
+File: gambar/confusionMatrixResnet18class-weighted.png Graphic file (type png)
+<use gambar/confusionMatrixResnet18class-weighted.png>
+Package pdftex.def Info: gambar/confusionMatrixResnet18class-weighted.png  used on input line 63.
+(pdftex.def)             Requested size: 288.51468pt x 246.73369pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [11 <./gambar/confusionMatrixResnet18class-weighted.png>] [12] (./konten/5-jadwal.tex
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 22--22
@@ -1092,9 +1130,10 @@ Overfull \hbox (1.52391pt too wide) in paragraph at lines 40--200
 \OT1/txr/m/n/12 adalah pen-go-la-han dan train-ing data citra yang akan di-lakukan pada minggu ke-3 sam-pai minggu
  []
 
-[11
+[13
 
-] [12
+
+] [14
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 211.
@@ -1105,28 +1144,31 @@ Overfull \hbox (22.07971pt too wide) in paragraph at lines 212--212
 \OT1/txr/m/it/12 Uni-ver-si-tas Lam-pung\OT1/txr/m/n/12 , vol. 6, no. 1, 2022. \OT1/txr/m/sc/12 doi\OT1/txr/m/n/12 : []$\OT1/txtt/m/n/12 https : / / doi . org / 10 . 23960 / jkunila6116 -[]
  []
 
-[13
+[15
 
 ] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8CDB591E1355E887A8627DA8A7829F2E;5936.
+(rerunfilecheck)             Checksum: 4F41BD15998C1424F4B4FBD2BB59F9F5;6895.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22325 strings out of 476029
- 386035 string characters out of 5794164
- 1870340 words of memory out of 5000000
- 42308 multiletter control sequences out of 15000+600000
+ 22399 strings out of 476029
+ 388393 string characters out of 5794164
+ 1873340 words of memory out of 5000000
+ 42363 multiletter control sequences out of 15000+600000
  554085 words of font info for 118 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 75i,12n,76p,1184b,1282s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,76p,1161b,1282s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (27 pages, 1168615 bytes).
+Output written on main.pdf (29 pages, 1374504 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 352 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
- 280 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 99 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

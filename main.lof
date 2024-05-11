@@ -4,4 +4,10 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Contoh Data Citra Retina\relax }}{5}{figure.caption.7}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram blok metodologi\relax }}{6}{figure.caption.8}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Training Loss dan Akurasi ResNet-18\relax }}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Training Loss dan Akurasi ResNet-34\relax }}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Training Loss dan Akurasi ResNet-50\relax }}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Training Loss dan Akurasi ResNet-101\relax }}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Training Loss dan Akurasi ResNet-152\relax }}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Training Loss dan Akurasi ResNet18\relax }}{11}{figure.caption.15}%
 \addvspace {10\p@ }
