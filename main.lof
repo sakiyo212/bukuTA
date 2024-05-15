@@ -4,10 +4,18 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Contoh Data Citra Retina\relax }}{5}{figure.caption.7}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram blok metodologi\relax }}{6}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Training Loss dan Akurasi ResNet-18\relax }}{9}{figure.caption.9}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Training Loss dan Akurasi ResNet-34\relax }}{9}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Training Loss dan Akurasi ResNet-50\relax }}{10}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Training Loss dan Akurasi ResNet-101\relax }}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Training Loss dan Akurasi ResNet-152\relax }}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Training Loss dan Akurasi ResNet18\relax }}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Training Loss dan Akurasi ResNet-18\relax }}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Training Loss dan Akurasi ResNet-34\relax }}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Training Loss dan Akurasi ResNet-50\relax }}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Training Loss dan Akurasi ResNet-101\relax }}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Training Loss dan Akurasi ResNet-152\relax }}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Image A\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces \emph {Confusion Matrix} dari model yang menggunakan penyesuaian \emph {class-weight}\relax }}{11}{figure.caption.17}%
 \addvspace {10\p@ }

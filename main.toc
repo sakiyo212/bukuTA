@@ -31,6 +31,7 @@
 \contentsline {section}{\numberline {4.1}Hasil Penelitian}{9}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Hasil Pengujian}{9}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Hasil pengujian Model tanpa menggunakan penyesuaian apapun}{9}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Hasil Pengujian Model dengan penyesuaian menggunakan class-weight}{11}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Hasil Pengujian Model dengan penyesuaian menggunakan class-weight}{10}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Analisis Hasil}{12}{subsection.4.2.3}%
 \contentsline {chapter}{\numberline {5}PENUTUP}{13}{chapter.5}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{15}{chapter*.18}%
