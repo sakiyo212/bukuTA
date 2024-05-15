@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.16)  15 MAY 2024 17:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.16)  15 MAY 2024 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -741,68 +741,88 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip116
 \cfttabindent=\skip117
 \cfttabnumwidth=\skip118
+) (c:/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count437
+\sf@farskip=\skip119
+\sf@captopadj=\dimen186
+\sf@capskip=\skip120
+\sf@nearskip=\skip121
+\c@subfigure=\count438
+\c@subfigure@save=\count439
+\c@subtable=\count440
+\c@subtable@save=\count441
+\sf@top=\skip122
+\sf@bottom=\skip123
 ) (c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip119
-\f@nch@O@elh=\skip120
-\f@nch@O@erh=\skip121
-\f@nch@O@olh=\skip122
-\f@nch@O@orh=\skip123
-\f@nch@O@elf=\skip124
-\f@nch@O@erf=\skip125
-\f@nch@O@olf=\skip126
-\f@nch@O@orf=\skip127
+\f@nch@headwidth=\skip124
+\f@nch@O@elh=\skip125
+\f@nch@O@erh=\skip126
+\f@nch@O@olh=\skip127
+\f@nch@O@orh=\skip128
+\f@nch@O@elf=\skip129
+\f@nch@O@erf=\skip130
+\f@nch@O@olf=\skip131
+\f@nch@O@orf=\skip132
 ) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box108
-\beforetitleunit=\skip128
-\aftertitleunit=\skip129
-\ttl@plus=\dimen186
-\ttl@minus=\dimen187
+\beforetitleunit=\skip133
+\aftertitleunit=\skip134
+\ttl@plus=\dimen187
+\ttl@minus=\dimen188
 \ttl@toksa=\toks28
-\titlewidth=\dimen188
-\titlewidthlast=\dimen189
-\titlewidthfirst=\dimen190
+\titlewidth=\dimen189
+\titlewidthlast=\dimen190
+\titlewidthfirst=\dimen191
 ) (./pustaka/variables.tex) (./pustaka/tanda-hubung.tex)
-\@quotelevel=\count437
-\@quotereset=\count438
- (./main.aux)
+\@quotelevel=\count442
+\@quotereset=\count443
+ (./main.aux
+
+LaTeX Warning: Label `fig:example' multiply defined.
+
+
+LaTeX Warning: Label `tb:HasilTrainClassWeight' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 137.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 137.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 138.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 138.
  (c:/texlive/2022/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 137.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 137.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 138.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 138.
  (c:/texlive/2022/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 137.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 137.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 138.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 138.
  (c:/texlive/2022/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 137.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 137.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 138.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 138.
  (c:/texlive/2022/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -839,9 +859,10 @@ LaTeX Font Info:    ... okay on input line 137.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen191
-\caption@adjustwidth@linewidth=\dimen192
+\caption@adjustwidth@hsize=\dimen192
+\caption@adjustwidth@linewidth=\dimen193
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -850,7 +871,8 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 137.
+Package hyperref Info: Link coloring OFF on input line 138.
+ (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -867,20 +889,20 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 137.
-Package biblatex Info: Reference segment=0 on input line 137.
+Package biblatex Info: Reference section=0 on input line 138.
+Package biblatex Info: Reference segment=0 on input line 138.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count439
-\scratchdimen=\dimen193
+\scratchcounter=\count444
+\scratchdimen=\dimen194
 \scratchbox=\box109
-\nofMPsegments=\count440
-\nofMParguments=\count441
+\nofMPsegments=\count445
+\nofMParguments=\count446
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count442
-\MPscratchDim=\dimen194
-\MPnumerator=\count443
-\makeMPintoPDFobject=\count444
+\MPscratchCnt=\count447
+\MPscratchDim=\dimen195
+\MPnumerator=\count448
+\makeMPintoPDFobject=\count449
 \everyMPtoPDFconversion=\toks30
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -946,7 +968,7 @@ LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 13.67995pt on input line 20.
 )
-<sampul/gambar/sampul-luar-tipis.png, id=4, 2107.875pt x 2981.1375pt>
+<sampul/gambar/sampul-luar-tipis.png, id=152, 2107.875pt x 2981.1375pt>
 File: sampul/gambar/sampul-luar-tipis.png Graphic file (type png)
 <use sampul/gambar/sampul-luar-tipis.png>
 Package pdftex.def Info: sampul/gambar/sampul-luar-tipis.png  used on input line 38.
@@ -979,30 +1001,29 @@ LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <14.4> not available
 
 ] [8
 
-]
-No file main.toc.
+] (./main.toc
+Underfull \vbox (badness 1728) has occurred while \output is active []
+
+ [9
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-[9
-
-] [10
-
-]
-No file main.lof.
+ [10] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
-[11
+ [11
+
 
 ] [12
 
-]
-No file main.lot.
+] (./main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
-[13
+ [13
 
 ] [14
 
@@ -1032,7 +1053,7 @@ Overfull \hbox (7.52768pt too wide) in paragraph at lines 9--10
 []\OT1/txr/m/n/12 Data yang di-gu-nakan dalam peneli-tian ini adalah data yang diper-oleh dari Di-a-betic Retinopa-
  []
 
-<gambar/exampleimage.png, id=137, 1027.84pt x 1027.84pt>
+<gambar/exampleimage.png, id=330, 1027.84pt x 1027.84pt>
 File: gambar/exampleimage.png Graphic file (type png)
 <use gambar/exampleimage.png>
 Package pdftex.def Info: gambar/exampleimage.png  used on input line 13.
@@ -1041,7 +1062,7 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 24
 (c:/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<gambar/diagramMethod.png, id=138, 570.63188pt x 438.8897pt>
+<gambar/diagramMethod.png, id=331, 570.63188pt x 438.8897pt>
 File: gambar/diagramMethod.png Graphic file (type png)
 <use gambar/diagramMethod.png>
 Package pdftex.def Info: gambar/diagramMethod.png  used on input line 43.
@@ -1060,7 +1081,7 @@ Overfull \hbox (4.69568pt too wide) in paragraph at lines 55--56
  []
 
 [6 <./gambar/diagramMethod.png>])
-Overfull \hbox (5.57918pt too wide) in paragraph at lines 67--192
+Overfull \hbox (5.57918pt too wide) in paragraph at lines 67--193
 \OT1/txr/m/n/12 mem-prediksi tingkat kepara-han penyakit retinopati di-a-betik. Grad-CAM bek-erja den-gan menghi-
  []
 
@@ -1068,60 +1089,27 @@ Overfull \hbox (5.57918pt too wide) in paragraph at lines 67--192
 
 ] (./konten/4-hasil.tex
 Chapter 4.
-<gambar/TrainingGraphResNet18class-weighted.png, id=172, 442.65375pt x 219.06844pt>
+<gambar/TrainingGraphResNet18class-weighted.png, id=353, 442.65375pt x 219.06844pt>
 File: gambar/TrainingGraphResNet18class-weighted.png Graphic file (type png)
 <use gambar/TrainingGraphResNet18class-weighted.png>
 Package pdftex.def Info: gambar/TrainingGraphResNet18class-weighted.png  used on input line 39.
 (pdftex.def)             Requested size: 354.12346pt x 175.25497pt.
-./konten/4-hasil.tex:44: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.44         \centering[width=\textwidth]
-                                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./konten/4-hasil.tex:44: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.44         \centering[width=\textwidth]
-                                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-<gambar/TrainingGraphResNet34class-weighted.png, id=173, 425.33907pt x 210.7875pt>
+<gambar/TrainingGraphResNet34class-weighted.png, id=354, 425.33907pt x 210.7875pt>
 File: gambar/TrainingGraphResNet34class-weighted.png Graphic file (type png)
 <use gambar/TrainingGraphResNet34class-weighted.png>
 Package pdftex.def Info: gambar/TrainingGraphResNet34class-weighted.png  used on input line 45.
 (pdftex.def)             Requested size: 361.5399pt x 179.17021pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9
-
-]
-<gambar/TrainingGraphResNet50class-weighted.png, id=183, 453.19313pt x 224.33812pt>
+<gambar/TrainingGraphResNet50class-weighted.png, id=355, 453.19313pt x 224.33812pt>
 File: gambar/TrainingGraphResNet50class-weighted.png Graphic file (type png)
 <use gambar/TrainingGraphResNet50class-weighted.png>
 Package pdftex.def Info: gambar/TrainingGraphResNet50class-weighted.png  used on input line 51.
 (pdftex.def)             Requested size: 362.555pt x 179.47073pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 55.
-
-<gambar/TrainingGraphResNet101class-weighted.png, id=184, 453.19313pt x 224.33812pt>
+<gambar/TrainingGraphResNet101class-weighted.png, id=356, 453.19313pt x 224.33812pt>
 File: gambar/TrainingGraphResNet101class-weighted.png Graphic file (type png)
 <use gambar/TrainingGraphResNet101class-weighted.png>
 Package pdftex.def Info: gambar/TrainingGraphResNet101class-weighted.png  used on input line 57.
 (pdftex.def)             Requested size: 362.555pt x 179.47073pt.
-[10 <./gambar/TrainingGraphResNet18class-weighted.png> <./gambar/TrainingGraphResNet34class-weighted.png> <./gambar/TrainingGraphResNet50class-weighted.png>]
-<gambar/TrainingGraphResNet152class-weighted.png, id=197, 453.19313pt x 224.33812pt>
+<gambar/TrainingGraphResNet152class-weighted.png, id=357, 453.19313pt x 224.33812pt>
 File: gambar/TrainingGraphResNet152class-weighted.png Graphic file (type png)
 <use gambar/TrainingGraphResNet152class-weighted.png>
 Package pdftex.def Info: gambar/TrainingGraphResNet152class-weighted.png  used on input line 63.
@@ -1142,114 +1130,89 @@ Overfull \hbox (38.58786pt too wide) in paragraph at lines 98--117
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gambar/confusionMatrixResnet18class-weighted_bestTrain.png, id=198, 381.67593pt x 325.96782pt>
+<gambar/confusionMatrixResnet18class-weighted_bestTrain.png, id=358, 381.67593pt x 325.96782pt>
 File: gambar/confusionMatrixResnet18class-weighted_bestTrain.png Graphic file (type png)
 <use gambar/confusionMatrixResnet18class-weighted_bestTrain.png>
 Package pdftex.def Info: gambar/confusionMatrixResnet18class-weighted_bestTrain.png  used on input line 122.
-(pdftex.def)             Requested size: 216.24373pt x 184.67949pt.
-<gambar/confusionMatrixResnet18class-weighted_bestVal.png, id=199, 356.0803pt x 304.13625pt>
+(pdftex.def)             Requested size: 184.9429pt x 157.94995pt.
+<gambar/confusionMatrixResnet18class-weighted_bestVal.png, id=359, 356.0803pt x 304.13625pt>
 File: gambar/confusionMatrixResnet18class-weighted_bestVal.png Graphic file (type png)
 <use gambar/confusionMatrixResnet18class-weighted_bestVal.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet18class-weighted_bestVal.png  used on input line 128.
-(pdftex.def)             Requested size: 216.24373pt x 184.69678pt.
-<gambar/confusionMatrixResnet34class-weighted_bestTrain.png, id=200, 453.19313pt x 386.94562pt>
+Package pdftex.def Info: gambar/confusionMatrixResnet18class-weighted_bestVal.png  used on input line 124.
+(pdftex.def)             Requested size: 184.9429pt x 157.96149pt.
+<gambar/confusionMatrixResnet34class-weighted_bestTrain.png, id=360, 453.19313pt x 386.94562pt>
 File: gambar/confusionMatrixResnet34class-weighted_bestTrain.png Graphic file (type png)
 <use gambar/confusionMatrixResnet34class-weighted_bestTrain.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet34class-weighted_bestTrain.png  used on input line 133.
-(pdftex.def)             Requested size: 216.24373pt x 184.63358pt.
-<gambar/confusionMatrixResnet34class-weighted_bestVal.png, id=201, 453.19313pt x 386.94562pt>
+Package pdftex.def Info: gambar/confusionMatrixResnet34class-weighted_bestTrain.png  used on input line 126.
+(pdftex.def)             Requested size: 184.9429pt x 157.90479pt.
+<gambar/confusionMatrixResnet34class-weighted_bestVal.png, id=361, 453.19313pt x 386.94562pt>
 File: gambar/confusionMatrixResnet34class-weighted_bestVal.png Graphic file (type png)
 <use gambar/confusionMatrixResnet34class-weighted_bestVal.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet34class-weighted_bestVal.png  used on input line 138.
-(pdftex.def)             Requested size: 216.24373pt x 184.63358pt.
-<gambar/confusionMatrixResnet50class-weighted_bestTrain.png, id=202, 453.19313pt x 386.94562pt>
+Package pdftex.def Info: gambar/confusionMatrixResnet34class-weighted_bestVal.png  used on input line 128.
+(pdftex.def)             Requested size: 184.9429pt x 157.90479pt.
+<gambar/confusionMatrixResnet50class-weighted_bestTrain.png, id=362, 453.19313pt x 386.94562pt>
 File: gambar/confusionMatrixResnet50class-weighted_bestTrain.png Graphic file (type png)
 <use gambar/confusionMatrixResnet50class-weighted_bestTrain.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet50class-weighted_bestTrain.png  used on input line 143.
-(pdftex.def)             Requested size: 216.24373pt x 184.63358pt.
-<gambar/confusionMatrixResnet50class-weighted_bestVal.png, id=203, 453.19313pt x 386.94562pt>
+Package pdftex.def Info: gambar/confusionMatrixResnet50class-weighted_bestTrain.png  used on input line 135.
+(pdftex.def)             Requested size: 184.9429pt x 157.90479pt.
+<gambar/confusionMatrixResnet50class-weighted_bestVal.png, id=363, 453.19313pt x 386.94562pt>
 File: gambar/confusionMatrixResnet50class-weighted_bestVal.png Graphic file (type png)
 <use gambar/confusionMatrixResnet50class-weighted_bestVal.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet50class-weighted_bestVal.png  used on input line 148.
-(pdftex.def)             Requested size: 216.24373pt x 184.63358pt.
-<gambar/confusionMatrixResnet101class-weighted_bestTrain.png, id=204, 453.19313pt x 386.94562pt>
+Package pdftex.def Info: gambar/confusionMatrixResnet50class-weighted_bestVal.png  used on input line 137.
+(pdftex.def)             Requested size: 184.9429pt x 157.90479pt.
+<gambar/confusionMatrixResnet101class-weighted_bestTrain.png, id=364, 453.19313pt x 386.94562pt>
 File: gambar/confusionMatrixResnet101class-weighted_bestTrain.png Graphic file (type png)
 <use gambar/confusionMatrixResnet101class-weighted_bestTrain.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet101class-weighted_bestTrain.png  used on input line 153.
-(pdftex.def)             Requested size: 216.24373pt x 184.63358pt.
-<gambar/confusionMatrixResnet101class-weighted_bestVal.png, id=205, 453.19313pt x 386.94562pt>
+Package pdftex.def Info: gambar/confusionMatrixResnet101class-weighted_bestTrain.png  used on input line 139.
+(pdftex.def)             Requested size: 184.9429pt x 157.90479pt.
+<gambar/confusionMatrixResnet101class-weighted_bestVal.png, id=365, 453.19313pt x 386.94562pt>
 File: gambar/confusionMatrixResnet101class-weighted_bestVal.png Graphic file (type png)
 <use gambar/confusionMatrixResnet101class-weighted_bestVal.png>
-Package pdftex.def Info: gambar/confusionMatrixResnet101class-weighted_bestVal.png  used on input line 158.
-(pdftex.def)             Requested size: 216.24373pt x 184.63358pt.
+Package pdftex.def Info: gambar/confusionMatrixResnet101class-weighted_bestVal.png  used on input line 141.
+(pdftex.def)             Requested size: 184.9429pt x 157.90479pt.
+[9
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--162
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--162
-[] []
- []
-
-
-Overfull \vbox (607.48216pt too high) has occurred while \output is active []
-
- [11 <./gambar/TrainingGraphResNet101class-weighted.png> <./gambar/TrainingGraphResNet152class-weighted.png> <./gambar/confusionMatrixResnet18class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet18class-weighted_bestVal.png> <./gambar/confusionMatrixResnet34class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet34class-weighted_bestVal.png> <./gambar/confusionMatrixResnet50class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet50class-weighted_bestVal.png> <./gambar/confusionMatrixResnet101class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet101class-weighted_bestVal.png>]) [12] (./konten/5-jadwal.tex
+] [10 <./gambar/TrainingGraphResNet18class-weighted.png> <./gambar/TrainingGraphResNet34class-weighted.png> <./gambar/TrainingGraphResNet50class-weighted.png>] [11 <./gambar/TrainingGraphResNet101class-weighted.png> <./gambar/TrainingGraphResNet152class-weighted.png>] [12 <./gambar/confusionMatrixResnet18class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet18class-weighted_bestVal.png> <./gambar/confusionMatrixResnet34class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet34class-weighted_bestVal.png>] [13 <./gambar/confusionMatrixResnet50class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet50class-weighted_bestVal.png> <./gambar/confusionMatrixResnet101class-weighted_bestTrain.png> <./gambar/confusionMatrixResnet101class-weighted_bestVal.png>]) [14] (./konten/5-jadwal.tex
 Chapter 5.
-) [13
+) [15
 
 
-] [14
+] [16
 
 ]
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 211.
+LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 212.
  (c:/texlive/2022/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-Overfull \hbox (22.07971pt too wide) in paragraph at lines 212--212
+Overfull \hbox (22.07971pt too wide) in paragraph at lines 213--213
 \OT1/txr/m/it/12 Uni-ver-si-tas Lam-pung\OT1/txr/m/n/12 , vol. 6, no. 1, 2022. \OT1/txr/m/sc/12 doi\OT1/txr/m/n/12 : []$\OT1/txtt/m/n/12 https : / / doi . org / 10 . 23960 / jkunila6116 -[]
  []
 
-[15
+[17
 
 ] (./main.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  60094FA198E963FAAECBA34917233B3A;7063.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5B49EFA3D1269781FEC332D141495190;7063.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22403 strings out of 476029
- 391318 string characters out of 5794164
- 1890340 words of memory out of 5000000
- 42369 multiletter control sequences out of 15000+600000
- 554085 words of font info for 118 fonts, out of 8000000 for 9000
+ 22621 strings out of 476029
+ 394911 string characters out of 5794164
+ 1893340 words of memory out of 5000000
+ 42560 multiletter control sequences out of 15000+600000
+ 555979 words of font info for 121 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  75i,12n,76p,1161b,1283s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (29 pages, 1566631 bytes).
+Output written on main.pdf (31 pages, 1574188 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 100 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 420 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 

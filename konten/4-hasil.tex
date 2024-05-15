@@ -34,31 +34,31 @@ Pada penelitian ini dipaparkan hasil penelitian serta analisis dari model klasif
 
 \subsection{Hasil Pengujian Model dengan penyesuaian menggunakan class-weight}
 
-    \begin{figure}[H]
+    \begin{figure}[hbtp]
         \centering
         \includegraphics[scale=0.8]{gambar/TrainingGraphResNet18class-weighted.png}
         \caption{Training Loss dan Akurasi ResNet-18}
         \label{Img:GraphResNet18}
     \end{figure}
-    \begin{figure}[H]
-        \centering[width=\textwidth]
+    \begin{figure}[hbtp]
+        \centering
         \includegraphics[scale=0.85]{gambar/TrainingGraphResNet34class-weighted.png}
         \caption{Training Loss dan Akurasi ResNet-34}
         \label{Img:GraphResNet34}
     \end{figure}
-    \begin{figure}[H]
+    \begin{figure}[hbtp]
         \centering
         \includegraphics[scale=0.8]{gambar/TrainingGraphResNet50class-weighted.png}
         \caption{Training Loss dan Akurasi ResNet-50}
         \label{Img:GraphResNet50}
     \end{figure}
-    \begin{figure}[]
+    \begin{figure}[hbtp]
         \centering
         \includegraphics[scale=0.8]{gambar/TrainingGraphResNet101class-weighted.png}
         \caption{Training Loss dan Akurasi ResNet-101}
         \label{Img:GraphResNet101}
     \end{figure}
-    \begin{figure}
+    \begin{figure}[hbtp]
         \centering
         \includegraphics[scale=0.8]{gambar/TrainingGraphResNet152class-weighted.png}
         \caption{Training Loss dan Akurasi ResNet-152}
@@ -116,50 +116,33 @@ Pada penelitian ini dipaparkan hasil penelitian serta analisis dari model klasif
             \end{tabular}
         \end{center}
     \end{table}
-    
-    \begin{figure}[H]
-        \begin{minipage}[t]{0.475\textwidth} %d
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet18class-weighted_bestTrain.png} 
-            \caption{Image A}
-            \label{fig:1a}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet18class-weighted_bestVal.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet34class-weighted_bestTrain.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet34class-weighted_bestVal.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet50class-weighted_bestTrain.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet50class-weighted_bestVal.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet101class-weighted_bestTrain.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \begin{minipage}[t]{0.475\textwidth} %
-            \includegraphics[draft=false, width=\textwidth]{gambar/confusionMatrixResnet101class-weighted_bestVal.png} 
-            \caption{Image D}
-            \label{fig:2b}
-        \end{minipage}
-        \caption{\emph{Confusion Matrix} dari model yang menggunakan penyesuaian \emph{class-weight}}
-    \end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \subfloat[\centering label 2]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18class-weighted_bestTrain.png} }}%
+    \qquad
+    \subfloat[\centering label 2]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18class-weighted_bestVal.png} }}%
+    \qquad
+    \subfloat[\centering label 1]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34class-weighted_bestTrain.png} }}%
+    \qquad
+    \subfloat[\centering label 2]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34class-weighted_bestVal.png} }}%
+    \caption{2 Figures side by side}%
+    \label{fig:example}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \subfloat[\centering label 2]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50class-weighted_bestTrain.png} }}%
+    \qquad
+    \subfloat[\centering label 2]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50class-weighted_bestVal.png} }}%
+    \qquad
+    \subfloat[\centering label 1]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101class-weighted_bestTrain.png} }}%
+    \qquad
+    \subfloat[\centering label 2]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101class-weighted_bestVal.png} }}%
+    \caption{2 Figures side by side}%
+    \label{fig:example}
+\end{figure}
+
+\newpage
 
 \subsection{Analisis Hasil}

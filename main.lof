@@ -9,13 +9,14 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Training Loss dan Akurasi ResNet-50\relax }}{10}{figure.caption.12}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Training Loss dan Akurasi ResNet-101\relax }}{11}{figure.caption.13}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Training Loss dan Akurasi ResNet-152\relax }}{11}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Image A\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Image D\relax }}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces \emph {Confusion Matrix} dari model yang menggunakan penyesuaian \emph {class-weight}\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 2 Figures side by side\relax }}{12}{figure.caption.17}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\centering label 2}}}{12}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\centering label 2}}}{12}{subfigure.6.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\centering label 1}}}{12}{subfigure.6.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\centering label 2}}}{12}{subfigure.6.4}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 2 Figures side by side\relax }}{13}{figure.caption.18}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\centering label 2}}}{13}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\centering label 2}}}{13}{subfigure.7.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\centering label 1}}}{13}{subfigure.7.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\centering label 2}}}{13}{subfigure.7.4}%
 \addvspace {10\p@ }
