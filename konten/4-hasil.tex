@@ -2,7 +2,12 @@
 Pada penelitian ini dipaparkan hasil penelitian serta analisis dari model klasifikasi yang telah dibuat sesuai dengan desain sistem dan implementasi pada Bab 3. Data yang digunakan pada pengujian ini menggunakan dataset DRAC dengan data splitting yang telah dilakukan pra-pemrosesan sebelumnya.
 \section{Hasil Penelitian}
 
-\section{Data Penelitian}
+Metrik yang digunakan untuk menentukan performa dari model pada saat dilatih atau training adalah akurasi dan loss. Kedua metrik ini bertujuan untuk melihat kondisi model telah fit atau tidak yang dapat menyebabkan kesulitan dalam memprediksi data yang belum pernah dilihat oleh model tersebut.
+
+Model yang digunakan pada proses pengujian ada tiga, yaitu model dengan nilai training accuracy tertinggi, model dengan nilai validasi tertinggi, dan model terakhir dalam pelatihan.
+
+Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks lain yaitu precision, recall, dan F1-score. Metrik-metrik tersebut, digunakan untuk mengukur akurasi dari model yang telah dibuat.
+
 \subsection{Hasil pengujian Model tanpa menggunakan penyesuaian apapun}
 
     \begin{table}[hbtp]
@@ -294,4 +299,5 @@ Pada penelitian ini dipaparkan hasil penelitian serta analisis dari model klasif
 
 \newpage
 
-\subsection{Analisis Hasil}
+\subsection{Analisis Hasil dan Evaluasi}
+Pengujian dilakukan dengan menggunakan model yang memiliki metrik akurasi tertinggi dalam setiap trainingnya. Terdapat dua skenario pengujian yang dilakukan dalam penelitian ini. Pertama, perbandingan untuk setiap arstitektur model yang digunakan tanpa dilakukan penyesuaian pada class-weight. Kedua, perbandingan untuk setiap arstitektur model yang digunakan dengan penerapan class-weight. Hasil perbandingan tersebut akan dilampirkan pada tabel dan nantinya akan dianalisa.

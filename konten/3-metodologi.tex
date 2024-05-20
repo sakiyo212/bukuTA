@@ -36,8 +36,18 @@ Dalam penelitian ini, penulis menggunakan komputer dengan sistem operasi Windows
 
 \section{Metode yang digunakan}
 
+Perbandingan metode skenario yang digunakan dalam pelatihan model ResNet:
+Dalam penelitian ini, dikarenakan oleh dataset yang sedikit dan ada class yang kurang representatif, dilakukan beberapa metode untuk penyeimbangan dataset.
+\begin{itemize}
+  \item Default
+  
+  Tidak ada Tindakan yang dilakukan untuk menyeimbangkan dataset. Metode ini dilakukan untuk variabel kontrol
+  \item Penyesuaian \emph{Class-weight}
+  
+  Pada metode ini, dilakukan penambahan weight agar class yang underrepresented memiliki beban lebih tinggi
+\end{itemize}
 
-% Contoh input gambar dengan format *.jpg
+
 \begin{figure} [H] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.5]{gambar/diagramMethod.png}
