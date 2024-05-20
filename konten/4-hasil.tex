@@ -125,35 +125,46 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
         \subfloat[\centering Best Train acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18_bestTrain.png} }}%
         \qquad
         \subfloat[\centering Best Val acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18_bestVal.png} }}%
-        \label{fig:example}
+        \qquad
+        \subfloat[\centering Last Trained ResNet-18]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet18.png} }}%
+        \label{fig:confRes18}
     \end{figure}
     \begin{figure}[hbtp]
         \centering
         \subfloat[\centering Best Train acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34_bestTrain.png} }}%
         \qquad
         \subfloat[\centering Best Val acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34_bestVal.png} }}%
-        \label{fig:example}
+        \qquad
+        \subfloat[\centering Last Trained ResNet-34]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet34.png} }}%
+        \label{fig:confRes34}
     \end{figure}
     \begin{figure}[hbtp]
         \centering
         \subfloat[\centering Best Train acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50_bestTrain.png} }}%
         \qquad
         \subfloat[\centering Best Val acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50_bestVal.png} }}%
-        \label{fig:example}
+        \qquad
+        \subfloat[\centering Last Trained ResNet-50]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet50.png} }}%
+
+        \label{fig:confRes50}
     \end{figure}
     \begin{figure}[hbtp]
         \centering
         \subfloat[\centering Best Train acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101_bestTrain.png} }}%
         \qquad
         \subfloat[\centering Best Val acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101_bestVal.png} }}%
-        \label{fig:example}
+        \qquad
+        \subfloat[\centering Last Trained ResNet-101]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet101.png} }}%
+        \label{fig:confRes101}
     \end{figure}
     \begin{figure}[hbtp]
         \centering
         \subfloat[\centering Best Train acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152_bestTrain.png} }}%
         \qquad
         \subfloat[\centering Best Val acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152_bestVal.png} }}%
-        \label{fig:example}
+        \qquad
+        \subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet152.png} }}%
+        \label{fig:confRes152}
     \end{figure}
 
 \subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian class-weight}
@@ -273,11 +284,17 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
     \qquad
     \subfloat[\centering Best Val acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18class-weighted_bestVal.png} }}%
     \qquad
+    \subfloat[\centering Last Trained ResNet-18]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet18class-weighted.png} }}%
+    \label{fig:confRes18Class}
+\end{figure}
+\begin{figure}
+    \centering
     \subfloat[\centering Best Train acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34class-weighted_bestTrain.png} }}%
     \qquad
     \subfloat[\centering Best Val acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34class-weighted_bestVal.png} }}%
-    %\caption{2 Figures side by side}%
-    \label{fig:example}
+    \qquad
+    \subfloat[\centering Last Trained ResNet-34]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet34class-weighted.png} }}
+    \label{fig:confRes34Class}
 \end{figure}
 
 \begin{figure}[hbtp]
@@ -286,15 +303,27 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
     \qquad
     \subfloat[\centering Best Val acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50class-weighted_bestVal.png} }}%
     \qquad
+    \subfloat[\centering Last Trained ResNet-50]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet50class-weighted.png} }}
+    \label{fig:confRes50Class}
+\end{figure}
+\begin{figure}
+    \centering
     \subfloat[\centering Best Train acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101class-weighted_bestTrain.png} }}%
     \qquad
     \subfloat[\centering Best Val acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101class-weighted_bestVal.png} }}%
     \qquad
+    \subfloat[\centering Last Trained ResNet-101]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet101class-weighted.png} }}
+    \label{fig:confRes101Class}
+\end{figure}
+\begin{figure}
+    \centering
     \subfloat[\centering Best Train acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152class-weighted_bestTrain.png} }}%
     \qquad
     \subfloat[\centering Best Val acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152class-weighted_bestVal.png} }}%
+    \qquad
+    \subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet152class-weighted.png} }}
     \caption{Confusion Matrix dari Model yang Telah dilakukan Penyesuaian Beban Kelas}%
-    \label{fig:example}
+    \label{fig:confRes152Class}
 \end{figure}
 
 \newpage
