@@ -166,7 +166,7 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
         \subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet152.png} }}%
         \label{fig:confRes152}
     \end{figure}
-
+\FloatBarrier
 \subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian class-weight}
     \begin{table}[hbtp]
         \begin{center}
@@ -194,7 +194,7 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
             \end{tabular}
         \end{center}
     \end{table}
-    \begin{table}[hbtp]
+    \begin{table}[H]
         \begin{center}
         \caption{Hasil best validated model menggunakan Penyesuaian Beban Class}
         \label{tb:HasilValClassWeight}
@@ -247,7 +247,7 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
         \end{center}
     \end{table}
 
-    \begin{figure}[!hbtp]
+    \begin{figure}[hbtp]
         \centering
         \includegraphics[scale=0.8]{gambar/TrainingGraphResNet18class-weighted.png}
         \caption{Training Loss dan Akurasi ResNet-18}
