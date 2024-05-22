@@ -1,38 +1,49 @@
 \chapter{TINJAUAN PUSTAKA}
+\label{chap:tinjauanpustaka}
 
-% Ubah konten-konten berikut sesuai dengan isi dari tinjauan pustaka
-\section{Hasil penelitian/perancangan terdahulu}
+% Ubah bagian-bagian berikut dengan isi dari tinjauan pustaka
+
+\section{Penelitian Terdahulu}
+\label{sec:21}
+
 \subsection{\emph{Classification of Diabetic Retinopathy Based on B-ResNet}}
+\label{subsec:211}
+
 Zhang dan rekan \parencite{zhang2022residual} pada penelitiannya menggunakan data set Eye-PACS, MESSIDOR-2, dan IDRiD untuk membangun data set DR dengan pembersihan, penguatan, dan normalisasi gambar. Selain itu, digunakan metode prapemrosesan gambar yang ditingkatkan untuk meningkatkan fitur gambar fundus. Model B-ResNet dibangun dengan menggabungkan keunggulan ekstraksi fitur ResNet50 dan fusi fitur BCNN. Selain itu, sebelum fusi fitur, gambar fitur yang diekstraksi oleh ResNet50 diproses oleh modul perhatian saluran. ResNet50 dipralatih pada data set ImageNet dan parameternya di-fine-tune melalui transfer learning.
 
 Hasil penelitian menunjukkan bahwa model B-ResNet mencapai akurasi 71,11\% , ACA 0,714, Kappa 0,634, dan macro-F1 0,711. Hasil ini lebih tinggi daripada penelitian sebelumnya. Percobaan perbandingan membuktikan bahwa metode prapemrosesan gambar yang ditingkatkan meningkatkan akurasi, ACA, Kappa, dan nilai macro-F1 model.
 
 \subsection{\emph{A Deep Learning Framework for Detection and Classification of Diabetic Retinopathy in FundusImages Using Residual Neural Networks}}
+\label{subsec:212}
 
 Abini dan rekan \parencite{10335079} melakukan studi menggunakan model ResNet, yang dilatih dengan dataset APTOS, untuk melakukan klasifikasi biner dan multikelas menggunakan jaringan saraf konvolusional dalam (deep convolutional neural network). Hasil eksperimen menunjukkan bahwa model dengan lapisan dalam seperti ResNet-50 dapat meningkatkan kinerja keseluruhan dataset. Ini mengindikasikan bahwa penggunaan model ResNet-50 dalam klasifikasi DR dapat menjadi lebih efisien dalam hal waktu, tenaga kerja, dan biaya dibandingkan dengan metode diagnostik manual.
 
 \section{Teori/Konsep Dasar}
+\label{sec:22}
 
 \subsection{Pengolahan Citra}
+\label{sec:221}
 
 Pengolahan citra adalah suatu proses yang mengubah citra menjadi citra lain yang lebih baik dan lebih sesuai dengan kebutuhan. Pengolahan citra dibagi menjadi dua, yaitu pengolahan citra analog dan pengolahan citra digital. Pengolahan citra analog adalah pengolahan citra yang dilakukan pada citra analog. Pengolahan citra digital adalah pengolahan citra yang dilakukan pada citra digital. Pengolahan citra digital dilakukan dengan menggunakan komputer. Pengolahan citra digital dibagi menjadi beberapa tahap, yaitu prapemrosesan, segmentasi, ekstraksi fitur, dan klasifikasi.
 
 \subsection{OCT Angiography}
+\label{sec:222}
+
 OCT Angiography (OCTA) adalah teknologi pencitraan medis non-invasif yang memanfaatkan prinsip Optical Coherence Tomography (OCT) untuk memvisualisasi aliran darah mikro di retina dan koroid. OCTA memberikan informasi struktural dan fungsional jaringan mata secara simultan, memungkinkan diagnosis dan pemantauan penyakit mata yang lebih komprehensif \parencite{Kashani2017-hn}.
 
 \subsection{CNN}
+\label{sec:223}
 
 CNN adalah salah satu jenis jaringan saraf tiruan yang digunakan untuk pengolahan citra. CNN memiliki arsitektur yang terinspirasi dari visual cortex pada hewan. CNN memiliki lapisan konvolusi dan lapisan pooling. Lapisan konvolusi digunakan untuk mengekstraksi fitur dari citra. Lapisan pooling digunakan untuk mengurangi ukuran citra. CNN memiliki beberapa jenis arsitektur, yaitu LeNet, AlexNet, VGGNet, GoogLeNet, dan ResNet.
 
 CNN, atau Convolutional Neural Networks, merupakan bagian dari Deep Neural Networks, yang ditandai dengan banyaknya lapisan dalam arsitekturnya. Ini sering digunakan untuk data gambar karena kemampuannya yang efektif dalam mengolah informasi visual. Dalam konteks klasifikasi gambar, penggunaan Multilayer Perceptrons (MLP) seringkali tidak ideal. Hal ini disebabkan oleh keterbatasan MLP dalam mempertahankan informasi spasial dari gambar. Berbeda dengan CNN, MLP memperlakukan setiap piksel gambar sebagai fitur yang terpisah dan tidak terkait, yang dapat mengakibatkan performa klasifikasi yang tidak optimal \parencite{AstutiSamsuryadi2018}.
 
 \subsection{ResNet}
+\label{sec:224}
 
 ResNet adalah salah satu jenis arsitektur CNN yang digunakan untuk pengolahan citra. ResNet memiliki lapisan konvolusi dan lapisan pooling. ResNet memiliki beberapa jenis arsitektur, yaitu ResNet-50, ResNet-101, dan ResNet-152. ResNet-50 memiliki 50 lapisan konvolusi dan lapisan pooling. ResNet-101 memiliki 101 lapisan konvolusi dan lapisan pooling. ResNet-152 memiliki 152 lapisan konvolusi dan lapisan pooling. ResNet-50, ResNet-101, dan ResNet-152 memiliki arsitektur yang sama, yaitu terdiri dari 5 blok. Setiap blok terdiri dari beberapa lapisan konvolusi dan lapisan pooling. ResNet-50, ResNet-101, dan ResNet-152 memiliki lapisan konvolusi dan lapisan pooling yang sama. Perbedaan ResNet-50, ResNet-101, dan ResNet-152 terletak pada jumlah lapisan konvolusi dan lapisan pooling yang dimiliki oleh masing-masing blok \parencite{He2016}.
 
 \subsection{Grad-CAM}
+\label{sec:225}
+
 Gradient-weighted Class Activation Mapping adalah alat yang membuat heatmap untuk menyorot area gambar yang menurut model deep learning paling penting untuk sebuah keputusan. Alat ini bekerja dengan menganalisis hubungan antara prediksi akhir dan fitur jaringan internal. Hal ini membantu men-debug model, mengidentifikasi bias, dan mengembangkan kepercayaan dalam keputusan AI.
-
-
-
-

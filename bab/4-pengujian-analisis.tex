@@ -1,0 +1,361 @@
+\chapter{HASIL DAN PEMBAHASAN}
+\label{chap:4}
+
+Pada penelitian ini dipaparkan hasil penelitian serta analisis dari model klasifikasi yang telah dibuat sesuai dengan desain sistem dan implementasi pada Bab 3. Data yang digunakan pada pengujian ini menggunakan dataset DRAC dengan data splitting yang telah dilakukan pra-pemrosesan sebelumnya.
+
+Berikut adalah hasil yang didapatkan dari penelitian yang telah dilakukan:
+
+\section{Hasil Penelitian}
+\label{sec:41}
+
+Metrik yang digunakan untuk menentukan performa dari model pada saat dilatih atau training adalah akurasi dan loss. Kedua metrik ini bertujuan untuk melihat kondisi model telah fit atau tidak yang dapat menyebabkan kesulitan dalam memprediksi data yang belum pernah dilihat oleh model tersebut.
+
+Model yang digunakan pada proses pengujian ada tiga, yaitu model dengan nilai training accuracy tertinggi, model dengan nilai validasi tertinggi, dan model terakhir dalam pelatihan.
+
+Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks lain yaitu precision, recall, dan F1-score. Metrik-metrik tersebut, digunakan untuk mengukur akurasi dari model yang telah dibuat.
+
+\subsection{Hasil Pengujian Model tanpa menggunakan Penyesuaian}
+\label{sec:411}
+
+\begin{table}[hbtp]
+	\begin{center}
+		\caption{Hasil Best Trained model}
+		\label{tb:HasilTrainDefault}
+		\begin{tabular}{|c|l|c|l|l|l|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
+			& non-DR                                             &                          & 0,875                                             & 0,848485                                         & 0,861538                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,645833                                          & 0,72093                                          & 0,681319                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7642} & 0,636364                                          & 0,5                                              & 0,56                                            & \multirow{-3}{*}{0.7583626695732866} \\ \hline
+			& non-DR                                             &                          & 0,83871                                           & 0,787879                                         & 0,8125                                          &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,64                                              & 0,744186                                         & 0,688172                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,748}  & 0,727273                                          & 0,571429                                         & 0,64                                            & \multirow{-3}{*}{0.7218079395196282} \\ \hline
+			& non-DR                                             &                          & 0,863636                                          & 0,863636                                         & 0,863636                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,688889                                          & 0,72093                                          & 0,704545                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7805} & 0,666667                                          & 0,571429                                         & 0,615385                                        & \multirow{-3}{*}{0.7266403960229424} \\ \hline
+			& non-DR                                             &                          & 0,873016                                          & 0,833333                                         & 0,852713                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,673913                                          & 0,72093                                          & 0,696629                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7805} & 0,714286                                          & 0,714286                                         & 0,714286                                        & \multirow{-3}{*}{0.7503614091151183} \\ \hline
+			& non-DR                                             &                          & 0,878788                                          & 0,878788                                         & 0,878788                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,68                                              & 0,790698                                         & 0,731183                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7967} & 0,857143                                          & 0,428571                                         & 0,571429                                        & \multirow{-3}{*}{0.6937048139657909} \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[hbtp]
+	\begin{center}
+		\caption{Hasil Best Validated model}
+		\label{tb:HasilValDefault}
+		\begin{tabular}{|c|l|c|l|l|l|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
+			& non-DR                                             &                          & 0,904762                                          & 0,863636                                         & 0,883721                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,698113                                          & 0,860465                                         & 0,770833                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,8211} & 1                                                 & 0,5                                              & 0,666667                                        & \multirow{-3}{*}{0.7332556875533816} \\ \hline
+			& non-DR                                             &                          & 0,818182                                          & 0,954545                                         & 0,881119                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,756757                                          & 0,651163                                         & 0,7                                             &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,8049} & 0,888889                                          & 0,571429                                         & 0,695652                                        & \multirow{-3}{*}{0.7074309213982319} \\ \hline
+			& non-DR                                             &                          & 0,847222                                          & 0,924242                                         & 0,884058                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,714286                                          & 0,697674                                         & 0,705882                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7967} & 0,777778                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.7051400702187358} \\ \hline
+			& non-DR                                             &                          & 0,931034                                          & 0,818182                                         & 0,870968                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,666667                                          & 0,883721                                         & 0,76                                            &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,875                                             & 0,5                                              & 0,636364                                        & \multirow{-3}{*}{0.6899458931486075} \\ \hline
+			& non-DR                                             &                          & 0,869565                                          & 0,909091                                         & 0,888889                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,717391                                          & 0,767442                                         & 0,741573                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,813}  & 0,875                                             & 0,5                                              & 0,636364                                        & \multirow{-3}{*}{0.7303200133655321} \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[hbtp]
+	\begin{center}
+		\caption{Hasil Last trained model}
+		\label{tb:HasilLastDefault}
+		\begin{tabular}{|c|l|c|l|l|l|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
+			& non-DR                                             &                          & 0,861538                                          & 0,848485                                         & 0,854962                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,652174                                          & 0,697674                                         & 0,674157                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7642} & 0,666667                                          & 0,571429                                         & 0,615385                                        & \multirow{-3}{*}{0.7543612091028568} \\ \hline
+			& non-DR                                             &                          & 0,857143                                          & 0,818182                                         & 0,837209                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,666667                                          & 0,790698                                         & 0,723404                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7724} & 0,777778                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.7289056625189767} \\ \hline
+			& non-DR                                             &                          & 0,808824                                          & 0,833333                                         & 0,820896                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,581395                                          & 0,581395                                         & 0,581395                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,6992} & 0,5                                               & 0,428571                                         & 0,461538                                        & \multirow{-3}{*}{0.7282307517601635} \\ \hline
+			& non-DR                                             &                          & 0,909091                                          & 0,909091                                         & 0,909091                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,711111                                          & 0,744186                                         & 0,727273                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,583333                                          & 0,5                                              & 0,538462                                        & \multirow{-3}{*}{0.7417574983086521} \\ \hline
+			& non-DR                                             &                          & 0,852459                                          & 0,787879                                         & 0,818898                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,603774                                          & 0,744186                                         & 0,666667                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7398} & 0,777778                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.6850781547845979} \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet18.png}
+	\caption{Training Loss dan Akurasi ResNet-18}
+	\label{Img:GraphResNet18}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.85]{gambar/TrainingGraphResNet34.png}
+	\caption{Training Loss dan Akurasi ResNet-34}
+	\label{Img:GraphResNet34}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet50.png}
+	\caption{Training Loss dan Akurasi ResNet-50}
+	\label{Img:GraphResNet50}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet101.png}
+	\caption{Training Loss dan Akurasi ResNet-101}
+	\label{Img:GraphResNet101}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet152.png}
+	\caption{Training Loss dan Akurasi ResNet-152}
+	\label{Img:GraphResNet152}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-18]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet18.png} }}%
+	\label{fig:confRes18}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-34]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet34.png} }}%
+	\label{fig:confRes34}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-50]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet50.png} }}%
+	
+	\label{fig:confRes50}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-101]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet101.png} }}%
+	\label{fig:confRes101}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet152.png} }}%
+	\label{fig:confRes152}
+\end{figure}
+\FloatBarrier
+
+\subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian class-weight}
+\label{sec:412}
+
+\begin{table}[hbtp]
+	\begin{center}
+		\caption{Hasil best trained model menggunakan Penyesuaian Beban Class}
+		\label{tb:HasilTrainClassWeight}
+		\begin{tabular}{|c|l|c|l|l|l|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
+			& non-DR                                             &                          & 0,875                                             & 0,848485                                         & 0,861538                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,704545                                          & 0,72093                                          & 0,712644                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7886} & 0,666667                                          & 0,714286                                         & 0,689655                                        & \multirow{-3}{*}{0.7526956474324895} \\ \hline
+			& non-DR                                             &                          & 0,877193                                          & 0,757576                                         & 0,813008                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,617021                                          & 0,674419                                         & 0,644444                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7236} & 0,526316                                          & 0,714286                                         & 0,606061                                        & \multirow{-3}{*}{0.7344195070936137} \\ \hline
+			& non-DR                                             &                          & 0,848485                                          & 0,848485                                         & 0,848485                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,634146                                          & 0,604651                                         & 0,619048                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7317} & 0,5                                               & 0,571429                                         & 0,533333                                        & \multirow{-3}{*}{0.7416221605070141} \\ \hline
+			& non-DR                                             &                          & 0,916667                                          & 0,833333                                         & 0,873016                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,666667                                          & 0,651163                                         & 0,658824                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7642} & 0,52381                                           & 0,785714                                         & 0,628571                                        & \multirow{-3}{*}{0.7133252550521831} \\ \hline
+			& non-DR                                             &                          & 0,870968                                          & 0,818182                                         & 0,84375                                         &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,714286                                          & 0,697674                                         & 0,705882                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7805} & 0,631579                                          & 0,857143                                         & 0,727273                                        & \multirow{-3}{*}{0.7423939072743689} \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\caption{Hasil best validated model menggunakan Penyesuaian Beban Class}
+		\label{tb:HasilValClassWeight}
+		\begin{tabular}{|c|l|c|l|l|l|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Arsitektur ResNet     & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & prec     & rec      & F1       & QWK                                  \\ \hline
+			& non-DR                                             &                          & 0,869565 & 0,909091 & 0,888889 &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,717391 & 0,767442 & 0,741573 &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,813}  & 0,875    & 0,5      & 0,636364 & \multirow{-3}{*}{0.6266311390141076} \\ \hline
+			& non-DR                                             &                          & 0,777778 & 0,954545 & 0,857143 &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,88     & 0,511628 & 0,647059 &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7886} & 0,705882 & 0,857143 & 0,774194 & \multirow{-3}{*}{0.6915275416648504} \\ \hline
+			& non-DR                                             &                          & 0,84058  & 0,878788 & 0,859259 &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,690476 & 0,674419 & 0,682353 &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7805} & 0,75     & 0,642857 & 0,692308 & \multirow{-3}{*}{0.7084479219119185} \\ \hline
+			& non-DR                                             &                          & 0,907692 & 0,893939 & 0,900763 &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,72973  & 0,627907 & 0,675    &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7886} & 0,52381  & 0,785714 & 0,628571 & \multirow{-3}{*}{0.7076588090504592} \\ \hline
+			& non-DR                                             &                          & 0,870968 & 0,818182 & 0,84375  &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,733333 & 0,767442 & 0,75     &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,75     & 0,857143 & 0,8      & \multirow{-3}{*}{0.7052973650209466} \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[hbtp]
+	\begin{center}
+		\caption{Hasil Last Trained Model Menggunakan Penyesuaian Beban Class}
+		\label{tb:HasilLastClassWeight}
+		\begin{tabular}{|c|l|c|l|l|l|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Arsitektur ResNet     & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
+			& non-DR                                             &                          & 0,852941                                          & 0,878788                                         & 0,865672                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,710526                                          & 0,627907                                         & 0,666667                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7724} & 0,588235                                          & 0,714286                                         & 0,645161                                        & \multirow{-3}{*}{0.714979444673576}  \\ \hline
+			& non-DR                                             &                          & 0,857143                                          & 0,818182                                         & 0,837209                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,652174                                          & 0,697674                                         & 0,674157                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,748}  & 0,571429                                          & 0,571429                                         & 0,571429                                        & \multirow{-3}{*}{0.7137225555570403} \\ \hline
+			& non-DR                                             &                          & 0,822581                                          & 0,772727                                         & 0,796875                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,608696                                          & 0,651163                                         & 0,629213                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7236} & 0,666667                                          & 0,714286                                         & 0,689655                                        & \multirow{-3}{*}{0.7006591702210159} \\ \hline
+			& non-DR                                             &                          & 0,901639                                          & 0,833333                                         & 0,866142                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,666667                                          & 0,697674                                         & 0,681818                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7724} & 0,588235                                          & 0,714286                                         & 0,645161                                        & \multirow{-3}{*}{0.7422994855414904} \\ \hline
+			& non-DR                                             &                          & 0,892857                                          & 0,757576                                         & 0,819672                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,604167                                          & 0,674419                                         & 0,637363                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7154} & 0,473684                                          & 0,642857                                         & 0,545455                                        & \multirow{-3}{*}{0.727319861566579}  \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet18class-weighted.png}
+	\caption{Training Loss dan Akurasi ResNet-18}
+	\label{Img:GraphResNet18}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.85]{gambar/TrainingGraphResNet34class-weighted.png}
+	\caption{Training Loss dan Akurasi ResNet-34}
+	\label{Img:GraphResNet34}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet50class-weighted.png}
+	\caption{Training Loss dan Akurasi ResNet-50}
+	\label{Img:GraphResNet50}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet101class-weighted.png}
+	\caption{Training Loss dan Akurasi ResNet-101}
+	\label{Img:GraphResNet101}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.8]{gambar/TrainingGraphResNet152class-weighted.png}
+	\caption{Training Loss dan Akurasi ResNet-152}
+	\label{Img:GraphResNet152}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18class-weighted_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-18]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet18class-weighted_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-18]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet18class-weighted.png} }}%
+	\label{fig:confRes18Class}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfloat[\centering Best Train acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34class-weighted_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-34]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet34class-weighted_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-34]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet34class-weighted.png} }}
+	\label{fig:confRes34Class}
+\end{figure}
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[\centering Best Train acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50class-weighted_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-50]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet50class-weighted_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-50]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet50class-weighted.png} }}
+	\label{fig:confRes50Class}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfloat[\centering Best Train acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101class-weighted_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-101]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet101class-weighted_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-101]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet101class-weighted.png} }}
+	\label{fig:confRes101Class}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfloat[\centering Best Train acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152class-weighted_bestTrain.png} }}%
+	\qquad
+	\subfloat[\centering Best Val acc ResNet-152]{{\includegraphics[width=6.5cm]{gambar/confusionMatrixResnet152class-weighted_bestVal.png} }}%
+	\qquad
+	\subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=6.5cm]{gambar/last model/confusionMatrixResnet152class-weighted.png} }}
+	\caption{Confusion Matrix dari Model yang Telah dilakukan Penyesuaian Beban Kelas}%
+	\label{fig:confRes152Class}
+\end{figure}
+
+\section{Analisis Hasil dan Evaluasi}
+\label{sec:42}
+
+Pengujian dilakukan dengan menggunakan model yang memiliki metrik akurasi tertinggi dalam setiap trainingnya. Terdapat dua skenario pengujian yang dilakukan dalam penelitian ini. Pertama, perbandingan untuk setiap arstitektur model yang digunakan tanpa dilakukan penyesuaian pada class-weight. Kedua, perbandingan untuk setiap arstitektur model yang digunakan dengan penerapan class-weight. Hasil perbandingan tersebut akan dilampirkan pada tabel dan nantinya akan dianalisa.
