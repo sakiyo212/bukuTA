@@ -1,0 +1,31 @@
+-tambahkan kondisi dataset (sudah di-assess quality-nya)
+-balancing
+
+1. default weight & class distribution (done)
+	1. highest train accuracy
+	2. highest validation accuracy
+	3. last trained model
+2. class-weight tuning (done)
+	1. highest train accuracy
+	2. highest validation accuracy
+	3. last trained model
+
+variasi model pre-trained
+resnet-18
+resnet-34
+resnet-50
+resnet-101
+resnet-152
+
+target
+1. finish code for evaluation -> get result from DRAC website (done)
+2. Evaluate accurracy for each models (done)
+3. complete chapter 4 (WIP)
+	deskripsi tiap data
+	analisa tiap data
+4. make a paper format using template from POMITS https://ejurnal.its.ac.id/
+5. Do gradcam evaluations (to do)
+
+
+gap: Using OCT-A instead of fundus image
+comparing all resnet that available in pytorch
