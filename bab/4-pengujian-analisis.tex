@@ -17,6 +17,16 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 \subsection{Hasil Pengujian Model tanpa menggunakan Penyesuaian}
 \label{sec:411}
 
+Untuk setiap model \emph{ResNet} yang digunakan akan dilakukan pelatihan sebanyak 100 epoch pada tiga kelas dataset berbeda, yaitu: \emph{non-diabetic retinopathy} (non-DR), \emph{proliferative diabetic retinopathy} (PDR), dan \emph{non-proliferative diabetic retinopathy} (NPDR).
+
+Data akan diambil dari model dengan nilai training terbaik (\emph{best trained}), validasi terbaik (\emph{best validated}), serta model terakhir yang dilatih (\emph{last trained}).
+
+Sebagai kontrol, dilakukan uji coba \emph{training} yang tidak menggunakan penyesuaian \emph{gradient-weighted class activation mapping} pada dataset sesuai pada bagian \ref{sec:32}. Uji coba ini dilakukan pada seluruh variasi model \emph{ResNet} yang digunakan dan sebagai metrik akan digunakan nilai akurasi, precision, recall, dan nilai F1.
+
+Dikarenakan dataset yang dipakai cenderung kecil, dan data untuk testing tidak memiliki label, maka dilakukan satu parameter lain untuk penilaian, yaitu \emph{Quadratic Weighted Kappa} (QWK). Penilaian ini bertujuan untuk meninjau kesetujuan antara model yang didapatkan, dengan model yang ada pada challenge dari DRAC. Hasil pengujian metrik dapat dihilat lebih jelas pada Tabel 4.1, Tabel 4.2, dan Tabel 4.3
+
+\pagebreak
+
 \begin{table}[hbtp]
 	\begin{center}
 		\caption{Hasil Best Trained model}
@@ -27,22 +37,46 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
 			& non-DR                                             &                          & 0,875                                             & 0,848485                                         & 0,861538                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,645833                                          & 0,72093                                          & 0,681319                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7642} & 0,636364                                          & 0,5                                              & 0,56                                            & \multirow{-3}{*}{0.7583626695732866} \\ \hline
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7642} & 0,636364                                          & 0,5                                              & 0,56                                            & \multirow{-3}{*}{\textbf{0.7583626695732866}} \\ \hline
 			& non-DR                                             &                          & 0,83871                                           & 0,787879                                         & 0,8125                                          &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,64                                              & 0,744186                                         & 0,688172                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,748}  & 0,727273                                          & 0,571429                                         & 0,64                                            & \multirow{-3}{*}{0.7218079395196282} \\ \hline
 			& non-DR                                             &                          & 0,863636                                          & 0,863636                                         & 0,863636                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,688889                                          & 0,72093                                          & 0,704545                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & \textbf{0,688889}                                          & 0,72093                                          & 0,704545                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7805} & 0,666667                                          & 0,571429                                         & 0,615385                                        & \multirow{-3}{*}{0.7266403960229424} \\ \hline
 			& non-DR                                             &                          & 0,873016                                          & 0,833333                                         & 0,852713                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,673913                                          & 0,72093                                          & 0,696629                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7805} & 0,714286                                          & 0,714286                                         & 0,714286                                        & \multirow{-3}{*}{0.7503614091151183} \\ \hline
-			& non-DR                                             &                          & 0,878788                                          & 0,878788                                         & 0,878788                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,68                                              & 0,790698                                         & 0,731183                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7967} & 0,857143                                          & 0,428571                                         & 0,571429                                        & \multirow{-3}{*}{0.6937048139657909} \\ \hline
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7805} & 0,714286                                          & \textbf{0,714286}                                         & \textbf{0,714286}                                        & \multirow{-3}{*}{0.7503614091151183} \\ \hline
+			& non-DR                                             &                          & \textbf{0,878788}                                          & \textbf{0,878788}                                         & \textbf{0,878788}                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,68                                              & \textbf{0,790698}                                         & \textbf{0,731183}                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{\textbf{0,7967}} & \textbf{0,857143}                                          & 0,428571                                         & 0,571429                                        & \multirow{-3}{*}{0.6937048139657909} \\ \hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+% === E's Comment ===
+% It's a good idea to \ref{} stuff previous and current chapters, I got a positive note for that
+% Maybe try converting your \tabular and \table into \longtable?
+% And \textbf{} the best result in every table so it's easier to read
+% Also maybe round the numbers a bit so they're not too long? to three or four decimal points
+% Apologies for spamming \pagebreak
+
+
+Dari model dengan nilai training terbaik didapatkan nilai akurasi terbaik sebesar \textbf{0.7967} dari arsitektur \emph{ResNet-152}.
+
+\begin{itemize}
+
+\item Untuk dataset non-DR didapatkan nilai precision, recall, dan F1 sebesar \textbf{0.878788} dari arsitektur \emph{ResNet-152};
+
+\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0.688889} dari arsitektur \emph{ResNet-50}, nilai recall sebesar \textbf{0.790698} dari arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0.731183} dari arsitektur \emph{ResNet-152};
+
+\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0.857143} dari arsitektur \emph{ResNet-152}, nilai recall sebesar \textbf{0.714286} dari arsitektur \emph{ResNet-101}, nilai F1 sebesar \textbf{0.714286} dari arsitektur \emph{ResNet-101}.
+
+\end{itemize}
+
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7583626695732866} didapatkan dari arsitektur \emph{ResNet-18}.
+
+\pagebreak
 
 \begin{table}[hbtp]
 	\begin{center}
@@ -53,23 +87,39 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			\rowcolor[HTML]{C0C0C0} 
 			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
 			& non-DR                                             &                          & 0,904762                                          & 0,863636                                         & 0,883721                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,698113                                          & 0,860465                                         & 0,770833                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,698113                                          & 0,860465                                         & \textbf{0,770833}                               &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,8211} & 1                                                 & 0,5                                              & 0,666667                                        & \multirow{-3}{*}{0.7332556875533816} \\ \hline
-			& non-DR                                             &                          & 0,818182                                          & 0,954545                                         & 0,881119                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,756757                                          & 0,651163                                         & 0,7                                             &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,8049} & 0,888889                                          & 0,571429                                         & 0,695652                                        & \multirow{-3}{*}{0.7074309213982319} \\ \hline
+			& non-DR                                             &                          & 0,818182                                          & \textbf{0,954545}                                & 0,881119                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & \textbf{0,756757}                                 & 0,651163                                         & 0,7                                             &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,8049} & 0,888889                                          & \textbf{0,571429}                                & \textbf{0,695652}                                        & \multirow{-3}{*}{0.7074309213982319} \\ \hline
 			& non-DR                                             &                          & 0,847222                                          & 0,924242                                         & 0,884058                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,714286                                          & 0,697674                                         & 0,705882                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7967} & 0,777778                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.7051400702187358} \\ \hline
-			& non-DR                                             &                          & 0,931034                                          & 0,818182                                         & 0,870968                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,666667                                          & 0,883721                                         & 0,76                                            &                                      \\ \cline{2-2} \cline{4-6}
+			& non-DR                                             &                          & \textbf{0,931034}                                 & 0,818182                                         & 0,870968                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,666667                                          & \textbf{0,883721}                                & 0,76                                            &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,875                                             & 0,5                                              & 0,636364                                        & \multirow{-3}{*}{0.6899458931486075} \\ \hline
-			& non-DR                                             &                          & 0,869565                                          & 0,909091                                         & 0,888889                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& non-DR                                             &                          & 0,869565                                          & 0,909091                                         & \textbf{0,888889}                               &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,717391                                          & 0,767442                                         & 0,741573                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,813}  & 0,875                                             & 0,5                                              & 0,636364                                        & \multirow{-3}{*}{0.7303200133655321} \\ \hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+Dari model terakhir yang telah dilatih, arsitektur \emph{ResNet-101} dan \emph{ResNet-34} mendapatkan nilai akurasi yang sama, yaitu sebesar \textbf{0.8049}.
+
+\begin{itemize}
+	
+	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,931034} dari arsitektur \emph{ResNet-101}, recall sebesar \textbf{0,954545} dari arsitektur \emph{ResNet-34}, dan F1 sebesar \textbf{0,888889} dari arsitektur \emph{ResNet-152};
+	
+	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,756757} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,883721} dari arsitektur \emph{ResNet-101}, nilai F1 sebesar \textbf{0,770833} dari arsitektur \emph{ResNet-18};
+	
+	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{1} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0.571429} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0,695652} dari arsitektur \emph{ResNet-34}.
+	
+\end{itemize}
+
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7332556875533816} didapatkan dari arsitektur \emph{ResNet-18}.
+
+\pagebreak
 
 \begin{table}[hbtp]
 	\begin{center}
@@ -81,22 +131,38 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
 			& non-DR                                             &                          & 0,861538                                          & 0,848485                                         & 0,854962                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,652174                                          & 0,697674                                         & 0,674157                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7642} & 0,666667                                          & 0,571429                                         & 0,615385                                        & \multirow{-3}{*}{0.7543612091028568} \\ \hline
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7642} & 0,666667                                          & \textbf{0,571429}                                         & \textbf{0,615385}                                        & \multirow{-3}{*}{\textbf{0.7543612091028568}} \\ \hline
 			& non-DR                                             &                          & 0,857143                                          & 0,818182                                         & 0,837209                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,666667                                          & 0,790698                                         & 0,723404                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7724} & 0,777778                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.7289056625189767} \\ \hline
+			& NPDR                                               &                          & 0,666667                                          & \textbf{0,790698}                                         & 0,723404                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7724} & \textbf{0,777778}                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.7289056625189767} \\ \hline
 			& non-DR                                             &                          & 0,808824                                          & 0,833333                                         & 0,820896                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,581395                                          & 0,581395                                         & 0,581395                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,6992} & 0,5                                               & 0,428571                                         & 0,461538                                        & \multirow{-3}{*}{0.7282307517601635} \\ \hline
-			& non-DR                                             &                          & 0,909091                                          & 0,909091                                         & 0,909091                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,711111                                          & 0,744186                                         & 0,727273                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,583333                                          & 0,5                                              & 0,538462                                        & \multirow{-3}{*}{0.7417574983086521} \\ \hline
+			& non-DR                                             &                          & \textbf{0,909091}                                          & \textbf{0,909091}                                         & \textbf{0,909091}                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & \textbf{0,711111}                                          & 0,744186                                         & \textbf{0,727273}                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{\textbf{0,8049}} & 0,583333                                          & 0,5                                              & 0,538462                                        & \multirow{-3}{*}{0.7417574983086521} \\ \hline
 			& non-DR                                             &                          & 0,852459                                          & 0,787879                                         & 0,818898                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,603774                                          & 0,744186                                         & 0,666667                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7398} & 0,777778                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.6850781547845979} \\ \hline
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7398} & \textbf{0,777778}                                          & 0,5                                              & 0,608696                                        & \multirow{-3}{*}{0.6850781547845979} \\ \hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0.8049} dari arsitektur \emph{ResNet-101}.
+
+\begin{itemize}
+	
+	\item Untuk dataset non-DR didapatkan nilai precision, recall, dan F1 sebesar \textbf{0.909091} dari arsitektur \emph{ResNet-101};
+	
+	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0.711111} dari arsitektur \emph{ResNet-101}, nilai recall sebesar \textbf{0.790698} dari arsitektur \emph{ResNet-34}, nilai F1 sebesar \textbf{0.727273} dari arsitektur \emph{ResNet-101};
+	
+	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0.777778} dari arsitektur \emph{ResNet-34} dan \emph{ResNet-152}, nilai recall sebesar \textbf{0.571429} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0.615385} dari arsitektur \emph{ResNet-18}.
+	
+\end{itemize}
+
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7543612091028568} didapatkan dari arsitektur \emph{ResNet-18}.
+
+\pagebreak
 
 \begin{figure}[hbtp]
 	\centering
@@ -132,6 +198,9 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 	\caption{Training Loss dan Akurasi ResNet-152}
 	\label{Img:GraphResNet152}
 \end{figure}
+Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation accuracy} pada setiap arsitektur tanpa menggunakan penyesuaian \emph{class weight} dapat dilihat dengan lebih jelas pada Gambar 4.1 sampai Gambar 4.5. Nilai loss cukup tinggi pada permulaan dikarenakan ukuran \emph{batch} yang cukup kecil, sehingga jumlah training sample yang digunakan dalam satu batch untuk satu iterasi juga kecil. Namun, setelah epoch tertentu, model akan menjaga nilai loss-nya tetap stabil pada nilai yang relatif rendah.
+
+\pagebreak
 
 \begin{figure}[hbtp]
 	\centering
@@ -185,6 +254,8 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 \end{figure}
 \FloatBarrier
 
+
+
 \subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian class-weight}
 \label{sec:412}
 
@@ -196,24 +267,40 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			\hline
 			\rowcolor[HTML]{C0C0C0} 
 			Arsitektur ResNet   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
-			& non-DR                                             &                          & 0,875                                             & 0,848485                                         & 0,861538                                        &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,704545                                          & 0,72093                                          & 0,712644                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7886} & 0,666667                                          & 0,714286                                         & 0,689655                                        & \multirow{-3}{*}{0.7526956474324895} \\ \hline
+			& non-DR                                             &                          & 0,875                                             & \textbf{0,848485}                                & 0,861538                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & 0,704545                                          & \textbf{0,72093}                                 & 0,712644                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7886} & \textbf{0,666667}                                 & 0,714286                                         & 0,689655                                        & \multirow{-3}{*}{\textbf{0.7526956474324895}} \\ \hline
 			& non-DR                                             &                          & 0,877193                                          & 0,757576                                         & 0,813008                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,617021                                          & 0,674419                                         & 0,644444                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7236} & 0,526316                                          & 0,714286                                         & 0,606061                                        & \multirow{-3}{*}{0.7344195070936137} \\ \hline
-			& non-DR                                             &                          & 0,848485                                          & 0,848485                                         & 0,848485                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& non-DR                                             &                          & 0,848485                                          & \textbf{0,848485}                                & 0,848485                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,634146                                          & 0,604651                                         & 0,619048                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7317} & 0,5                                               & 0,571429                                         & 0,533333                                        & \multirow{-3}{*}{0.7416221605070141} \\ \hline
-			& non-DR                                             &                          & 0,916667                                          & 0,833333                                         & 0,873016                                        &                                      \\ \cline{2-2} \cline{4-6}
+			& non-DR                                             &                          & \textbf{0,916667}                                 & 0,833333                                         & \textbf{0,873016}                               &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,666667                                          & 0,651163                                         & 0,658824                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7642} & 0,52381                                           & 0,785714                                         & 0,628571                                        & \multirow{-3}{*}{0.7133252550521831} \\ \hline
 			& non-DR                                             &                          & 0,870968                                          & 0,818182                                         & 0,84375                                         &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,714286                                          & 0,697674                                         & 0,705882                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7805} & 0,631579                                          & 0,857143                                         & 0,727273                                        & \multirow{-3}{*}{0.7423939072743689} \\ \hline
+			& NPDR                                               &                          & \textbf{0,714286}                                 & 0,697674                                         & 0,705882                                        &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7805} & 0,631579                                          & \textbf{0,857143}                                & \textbf{0,727273}                               & \multirow{-3}{*}{0.7423939072743689} \\ \hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0,7886} dari arsitektur \emph{ResNet-18}.
+
+\begin{itemize}
+	
+	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,916667} dari arsitektur \emph{ResNet-18}, recall \textbf{0,848485} yang didapatkan pada arsitektur \emph{Resnet-18} dan \emph{ResNet-50}, dan F1 sebesar \textbf{0,873016} dari arsitektur \emph{ResNet-101};
+	
+	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,714286} dari arsitektur \emph{ResNet-152}, nilai recall sebesar \textbf{0,72093} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0,712644} dari arsitektur \emph{ResNet-18};
+	
+	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,667} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,727273} dari arsitektur \emph{ResNet-152}.
+	
+\end{itemize}
+
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7526956474324895} didapatkan dari arsitektur \emph{ResNet-18}.
+
+\pagebreak
 
 \begin{table}[H]
 	\begin{center}
@@ -224,23 +311,39 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			\rowcolor[HTML]{C0C0C0} 
 			Arsitektur ResNet     & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & prec     & rec      & F1       & QWK                                  \\ \hline
 			& non-DR                                             &                          & 0,869565 & 0,909091 & 0,888889 &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,717391 & 0,767442 & 0,741573 &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,813}  & 0,875    & 0,5      & 0,636364 & \multirow{-3}{*}{0.6266311390141076} \\ \hline
-			& non-DR                                             &                          & 0,777778 & 0,954545 & 0,857143 &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,88     & 0,511628 & 0,647059 &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7886} & 0,705882 & 0,857143 & 0,774194 & \multirow{-3}{*}{0.6915275416648504} \\ \hline
+			& NPDR                                               &                          & 0,717391 & \textbf{0,767442} & 0,741573 &                             \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{\textbf{0,813}}  & \textbf{0,875}    & 0,5      & 0,636364 & \multirow{-3}{*}{0.6266311390141076} \\ \hline
+			& non-DR                                             &                          & 0,777778 & \textbf{0,954545} & 0,857143 &                             \\ \cline{2-2} \cline{4-6}
+			& NPDR                                               &                          & \textbf{0,88}     & 0,511628 & 0,647059 &                              \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,7886} & 0,705882 & \textbf{0,857143} & 0,774194 & \multirow{-3}{*}{0.6915275416648504} \\ \hline
 			& non-DR                                             &                          & 0,84058  & 0,878788 & 0,859259 &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,690476 & 0,674419 & 0,682353 &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7805} & 0,75     & 0,642857 & 0,692308 & \multirow{-3}{*}{0.7084479219119185} \\ \hline
-			& non-DR                                             &                          & 0,907692 & 0,893939 & 0,900763 &                                      \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7805} & 0,75     & 0,642857 & 0,692308 & \multirow{-3}{*}{\textbf{0.7084479219119185}} \\ \hline
+			& non-DR                                             &                          & \textbf{0,907692} & 0,893939 & \textbf{0,900763} &                    \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,72973  & 0,627907 & 0,675    &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7886} & 0,52381  & 0,785714 & 0,628571 & \multirow{-3}{*}{0.7076588090504592} \\ \hline
 			& non-DR                                             &                          & 0,870968 & 0,818182 & 0,84375  &                                      \\ \cline{2-2} \cline{4-6}
-			& NPDR                                               &                          & 0,733333 & 0,767442 & 0,75     &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,75     & 0,857143 & 0,8      & \multirow{-3}{*}{0.7052973650209466} \\ \hline
+			& NPDR                                               &                          & 0,733333 & \textbf{0,767442} & \textbf{0,75}     &                    \\ \cline{2-2} \cline{4-6}
+			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,8049} & 0,75     & \textbf{0,857143} & \textbf{0,8}      & \multirow{-3}{*}{0.7052973650209466} \\ \hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0,813} dari arsitektur \emph{ResNet-18}.
+
+\begin{itemize}
+	
+	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,907692} dari arsitektur \emph{ResNet-101}, recall \textbf{0,954545} dari arsitektur \emph{ResNet-34}, dan F1 sebesar \textbf{0,900763} dari arsitektur \emph{ResNet-101};
+	
+	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,88} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,767442} dari arsitektur \emph{ResNet-18} dan \textbf{0,767442}, nilai F1 sebesar \textbf{0,75} dari arsitektur \emph{ResNet-152};
+	
+	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,875} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-34} dan arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,8} dari arsitektur \emph{ResNet-152}.
+	
+\end{itemize}
+
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7084479219119185} didapatkan dari arsitektur \emph{ResNet-50}.
+
+\pagebreak
 
 \begin{table}[hbtp]
 	\begin{center}
@@ -252,7 +355,7 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			Arsitektur ResNet     & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}class} & acc                      & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}prec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}rec} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}F1} & QWK                                  \\ \hline
 			& non-DR                                             &                          & 0,852941                                          & 0,878788                                         & 0,865672                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,710526                                          & 0,627907                                         & 0,666667                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{0,7724} & 0,588235                                          & 0,714286                                         & 0,645161                                        & \multirow{-3}{*}{0.714979444673576}  \\ \hline
+			\multirow{-3}{*}{18}  & PDR                                                & \multirow{-3}{*}{\textbf{0,7724}} & 0,588235                                 & 0,714286                                         & 0,645161                                        & \multirow{-3}{*}{0.714979444673576}  \\ \hline
 			& non-DR                                             &                          & 0,857143                                          & 0,818182                                         & 0,837209                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,652174                                          & 0,697674                                         & 0,674157                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{34}  & PDR                                                & \multirow{-3}{*}{0,748}  & 0,571429                                          & 0,571429                                         & 0,571429                                        & \multirow{-3}{*}{0.7137225555570403} \\ \hline
@@ -261,13 +364,29 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 			\multirow{-3}{*}{50}  & PDR                                                & \multirow{-3}{*}{0,7236} & 0,666667                                          & 0,714286                                         & 0,689655                                        & \multirow{-3}{*}{0.7006591702210159} \\ \hline
 			& non-DR                                             &                          & 0,901639                                          & 0,833333                                         & 0,866142                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,666667                                          & 0,697674                                         & 0,681818                                        &                                      \\ \cline{2-2} \cline{4-6}
-			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{0,7724} & 0,588235                                          & 0,714286                                         & 0,645161                                        & \multirow{-3}{*}{0.7422994855414904} \\ \hline
+			\multirow{-3}{*}{101} & PDR                                                & \multirow{-3}{*}{\textbf{0,7724}} & 0,588235                                 & 0,714286                                         & 0,645161                                        & \multirow{-3}{*}{\textbf{0.7422994855414904}} \\ \hline
 			& non-DR                                             &                          & 0,892857                                          & 0,757576                                         & 0,819672                                        &                                      \\ \cline{2-2} \cline{4-6}
 			& NPDR                                               &                          & 0,604167                                          & 0,674419                                         & 0,637363                                        &                                      \\ \cline{2-2} \cline{4-6}
 			\multirow{-3}{*}{152} & PDR                                                & \multirow{-3}{*}{0,7154} & 0,473684                                          & 0,642857                                         & 0,545455                                        & \multirow{-3}{*}{0.727319861566579}  \\ \hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0,7724} dari arsitektur \emph{ResNet-18} dan \emph{ResNet-101}.
+
+\begin{itemize}
+	
+	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,907692} dari arsitektur \emph{ResNet-101}, recall \textbf{0,954545} dari arsitektur \emph{ResNet-34}, dan F1 sebesar \textbf{0,900763} dari arsitektur \emph{ResNet-101};
+	
+	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,88} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,767442} dari arsitektur \emph{ResNet-18} dan \textbf{0,767442}, nilai F1 sebesar \textbf{0,75} dari arsitektur \emph{ResNet-152};
+	
+	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,875} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-34} dan arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,8} dari arsitektur \emph{ResNet-152}.
+	
+\end{itemize}
+
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7422994855414904} didapatkan dari arsitektur \emph{ResNet-101}.
+
+\pagebreak
 
 \begin{figure}[hbtp]
 	\centering

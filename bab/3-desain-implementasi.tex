@@ -76,13 +76,29 @@ Pra-pemrosesan data dilakukan untuk mempersiapkan data sebelum dilakukan proses 
 \label{sec:323}
 Model ResNet yang akan digunakan untuk dibandingkan dalam penelitian ini adalah model pre-trained resnet-18, resnet-34, resnet-50, resnet-101, dan resnet-152. Performa model-model tersebut akan dibandingkan dengan melihat nilai akurasi, \emph{loss}, dan \emph{val\_loss}.
 
-\subsection{Akuisisi Data}
-\label{sec:324}
-Data yang digunakan dalam penelitian ini adalah data yang diperoleh dari Diabetic Retinopathy Analisis Grand challenge \parencite{drac_challenge_2023_10280359}. Data yang digunakan adalah data citra retina yang sudah diberi label berupa tingkat keparahan penyakit retinopati diabetik yang sebelumnya sudah melalui proses image assesment sehingga sudah siap digunakan untuk training model. Dataset ini berisikan 611 citra OCT-A yang telah diberi label. Dataset ini juga berisikan 386 citra OCT-A yang tidak berlabel untuk dijadikan testing dataset.
-
 \subsection{Pelatihan Model}
 \label{sec:325}
 Pelatihan model dilakukan dengan menggunakan metode \emph{transfer learning}. Metode \emph{transfer learning} dilakukan dengan menggunakan model ResNet yang sudah dipilih dan sudah dilatih dengan dataset ImageNet.
+Arsitektur model yang digunakan sesuai pada penjelasan bagian \ref{sec:323} dengan menggunakan \emph{hyper-parameter} yang ada pada tabel \ref{tb:hyperParameterTraining}
+\begin{table}[hbtp]
+	\begin{center}
+		\caption{Hyperparameter}
+		\label{tb:hyperParameterTraining}
+		\begin{tabular}{|
+		>{\columncolor[HTML]{C0C0C0}}l |l|lll}
+		\cline{1-2}
+		Input shape                                         & 224,224,3      &  &  &  \\ \cline{1-2}
+		Opimizer                                            & Adam           &  &  &  \\ \cline{1-2}
+		Loss Function                                       & Cross Entropy  &  &  &  \\ \cline{1-2}
+		Learning Rate                                       & 0.1            &  &  &  \\ \cline{1-2}
+		Momentum                                            & 0.9            &  &  &  \\ \cline{1-2}
+		\cellcolor[HTML]{C0C0C0}                            & Step size = 10 &  &  &  \\ \cline{2-2}
+		\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Scheduler} & Gamma = 0.1    &  &  &  \\ \cline{1-2}
+		Epoch                                               & 100            &  &  &  \\ \cline{1-2}
+		Batch size                                          & 32             &  &  &  \\ \cline{1-2}
+		\end{tabular}
+	\end{center}
+\end{table}
 
 \subsection{Pengujian dan Evaluasi}
 \label{sec:326}
