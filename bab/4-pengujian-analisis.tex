@@ -66,7 +66,7 @@ Dari model dengan nilai training terbaik didapatkan nilai akurasi terbaik sebesa
 
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7583626695732866} didapatkan dari arsitektur \emph{ResNet-18}.
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7583626695732866} didapatkan dari arsitektur \emph{ResNet-18}. Untuk hasil dari best validated model dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilValDefault}
 
 \pagebreak
 
@@ -109,8 +109,7 @@ Dari model terakhir yang telah dilatih, arsitektur \emph{ResNet-101} dan \emph{R
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7332556875533816} didapatkan dari arsitektur \emph{ResNet-18}.
-
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7332556875533816} didapatkan dari arsitektur \emph{ResNet-18}. Untuk hasil dari model epoch terakhir dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilLastDefault}
 \pagebreak
 
 \begin{table}[hbtp]
@@ -339,7 +338,7 @@ Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7526956474324895} didapatkan dari arsitektur \emph{ResNet-18}.
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7526956474324895} didapatkan dari arsitektur \emph{ResNet-18}. Untuk hasil dari best validated model dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilValClassWeight}
 
 \pagebreak
 
@@ -382,7 +381,7 @@ Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7084479219119185} didapatkan dari arsitektur \emph{ResNet-50}.
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7084479219119185} didapatkan dari arsitektur \emph{ResNet-50}. Untuk hasil dari model epoch terakhir dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilLastClassWeight}
 
 \pagebreak
 
@@ -439,12 +438,18 @@ Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation
 	\label{fig:graphTrainingWeightedPt1}
 \end{figure}
 
-Dari grafik Training Loss \emph{ResNet-18 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-18} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
 
-Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-18} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
-\pagebreak
+Dari grafik Training Accuracy \emph{ResNet-18} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+
+Kemudian Dari grafik Training Loss \emph{ResNet-34} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+
+Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+
+Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+
 \begin{figure}
 	\centering
 	\subfloat[\centering Training Loss dan akurasi ResNet-50]{{\includegraphics[height=7cm]{gambar/TrainingGraphResNet50class-weighted.png}}}
@@ -454,11 +459,11 @@ Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akura
 	\label{fig:graphTrainingWeightedPt2}
 \end{figure}
 
-Dari grafik Training Loss \emph{ResNet-18 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-50} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
 
-Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-50} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+Dari grafik Training Accuracy \emph{ResNet-50} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 \pagebreak
 
 \begin{figure}
@@ -467,11 +472,11 @@ Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akura
 	\caption{Grafik Training Loss dan akurasi ResNet-152 dengan Penyesuaian Beban pada \emph{Class}}
 	\label{fig:graphTrainingWeightedPt3}
 \end{figure}
-Dari grafik Training Loss \emph{ResNet-18 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-152} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
 
-Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
 \pagebreak
 
