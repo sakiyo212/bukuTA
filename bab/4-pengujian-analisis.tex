@@ -164,14 +164,15 @@ Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation
 	\label{Fig:GraphTrainingDefPt1}
 \end{figure}
 
-Dari grafik Training Loss \emph{ResNet-18 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss dari \emph{ResNet-18 Default} dan \emph{ResNet-34 Default}  dapat dilihat bahwa nilai loss mulai dari \textbf{1.0}/mendekati \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
 
 Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
 Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
+Dari grafik Training Accuracy \emph{ResNet-34 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.5} dan bersifat fluktuatif hingga sebelum epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+
 Untuk Grafik training ResNet-50 dan Resnet-101, dapat dilihat pada Gambar \ref{Fig:GraphTrainingDefPt2} di bawah ini.
-\pagebreak
 
 \begin{figure}[hbtp]
 	\centering
@@ -181,12 +182,17 @@ Untuk Grafik training ResNet-50 dan Resnet-101, dapat dilihat pada Gambar \ref{F
 	\caption{Grafik Training Loss dan akurasi ResNet-50 dan ResNet-101 Tanpa Penyesuaian Beban pada \emph{Class}}
 	\label{Fig:GraphTrainingDefPt2}
 \end{figure}
-Dari grafik Training Loss \emph{ResNet-50 dan ResNet-101 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-50 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
 
-Dari grafik Training Accuracy \emph{ResNet-50 dan ResNet-101 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-50 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-50 dan ResNet-101 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
-\pagebreak
+Dari grafik Training Accuracy \emph{ResNet-50 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+
+Kemudian Dari grafik Training Loss \emph{ResNet-101 Default} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+
+Dari grafik Training Accuracy \emph{ResNet-101 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+
+Dari grafik Training Accuracy \emph{ResNet-101 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
 \begin{figure}[hbtp]
 	\subfloat[\centering Training Loss dan Akurasi ResNet-152]{{\includegraphics[height=7cm]{gambar/TrainingGraphResNet152.png}}}
@@ -198,8 +204,9 @@ Dari grafik Training Loss \emph{ResNet-152 Default} dapat dilihat bahwa nilai lo
 Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
 Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
-\pagebreak
 
+Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \ref{fig:confRes18}, Gambar \ref{fig:confRes34}, Gambar \ref{fig:confRes50}, Gambar \ref{fig:confRes101}, dan Gambar \ref{fig:confRes152}. Masing - masing gambar terdiri dari tiga \emph{confusion matrix}, yang merupakan hasil dari model terbaik pada akurasi \emph{training}, model terbaik pada akurasi validasi, dan model terakhir dari 100 \emph{epoch} pada arsitektur tersebut.
+\pagebreak
 \begin{figure}[hbtp]
 	\centering
 	\subfloat[\centering Best Train acc ResNet-18]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet18_bestTrain.png} }}%
@@ -207,15 +214,16 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 	\subfloat[\centering Best Val acc ResNet-18]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet18_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-18]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet18.png} }}%
+	\caption{Confusion Matrix ResNet-18 yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes18}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{57 kasus non-DR} dengan akurat, dan 9 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{37 kasus NPDR} dengan akurat, dan 6 kasus diprediksi sebagai non-DR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{8 kasus PDR} dengan akurat, dan 6 kasus diprediksi sebagai NPDR tanpa prediksi non-DR.
 \end{itemize}
 \pagebreak
 
@@ -226,15 +234,16 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 	\subfloat[\centering Best Val acc ResNet-34]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet34_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-34]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet34.png} }}%
+	\caption{Confusion Matrix ResNet-34 yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes34}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{63 kasus non-DR} dengan akurat, dan 3 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{34 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 1 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{8 kasus PDR} dengan akurat, dan 6 kasus diprediksi sebagai NPDR tanpa prediksi non-DR.
 \end{itemize}
 \pagebreak
 
@@ -245,15 +254,16 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 	\subfloat[\centering Best Val acc ResNet-50]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet50_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-50]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet50.png} }}%
+	\caption{Confusion Matrix ResNet-50 Default yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes50}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{61 kasus non-DR} dengan akurat, dan 5 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 9 kasus diprediksi sebagai non-DR, dan 3 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{8 kasus PDR} dengan akurat, dan 6 kasus diprediksi sebagai NPDR tanpa prediksi non-DR.
 \end{itemize}
 \pagebreak
 
@@ -264,15 +274,16 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 	\subfloat[\centering Best Val acc ResNet-101]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet101_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-101]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet101.png} }}%
+	\caption{Confusion Matrix ResNet-101 yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes101}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{60 kasus non-DR} dengan akurat, dan 6 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{38 kasus NPDR} dengan akurat, 4 kasus diprediksi sebagai non-DR, dan 1 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{10 kasus PDR} dengan akurat, dan 4 kasus diprediksi sebagai NPDR tanpa prediksi non-DR.
 \end{itemize}
 \pagebreak
 
@@ -283,16 +294,17 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 	\subfloat[\centering Best Val acc ResNet-152]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet152_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet152.png} }}%
+	\caption{Confusion Matrix ResNet-152 yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes152}
 \end{figure}
 \FloatBarrier
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model best \emph{validation accuracy}, yang dapat melakukan prediksi \textbf{60 kasus non-DR} dengan akurat, dan 6 kasus diprediksi salah sebagai NDPR tanpa kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{best train accuracy}, yang dapat melakukan prediksi \textbf{34 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 1 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy} dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, 7 kasus diprediksi sebagai NPDR tanpa kasus diprediksi sebagai non-DR.
 \end{itemize}
 \pagebreak
 
@@ -438,19 +450,19 @@ Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation
 	\label{fig:graphTrainingWeightedPt1}
 \end{figure}
 
-Dari grafik Training Loss \emph{ResNet-18} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-18} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.45}.
 
 Dari grafik Training Accuracy \emph{ResNet-18} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-18} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+Dari grafik Training Accuracy \emph{ResNet-18} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.7} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
-Kemudian Dari grafik Training Loss \emph{ResNet-34} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Kemudian Dari grafik Training Loss \emph{ResNet-34} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.5}.
 
-Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.55} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.3}, kemudian turun mendekati nilai \textbf{0.1} sebelum kemudian naik kembali dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\subfloat[\centering Training Loss dan akurasi ResNet-50]{{\includegraphics[height=7cm]{gambar/TrainingGraphResNet50class-weighted.png}}}
 	\qquad
@@ -459,26 +471,31 @@ Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi valid
 	\label{fig:graphTrainingWeightedPt2}
 \end{figure}
 
-Dari grafik Training Loss \emph{ResNet-50} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-50} dapat dilihat bahwa nilai loss mulai dari \textbf{1.05} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
 
-Dari grafik Training Accuracy \emph{ResNet-50} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-50} dapat dilihat bahwa akurasi training mulai dari nilai mendekati \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-50} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
-\pagebreak
+Dari grafik Training Accuracy \emph{ResNet-50} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} kemudian turun mendekati \textbf{0.1} sebelum akhirnya naik kembali, dan bersifat fluktuatif hingga epoch ke-\textbf{10} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
-\begin{figure}
+Kemudian Dari grafik Training Loss \emph{ResNet-101} dapat dilihat bahwa nilai loss mulai dari mendekati \textbf{1.1} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.45}.
+
+Dari grafik Training Accuracy \emph{ResNet-101} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+
+Dari grafik Training Accuracy \emph{ResNet-101} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.5} kemudian turun mendekati \textbf{0.1} sebelum akhirnya naik kembali dan bersifat fluktuatif hingga sebelum epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+
+\begin{figure}[H]
 	\centering
 	\subfloat[\centering Training Loss dan akurasi ResNet-152]{{\includegraphics[height=7cm]{gambar/TrainingGraphResNet152class-weighted.png}}}
 	\caption{Grafik Training Loss dan akurasi ResNet-152 dengan Penyesuaian Beban pada \emph{Class}}
 	\label{fig:graphTrainingWeightedPt3}
 \end{figure}
-Dari grafik Training Loss \emph{ResNet-152} dapat dilihat bahwa nilai loss mulai dari \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+Dari grafik Training Loss \emph{ResNet-152} dapat dilihat bahwa nilai loss mulai dari \textbf{\>1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.45}.
 
-Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
+Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{\>0.5} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
-Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi validasi mulai dari nilai antara \textbf{0.3} dan \textbf{0.4} kemudian turun mendekati \textbf{0.1} sebelum akhirnya naik dan bersifat fluktuatif hingga epoch ke-\textbf{20}. Dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
-\pagebreak
+Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \ref{fig:confRes18Class}, Gambar \ref{fig:confRes34Class}, Gambar \ref{fig:confRes50Class}, Gambar \ref{fig:confRes101Class}, dan Gambar \ref{fig:confRes152Class}. Masing - masing gambar terdiri dari tiga \emph{confusion matrix}, yang merupakan hasil dari model terbaik pada akurasi \emph{training}, model terbaik pada akurasi validasi, dan model terakhir dari 100 \emph{epoch} pada arsitektur tersebut.
 
 \begin{figure}[hbtp]
 	\centering
@@ -487,15 +504,16 @@ Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi vali
 	\subfloat[\centering Best Val acc ResNet-18]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet18class-weighted_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-18]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet18class-weighted.png} }}%
+	\caption{Confusion Matrix ResNet-18 yang Telah dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes18Class}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{60 kasus non-DR} dengan akurat, dan 6 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{33 kasus NPDR} dengan akurat, 9 kasus diprediksi sebagai non-DR, dan 1 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model terbaik dapat melakukan prediksi \textbf{10 kasus PDR} dengan akurat. Pada model \emph{best train}, 3 kasus diprediksi sebagai NPDR, dan 1 kasus diprediksi sebagai non-DR. Pada model \emph{last trained}, 4 kasus diprediksi sebagai NPDR tanpa prediksi non-DR.
 \end{itemize}
 \pagebreak
 
@@ -506,13 +524,14 @@ Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi vali
 	\subfloat[\centering Best Val acc ResNet-34]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet34class-weighted_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-34]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet34class-weighted.png} }}
+	\caption{Confusion Matrix ResNet-34 yang Telah dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes34Class}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{63 kasus non-DR} dengan akurat, 2 kasus diprediksi salah sebagai NDPR, dan 1 kasus dirediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{last trained}, yang dapat melakukan prediksi \textbf{30 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 5 kasus diprediksi sebagai PDR.
+	\item Untuk dataset PDR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{12 kasus PDR} dengan akurat, 1 kasus diprediksi sebagai NPDR, dan 1 kasus diprediksi sebagai non-DR.
 \end{itemize}
 \pagebreak
 
@@ -523,54 +542,56 @@ Dari grafik Training Accuracy \emph{ResNet-152} dapat dilihat bahwa akurasi vali
 	\subfloat[\centering Best Val acc ResNet-50]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet50class-weighted_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-50]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet50class-weighted.png} }}
+	\caption{Confusion Matrix ResNet-50 yang Telah dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes50Class}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{58 kasus non-DR} dengan akurat, dan 8 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{29 kasus NPDR} dengan akurat, 11 kasus diprediksi sebagai non-DR, dan 3 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model terbaik adalah model \emph{last trained}, yang dapat melakukan prediksi \textbf{10 kasus PDR} dengan akurat, dan 4 kasus diprediksi sebagai NPDR tanpa prediksi non-DR.
 \end{itemize}
 \pagebreak
 
-\begin{figure}[t]
+\begin{figure}[hbtp]
 	\centering
 	\subfloat[\centering Best Train acc ResNet-101]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet101class-weighted_bestTrain.png} }}%
 	\qquad
 	\subfloat[\centering Best Val acc ResNet-101]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet101class-weighted_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-101]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet101class-weighted.png} }}
+	\caption{Confusion Matrix ResNet-101 yang Telah dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes101Class}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{59 kasus non-DR} dengan akurat, dan 7 kasus diprediksi salah sebagai NDPR. Tidak ada kasus yang diprediksi sebagai PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{last trained}, yang dapat melakukan prediksi \textbf{30 kasus NPDR} dengan akurat, 6 kasus diprediksi sebagai non-DR, dan 7 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model terbaik adalah model \emph{best train} dan \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{11 kasus PDR} dengan akurat, 3 kasus diprediksi sebagai NPDR. Tidak ada kasus yang diprediksi sebagai non-DR.
 \end{itemize}
 \pagebreak
 
-\begin{figure}[t]
+\begin{figure}[hbtp]
 	\centering
 	\subfloat[\centering Best Train acc ResNet-152]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet152class-weighted_bestTrain.png} }}%
 	\qquad
 	\subfloat[\centering Best Val acc ResNet-152]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet152class-weighted_bestVal.png} }}%
 	\qquad
 	\subfloat[\centering Last Trained ResNet-152]{{\includegraphics[width=7cm]{gambar/last model/confusionMatrixResnet152class-weighted.png} }}
-	\caption{Confusion Matrix dari Model yang Telah dilakukan Penyesuaian Beban Kelas}%
+	\caption{Confusion Matrix ResNet-152 yang Telah dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes152Class}
 \end{figure}
 
 \begin{itemize}
-	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{56 kasus non-DR} dengan akurat, dan 10 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
+	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best train} dan \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{54 kasus non-DR} dengan akurat, dan 11 kasus diprediksi salah sebagai NDPR dan 1 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset NPDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{31 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 4 kasus diprediksi sebagai PDR.
+	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{33 kasus NPDR} dengan akurat, 7 kasus diprediksi sebagai non-DR, dan 3 kasus diprediksi sebagai PDR.
 	
-	\item Untuk dataset PDR dapat dilihat bahwa model dapat melakukan prediksi \textbf{7 kasus PDR} dengan akurat, dan 7 kasus diprediksi sebagai PDR tanpa prediksi non-DR.
+	\item Untuk dataset PDR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{12 kasus PDR} dengan akurat, 1 kasus diprediksi sebagai NPDR, dan 1 kasus diprediksi sebagai non-DR.
 \end{itemize}
 
 \section{Analisis Hasil dan Evaluasi}
