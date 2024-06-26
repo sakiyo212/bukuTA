@@ -120,3 +120,56 @@ Dengan menggunakan QWK, kita dapat mengevaluasi kesepakatan antara kelas yang di
 \label{sec:225}
 
 Gradient-weighted Class Activation Mapping adalah alat yang membuat heatmap untuk menyorot area gambar yang menurut model deep learning paling penting untuk sebuah keputusan. Alat ini bekerja dengan menganalisis hubungan antara prediksi akhir dan fitur jaringan internal. Hal ini membantu men-debug model, mengidentifikasi bias, dan mengembangkan kepercayaan dalam keputusan AI.
+
+\subsection{Prinsip Kerja Grad-CAM}
+
+Grad-CAM bekerja dengan menggunakan gradien dari kelas yang diinginkan, yang mengalir kembali ke lapisan convolutional terakhir model untuk menghasilkan peta panas. Berikut adalah langkah-langkah utama dalam Grad-CAM:
+
+\begin{enumerate}
+    \item \textbf{Mendapatkan Gradien:} Pertama, hitung gradien dari skor kelas target (misalnya, probabilitas kelas tertentu) terhadap fitur map dari lapisan convolutional terakhir.
+    \item \textbf{Menghitung Bobot:} Rata-rata gradien ini di seluruh dimensi spasial untuk mendapatkan bobot penting, yang menunjukkan seberapa penting fitur tertentu untuk kelas yang diinginkan.
+    \item \textbf{Menghasilkan Peta Panas:} Buat peta panas sebagai kombinasi linier dari fitur map dan bobot yang diperoleh. Peta panas ini menunjukkan area pada gambar asli yang memiliki pengaruh terbesar terhadap prediksi model.
+\end{enumerate}
+
+Secara matematis, peta panas \(L_{\text{Grad-CAM}}^c\) untuk kelas \(c\) dihitung sebagai berikut \cite{selvaraju2017grad}:
+
+\[
+L_{\text{Grad-CAM}}^c = \text{ReLU}\left(\sum_k \alpha_k^c A^k\right)
+\]
+
+Di mana:
+
+\begin{itemize}
+    \item \(A^k\) adalah peta fitur dari lapisan convolutional terakhir.
+    \item \(\alpha_k^c\) adalah bobot penting yang dihitung sebagai rata-rata gradien dari skor kelas \(c\) terhadap \(A^k\).
+    \item \(\text{ReLU}\) adalah fungsi aktivasi Rectified Linear Unit yang memastikan hanya nilai positif yang dipertimbangkan, menghilangkan pengaruh negatif.
+\end{itemize}
+
+\subsection{Kelebihan Grad-CAM}
+
+Grad-CAM memiliki beberapa kelebihan yang membuatnya sangat berguna dalam analisis dan interpretasi model pembelajaran mendalam:
+
+\begin{itemize}
+    \item \textbf{Generalisasi:} Grad-CAM dapat digunakan dengan berbagai arsitektur CNN tanpa memerlukan modifikasi khusus pada model \cite{selvaraju2017grad}.
+    \item \textbf{Keterlihatan:} Peta panas yang dihasilkan memberikan wawasan visual yang intuitif tentang area gambar yang paling berpengaruh pada keputusan model, membantu dalam diagnosis dan debugging model \cite{selvaraju2017grad}.
+    \item \textbf{Fleksibilitas:} Grad-CAM dapat diterapkan pada berbagai tugas klasifikasi, termasuk deteksi objek dan segmentasi, dengan memberikan interpretasi yang lebih baik tentang bagaimana model memandang input \cite{selvaraju2017grad}.
+\end{itemize}
+
+\subsection{Aplikasi Grad-CAM}
+
+Grad-CAM telah digunakan dalam berbagai aplikasi di bidang pengolahan citra dan visi komputer, termasuk:
+
+\begin{itemize}
+    \item \textbf{Deteksi Penyakit Medis:} Grad-CAM membantu dalam memahami prediksi model untuk deteksi penyakit dari citra medis, seperti mammografi, radiografi, dan retinografi \cite{selvaraju2017grad}.
+    \item \textbf{Sistem Pengawasan:} Dalam sistem pengawasan otomatis, Grad-CAM membantu dalam memahami area yang diprioritaskan oleh model dalam mendeteksi aktivitas mencurigakan \cite{selvaraju2017grad}.
+    \item \textbf{Kendaraan Otonom:} Pada kendaraan otonom, Grad-CAM membantu dalam menganalisis bagaimana model memutuskan tindakan berdasarkan citra dari sensor kamera \cite{selvaraju2017grad}.
+\end{itemize}
+
+Grad-CAM memberikan alat yang kuat untuk interpretasi model pembelajaran mendalam, memberikan kepercayaan lebih dalam penggunaan model ini di aplikasi dunia nyata yang kritis \cite{selvaraju2017grad}.
+
+\begin{thebibliography}{9}
+
+\bibitem{selvaraju2017grad} Selvaraju, R. R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., \& Batra, D. (2017). Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization. In \textit{Proceedings of the IEEE International Conference on Computer Vision (ICCV)} (pp. 618-626).
+
+\end{thebibliography}
+
