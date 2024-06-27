@@ -22,9 +22,30 @@ Abini dan rekan \parencite{10335079} melakukan studi menggunakan model ResNet, y
 \label{sec:22}
 
 \subsection{Retinopati Diabetik}
-Secara klinis, retinopati diabetik didefinisikan sebagai adanya tanda-tanda mikrovaskular retina yang khas pada seseorang dengan diabetes mellitus. Kehilangan penglihatan berkembang dari gejala sisa dari makulopati (edema makula dan iskemia) dan neovaskularisasi retina (vitreous perdarahan dan ablasi retina) dan iris (glaukoma neovaskular)\parencite{Cheung2010}. 
+Secara klinis, retinopati diabetik didefinisikan sebagai adanya tanda-tanda mikrovaskular retina yang khas pada seseorang dengan diabetes mellitus. Kehilangan penglihatan berkembang dari gejala sisa dari makulopati (edema makula dan iskemia) dan neovaskularisasi retina (vitreous perdarahan dan ablasi retina) dan iris (glaukoma neovaskular) \parencite{Cheung2010}. 
 
-Kondisi ini pertama kali diamati oleh Eduard Jaeger pada tahun 1856 pada Jurnalnya berjudul “Beitrage zur Pathologie des Auges”\parencite{jaeger1855}. Sedangkan penamaan Retinopati diabetik sendiri baru pertama kali digunakan pada 1906, oleh 
+Kondisi ini pertama kali diamati oleh Eduard Jaeger pada tahun 1856 pada Jurnalnya berjudul “Beitrage zur Pathologie des Auges” \parencite{jaeger1855}. Sedangkan penamaan Retinopati diabetik sendiri baru pertama kali digunakan pada 1906, oleh 
+Retinopati diabetik adalah komplikasi dari diabetes melitus yang mempengaruhi mata. Ini terjadi karena kerusakan pembuluh darah di retina, lapisan jaringan yang peka cahaya di belakang mata. Retinopati diabetik merupakan penyebab utama kebutaan pada populasi usia kerja di banyak negara \parencite{fong2004diabetic}.
+
+\subsubsection{Klasifikasi Retinopati Diabetik}
+
+Retinopati diabetik dapat diklasifikasikan menjadi dua tahap utama:
+
+\begin{enumerate}
+    \item \textbf{Retinopati Diabetik Non-Proliferatif (RDN):} Pada tahap ini, dinding pembuluh darah di retina melemah. Mikroaneurisma dapat terjadi, yang menyebabkan kebocoran cairan dan darah ke dalam retina. Ini dapat mengakibatkan pembengkakan makula (edema makula) dan kehilangan penglihatan \parencite{aiello1998diabetic}.
+    \item \textbf{Retinopati Diabetik Proliferatif (RDP):} Ini adalah tahap lanjut dari retinopati diabetik. Pada RDP, pembuluh darah baru yang abnormal mulai tumbuh di retina. Pembuluh darah baru ini rapuh dan dapat berdarah ke dalam vitreous, menyebabkan penurunan penglihatan yang signifikan atau bahkan kebutaan \parencite{king1998diabetes}.
+\end{enumerate}
+
+\subsubsection{Faktor Risiko dan Patogenesis}
+
+Beberapa faktor risiko untuk retinopati diabetik termasuk durasi diabetes, kontrol glukosa darah yang buruk, hipertensi, hiperlipidemia, dan kehamilan \parencite{fong2004diabetic}. Patogenesis retinopati diabetik melibatkan proses kompleks yang termasuk peningkatan permeabilitas vaskular, kerusakan kapiler, dan hipoksia retina, yang mendorong angiogenesis patologis \parencite{antonetti2012diabetic}.
+
+\subsubsection{Diagnosis dan Pengobatan}
+
+\begin{itemize}
+    \item \textbf{Diagnosis:} Retinopati diabetik biasanya didiagnosis melalui pemeriksaan fundus menggunakan ophthalmoscopy atau fotografi fundus. Fluorescein angiography dan Optical Coherence Tomography (OCT) juga digunakan untuk mengevaluasi tingkat kerusakan retina \parencite{browning2008optical}.
+    \item \textbf{Pengobatan:} Pengobatan retinopati diabetik mencakup kontrol ketat terhadap kadar gula darah, tekanan darah, dan kadar lipid. Terapi laser (panretinal photocoagulation) digunakan untuk mengatasi RDP dan edema makula. Injeksi intravitreal dari agen anti-VEGF (vascular endothelial growth factor) juga efektif dalam mengurangi edema makula dan mencegah pertumbuhan pembuluh darah baru yang abnormal \parencite{ciulla2003intravitreal}.
+\end{itemize}
 
 \subsection{Pengolahan Citra}
 \label{sec:221}
@@ -36,12 +57,29 @@ Pengolahan citra adalah suatu proses yang mengubah citra menjadi citra lain yang
 
 OCT Angiography (OCTA) adalah teknologi pencitraan medis non-invasif yang memanfaatkan prinsip Optical Coherence Tomography (OCT) untuk memvisualisasi aliran darah mikro di retina dan koroid. OCTA memberikan informasi struktural dan fungsional jaringan mata secara simultan, memungkinkan diagnosis dan pemantauan penyakit mata yang lebih komprehensif \parencite{Kashani2017-hn}.
 
+OCTA menggunakan deteksi perubahan temporal dalam reflektivitas untuk membedakan pembuluh darah dari jaringan statis, memungkinkan visualisasi struktur vaskular tanpa memerlukan pewarna kontras seperti fluorescein atau indocyanine green \parencite{jia2012split}.
+
+\subsubsection{Prinsip Kerja}
+
+OCTA bekerja dengan memanfaatkan teknologi Optical Coherence Tomography (OCT), yang menggunakan cahaya koheren untuk menghasilkan gambar resolusi tinggi dari struktur internal mata. Perbedaan utama antara OCT konvensional dan OCTA adalah kemampuan OCTA untuk mendeteksi pergerakan darah dalam pembuluh darah, sehingga memungkinkan pencitraan dinamis dari aliran darah \parencite{spaide2018choriocapillaris}.
+
+\subsubsection{Aplikasi Klinis}
+
+OCTA telah menjadi alat penting dalam diagnosis dan pemantauan berbagai penyakit mata, termasuk degenerasi makula terkait usia (AMD), retinopati diabetik, dan oklusi vena retina. OCTA memungkinkan visualisasi mikroaneurisma, iskemia kapiler, dan neovaskularisasi dengan detail yang tinggi, yang membantu dalam penilaian dan pengelolaan kondisi ini \parencite{de2016optical}.
+
+\subsubsection{Keunggulan dan Keterbatasan}
+
+\begin{itemize}
+    \item \textbf{Keunggulan:} Keuntungan utama dari OCTA adalah non-invasif dan tidak memerlukan pewarna kontras, mengurangi risiko reaksi alergi dan komplikasi lainnya. Selain itu, OCTA menyediakan gambar resolusi tinggi dari lapisan vaskular yang berbeda dalam retina \parencite{spaide2018retinal}.
+    \item \textbf{Keterbatasan:} Meskipun memiliki banyak keunggulan, OCTA juga memiliki keterbatasan. Salah satunya adalah sensitivitas terhadap gerakan pasien, yang dapat menghasilkan artefak dalam gambar. Selain itu, interpretasi gambar OCTA memerlukan keahlian khusus dan pengalaman klinis \parencite{jia2012split}.
+\end{itemize}
+
 \subsection{CNN}
 \label{sec:223}
 
 CNN adalah salah satu jenis jaringan saraf tiruan yang digunakan untuk pengolahan citra. CNN memiliki arsitektur yang terinspirasi dari visual cortex pada hewan. CNN memiliki lapisan konvolusi dan lapisan pooling. Lapisan konvolusi digunakan untuk mengekstraksi fitur dari citra. Lapisan pooling digunakan untuk mengurangi ukuran citra. CNN memiliki beberapa jenis arsitektur, yaitu LeNet, AlexNet, VGGNet, GoogLeNet, dan ResNet.
 
-CNN, atau Convolutional Neural Networks, merupakan bagian dari Deep Neural Networks, yang ditandai dengan banyaknya lapisan dalam arsitekturnya. Ini sering digunakan untuk data gambar karena kemampuannya yang efektif dalam mengolah informasi visual. Dalam konteks klasifikasi gambar, penggunaan Multilayer Perceptrons (MLP) seringkali tidak ideal. Hal ini disebabkan oleh keterbatasan MLP dalam mempertahankan informasi spasial dari gambar. Berbeda dengan CNN, MLP memperlakukan setiap piksel gambar sebagai fitur yang terpisah dan tidak terkait, yang dapat mengakibatkan performa klasifikasi yang tidak optimal \parencite{AstutiSamsuryadi2018}.
+CNN, atau Convolutional Neural Networks, merupakan bagian dari Deep Neural Networks, yang ditandai dengan banyaknya lapisan dalam arsitekturnya. CNN sering digunakan untuk data berjenis gambar karena kemampuannya yang efektif dalam mengolah informasi visual. Dalam konteks klasifikasi gambar, penggunaan Multilayer Perceptrons (MLP) seringkali tidak ideal. Hal ini disebabkan oleh keterbatasan MLP dalam mempertahankan informasi spasial dari gambar. Berbeda dengan CNN, MLP memperlakukan setiap piksel gambar sebagai fitur yang terpisah dan tidak terkait, yang dapat mengakibatkan performa klasifikasi yang tidak optimal \parencite{AstutiSamsuryadi2018}.
 
 \subsection{ResNet}
 \label{sec:224}
@@ -121,17 +159,17 @@ Dengan menggunakan QWK, kita dapat mengevaluasi kesepakatan antara kelas yang di
 
 Gradient-weighted Class Activation Mapping adalah alat yang membuat heatmap untuk menyorot area gambar yang menurut model deep learning paling penting untuk sebuah keputusan. Alat ini bekerja dengan menganalisis hubungan antara prediksi akhir dan fitur jaringan internal. Hal ini membantu men-debug model, mengidentifikasi bias, dan mengembangkan kepercayaan dalam keputusan AI.
 
-\subsection{Prinsip Kerja Grad-CAM}
+\subsubsection{Prinsip Kerja Grad-CAM}
 
-Grad-CAM bekerja dengan menggunakan gradien dari kelas yang diinginkan, yang mengalir kembali ke lapisan convolutional terakhir model untuk menghasilkan peta panas. Berikut adalah langkah-langkah utama dalam Grad-CAM:
+Grad-CAM bekerja dengan menggunakan gradien dari kelas yang diinginkan, yang mengalir kembali ke lapisan convolutional terakhir model untuk menghasilkan \emph{heatmap}. Berikut adalah langkah-langkah utama dalam Grad-CAM:
 
 \begin{enumerate}
     \item \textbf{Mendapatkan Gradien:} Pertama, hitung gradien dari skor kelas target (misalnya, probabilitas kelas tertentu) terhadap fitur map dari lapisan convolutional terakhir.
     \item \textbf{Menghitung Bobot:} Rata-rata gradien ini di seluruh dimensi spasial untuk mendapatkan bobot penting, yang menunjukkan seberapa penting fitur tertentu untuk kelas yang diinginkan.
-    \item \textbf{Menghasilkan Peta Panas:} Buat peta panas sebagai kombinasi linier dari fitur map dan bobot yang diperoleh. Peta panas ini menunjukkan area pada gambar asli yang memiliki pengaruh terbesar terhadap prediksi model.
+    \item \textbf{Menghasilkan \emph{heatmap}:} Buat \emph{heatmap} sebagai kombinasi linier dari fitur map dan bobot yang diperoleh. \emph{heatmap} ini menunjukkan area pada gambar asli yang memiliki pengaruh terbesar terhadap prediksi model.
 \end{enumerate}
 
-Secara matematis, peta panas \(L_{\text{Grad-CAM}}^c\) untuk kelas \(c\) dihitung sebagai berikut \cite{selvaraju2017grad}:
+Secara matematis, \emph{heatmap} \(L_{\text{Grad-CAM}}^c\) untuk kelas \(c\) dihitung sebagai berikut \parencite{selvaraju2017grad}:
 
 \[
 L_{\text{Grad-CAM}}^c = \text{ReLU}\left(\sum_k \alpha_k^c A^k\right)
@@ -145,31 +183,25 @@ Di mana:
     \item \(\text{ReLU}\) adalah fungsi aktivasi Rectified Linear Unit yang memastikan hanya nilai positif yang dipertimbangkan, menghilangkan pengaruh negatif.
 \end{itemize}
 
-\subsection{Kelebihan Grad-CAM}
+\subsubsection{Kelebihan Grad-CAM}
 
 Grad-CAM memiliki beberapa kelebihan yang membuatnya sangat berguna dalam analisis dan interpretasi model pembelajaran mendalam:
 
 \begin{itemize}
-    \item \textbf{Generalisasi:} Grad-CAM dapat digunakan dengan berbagai arsitektur CNN tanpa memerlukan modifikasi khusus pada model \cite{selvaraju2017grad}.
-    \item \textbf{Keterlihatan:} Peta panas yang dihasilkan memberikan wawasan visual yang intuitif tentang area gambar yang paling berpengaruh pada keputusan model, membantu dalam diagnosis dan debugging model \cite{selvaraju2017grad}.
-    \item \textbf{Fleksibilitas:} Grad-CAM dapat diterapkan pada berbagai tugas klasifikasi, termasuk deteksi objek dan segmentasi, dengan memberikan interpretasi yang lebih baik tentang bagaimana model memandang input \cite{selvaraju2017grad}.
+    \item \textbf{Generalisasi:} Grad-CAM dapat digunakan dengan berbagai arsitektur CNN tanpa memerlukan modifikasi khusus pada model \parencite{selvaraju2017grad}.
+    \item \textbf{Keterlihatan:} \emph{heatmap} yang dihasilkan memberikan wawasan visual yang intuitif tentang area gambar yang paling berpengaruh pada keputusan model, membantu dalam diagnosis dan debugging model \parencite{selvaraju2017grad}.
+    \item \textbf{Fleksibilitas:} Grad-CAM dapat diterapkan pada berbagai tugas klasifikasi, termasuk deteksi objek dan segmentasi, dengan memberikan interpretasi yang lebih baik tentang bagaimana model memandang input \parencite{selvaraju2017grad}.
 \end{itemize}
 
-\subsection{Aplikasi Grad-CAM}
+\subsubsection{Aplikasi Grad-CAM}
 
 Grad-CAM telah digunakan dalam berbagai aplikasi di bidang pengolahan citra dan visi komputer, termasuk:
 
 \begin{itemize}
-    \item \textbf{Deteksi Penyakit Medis:} Grad-CAM membantu dalam memahami prediksi model untuk deteksi penyakit dari citra medis, seperti mammografi, radiografi, dan retinografi \cite{selvaraju2017grad}.
-    \item \textbf{Sistem Pengawasan:} Dalam sistem pengawasan otomatis, Grad-CAM membantu dalam memahami area yang diprioritaskan oleh model dalam mendeteksi aktivitas mencurigakan \cite{selvaraju2017grad}.
-    \item \textbf{Kendaraan Otonom:} Pada kendaraan otonom, Grad-CAM membantu dalam menganalisis bagaimana model memutuskan tindakan berdasarkan citra dari sensor kamera \cite{selvaraju2017grad}.
+    \item \textbf{Deteksi Penyakit Medis:} Grad-CAM membantu dalam memahami prediksi model untuk deteksi penyakit dari citra medis, seperti mammografi, radiografi, dan retinografi \parencite{selvaraju2017grad}.
+    \item \textbf{Sistem Pengawasan:} Dalam sistem pengawasan otomatis, Grad-CAM membantu dalam memahami area yang diprioritaskan oleh model dalam mendeteksi aktivitas mencurigakan \parencite{selvaraju2017grad}.
+    \item \textbf{Kendaraan Otonom:} Pada kendaraan otonom, Grad-CAM membantu dalam menganalisis bagaimana model memutuskan tindakan berdasarkan citra dari sensor kamera \parencite{selvaraju2017grad}.
 \end{itemize}
 
-Grad-CAM memberikan alat yang kuat untuk interpretasi model pembelajaran mendalam, memberikan kepercayaan lebih dalam penggunaan model ini di aplikasi dunia nyata yang kritis \cite{selvaraju2017grad}.
-
-\begin{thebibliography}{9}
-
-\bibitem{selvaraju2017grad} Selvaraju, R. R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., \& Batra, D. (2017). Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization. In \textit{Proceedings of the IEEE International Conference on Computer Vision (ICCV)} (pp. 618-626).
-
-\end{thebibliography}
+Grad-CAM memberikan alat yang kuat untuk interpretasi model pembelajaran mendalam, memberikan kepercayaan lebih dalam penggunaan model ini di aplikasi dunia nyata yang kritis.
 
