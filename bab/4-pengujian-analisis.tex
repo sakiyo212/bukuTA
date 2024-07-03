@@ -205,7 +205,7 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 
 Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
-Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \ref{fig:confRes18}, Gambar \ref{fig:confRes34}, Gambar \ref{fig:confRes50}, Gambar \ref{fig:confRes101}, dan Gambar \ref{fig:confRes152}. Masing - masing gambar terdiri dari tiga \emph{confusion matrix}, yang merupakan hasil dari model terbaik pada akurasi \emph{training}, model terbaik pada akurasi validasi, dan model terakhir dari 100 \emph{epoch} pada arsitektur tersebut.
+Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \ref{fig:confRes18}, Gambar \ref{fig:confRes34}, Gambar \ref{fig:confRes50}, Gambar \ref{fig:confRes101}, dan Gambar \ref{fig:confRes152}. Masing - masing gambar terdiri dari tiga \emph{confusion matrix}, yang masing - masing confusion matrix merupakan hasil dari model dengan akurasi \emph{training} terbaik, model dengan akurasi validasi terbaik, dan model terakhir dari 100 \emph{epoch} pada arsitektur tersebut.
 \pagebreak
 \begin{figure}[hbtp]
 	\centering
@@ -308,7 +308,7 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 \end{itemize}
 \pagebreak
 
-\subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian class-weight}
+\subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian \emph{Class-weight}}
 \label{sec:412}
 Proses testing untuk mendapatkan nilai QWK dilakukan dengan menggunakan data yang tidak dipergunakan saat training sebelumnya. Namun karena dataset testing tidak memiliki label, untuk metrik \emph{precision, recall}, dan \emph{F1-score} digunakan dataset validasi, yang sebesar 10\% dari dataset training. Model yang digunakan adalah model dengan metrik validasi terbaik, training terbaik, dan model terakhir dari setiap arsitektur.  Hasil pengujian metrik yang telah disebutkan dapat dilihat pada tabel \ref{tb:HasilTrainClassWeight}, tabel \ref{tb:HasilValClassWeight}, dan tabel \ref{tb:HasilLastClassWeight}
 \begin{table}[hbtp]
@@ -622,7 +622,7 @@ Pengujian dilakukan dengan menggunakan model yang memiliki metrik akurasi tertin
 	\end{center}
 \end{table}
 
-Dapat dilihat pada tabel \ref{tb:PerbandinganHasilBestTrain}, akurasi secara umum mengalami penurunan pada semua model, namun akurasi pada class PDR mengalami kenaikan terkecuali pada ResNet-50 yang tidak terdapat kenaikan maupun penurunan. Akurasi PDR pada ResNet-152 mengalami kenaikan yang paling signifikan, yaitu sebesar 0,428572. Pada metrik Quadratic Weighted Kappa, hanya resnet 18 dan 101 yang mengalami penurunan nilai.
+Dapat dilihat pada Tabel \ref{tb:PerbandinganHasilBestTrain}, akurasi secara umum mengalami penurunan pada semua model, namun akurasi pada class PDR mengalami kenaikan terkecuali pada ResNet-50 yang tidak terdapat kenaikan maupun penurunan. Akurasi PDR pada ResNet-152 mengalami kenaikan yang paling signifikan, yaitu sebesar 0,428572. Pada metrik Quadratic Weighted Kappa, hanya resnet 18 dan 101 yang mengalami penurunan nilai.
 \begin{table}[hbtp]
 	\begin{center}
 	\caption{Perbandingan Nilai Akurasi, Recall pada class PDR. dan QWK dari setiap \emph{Best Validated Model} dengan Pembebanan pada \emph{Class} dan tanpa Pembebanan pada \emph{Class}}
@@ -646,8 +646,8 @@ Dapat dilihat pada tabel \ref{tb:PerbandinganHasilBestTrain}, akurasi secara umu
 \end{table}
 
 Pada tabel \ref{tb:PerbandinganHasilBestVal}, dapat dilihat bahwa akurasi secara umum mengalami penurunan pada semua model, namun akurasi pada class PDR mengalami kenaikan terkecuali pada ResNet-18 yang tidak terdapat kenaikan maupun penurunan. Akurasi PDR pada ResNet-152 kembali mengalami kenaikan yang paling signifikan, yaitu sebesar 0,357143. Pada metrik QWK, hanya resnet 50 dan 101 yang mengalami kenaikan nilai.
-
 \pagebreak
+
 \begin{table}[hbtp]
 \begin{center}
 	\caption{Perbandingan Nilai Akurasi, Recall pada class PDR. dan QWK dari setiap \emph{Last Trained Model} dengan Pembebanan pada \emph{Class} dan tanpa Pembebanan pada \emph{Class}}
@@ -672,37 +672,48 @@ Pada tabel \ref{tb:PerbandinganHasilBestVal}, dapat dilihat bahwa akurasi secara
 
 Sesuai dengan data yang ada pada tabel \ref{tb:PerbandinganHasilLastTrained}, akurasi model secara umum mengalami penurunan kecuali pada model ResNet-18 dan ResNet-50. Sedangkan sama seperti model pada tabel-tabel sebelumnya, akurasi pada class PDR mengalami kenaikan dengan ResNet-50 mengalami kenaikan yang paling signifikan, yaitu sebesar 0,285715. Pada metrik QWK, hanya ResNet-101 dan ResNet-152 yang mengalami kenaikan nilai.
 
+Secara umum, temuan yang disajikan pada Tabel \ref{tb:PerbandinganHasilBestTrain}, Tabel \ref{tb:PerbandinganHasilBestVal}, dan \ref{tb:PerbandinganHasilLastTrained} menunjukkan bahwa penyesuaian beban kelas kumpulan data menghasilkan peningkatan akurasi untuk kelas 2 (PDR) dalam banyak kasus, meskipun terdapat pengecualian. Namun penyesuaian ini mengakibatkan penurunan akurasi untuk kelas 0 (Non-DR). Akibatnya, keakuratan model secara keseluruhan juga menurun, karena peningkatan akurasi untuk kelas 2 tidak cukup untuk mengimbangi penurunan akurasi untuk kelas 0, mengingat ukuran kumpulan data kelas 2 yang relatif kecil. Meskipun demikian, penurunan akurasi di semua variasi model sangat kecil, biasanya di bawah 0,05.
+
 \subsection{GRAD-CAM}
 \label{sec:43}
-Tahap ini melibatkan pengujian menggunakan Grad-CAM. 
-Grad-CAM akan menghasilkan \emph{heatmap} yang ditimpa ke gambar asli. 
-\emph{\emph{heatmap}} ini memberikan informasi tentang bagian atau fitur dari gambar yang penting bagi proses pengambilan keputusan model. Sub-bab ini akan membahas hasil pengujian menggunakan subset data training untuk mengetahui daerah mana yang disoroti dan dianggap penting atau unik oleh classifier berdasarkan model yang telah dilatih. Subset data training digunakan karena merupakan dataset yang sama yang digunakan selama fase pelatihan untuk mengembangkan model yang digunakan untuk Grad-CAM. Pengujian dilakukan dengan memilih satu citra yang akan diuji menggunakan Grad-CAM dengan masing-masing model yang telah diperoleh. Model yang digunakan dalam pengujian ini adalah model yang mencapai akurasi pelatihan tertinggi dalam setiap variasi pengujian.
+Fase ini melibatkan pelaksanaan pengujian menggunakan Grad-CAM, sebuah teknik yang menghasilkan \emph{heatmap} yang ditumpangkan pada gambar asli. \emph{heatmap} mengungkapkan wilayah atau karakteristik tertentu dalam gambar yang dianggap penting untuk proses pengambilan keputusan model. Bagian ini akan menganalisis hasil pengujian menggunakan subset data pelatihan untuk mengidentifikasi area yang disorot yang dianggap penting atau berbeda oleh pengklasifikasi berdasarkan model yang dilatih. 
 
-\begin{figure}[hbtp]
+Subset data pelatihan digunakan untuk menjaga konsistensi dengan kumpulan data yang digunakan selama fase pelatihan model untuk Grad-CAM. Pengujian melibatkan pemilihan satu gambar untuk evaluasi menggunakan Grad-CAM dengan setiap model yang diperoleh.
+
+Model yang dipilih untuk contoh hasil analisis GRAD-CAM adalah \emph{ResNet-18 default weight}, \emph{ResNet-18 class-weighted}, \emph{ResNet-152 class-weighted}. Pemilihan model - model ini dikarenakan model - model ini memiliki akurasi klasifikasi \emph{class} PDR yang tinggi, tanpa mengorbankan banyak dari akurasi keseluruhan. Model ini juga memiliki nilai Kappa yang cukup tinggi yaitu sekitar 0,74. Model ResNet-18 dipilih dikarenakan memiliki nilai Kappa tertinggi, namun akurasi klasifikasi untuk \emph{class} PDR cukup rendah dibanding ResNet-152, sedangkan akurasi keseluruhan dari ResNet-18 sedikit lebih unggul dari ResNet-152 yaitu sebesar 0,0081.
+
+Perbandingan citra gambar pada setiap \emph{class} dan analisis GRAD-CAM dari model-model terpilih dapat dilihat pada Gambar \ref{fig:GRAD0}, Gambar \ref{fig:GRAD1}, dan Gambar \ref{fig:GRAD2}.
+
+\begin{figure}[H]
 	\centering
-	\subfloat{{\includegraphics[width=4cm]{gambar/0_0.png} }}%
-	\subfloat{{\includegraphics[width=4cm]{gambar/0_1.png} }}%
-	\subfloat{{\includegraphics[width=4cm]{gambar/0_2.png} }}
-	\caption{Hasil \emph{\emph{heatmap}} dari dataset class 0}
+	\subfloat[\centering Gambar Asli]{{\includegraphics[width=4cm]{gambar/class0_0.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-18 Default Weight]{{\includegraphics[width=4cm]{gambar/0_0_18def.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-18 Class-weighted]{{\includegraphics[width=4cm]{gambar/0_0_18class.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-152 Class-weighted]{{\includegraphics[width=4cm]{gambar/0_0_152.png} }}%
+	\caption{Hasil \emph{heatmap} dari dataset \emph{class} 0 (Non-DR)}
 	\label{fig:GRAD0}
 \end{figure}
 
-\begin{figure}[hbtp]
+\begin{figure}[H]
 	\centering
-	\subfloat{{\includegraphics[width=4cm]{gambar/1_0.png} }}%
-	\subfloat{{\includegraphics[width=4cm]{gambar/1_1.png} }}%
-	\subfloat{{\includegraphics[width=4cm]{gambar/1_2.png} }}
-	\caption{Hasil \emph{\emph{heatmap}} dari dataset class 1}
+	\subfloat[\centering Gambar Asli]{{\includegraphics[width=4cm]{gambar/class1_0.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-18 Default Weight]{{\includegraphics[width=4cm]{gambar/1_0_18def.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-18 Class-weighted]{{\includegraphics[width=4cm]{gambar/1_0_18class.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-152 Class-weighted]{{\includegraphics[width=4cm]{gambar/1_0_152.png} }}%
+	\caption{Hasil \emph{heatmap} dari dataset \emph{class} 1 (NPDR)}
 	\label{fig:GRAD1}
 \end{figure}
 
-\begin{figure}[hbtp]
+\begin{figure}[H]
 	\centering
-	\subfloat{{\includegraphics[width=4cm]{gambar/2_0.png} }}%
-	\subfloat{{\includegraphics[width=4cm]{gambar/2_1.png} }}%
-	\subfloat{{\includegraphics[width=4cm]{gambar/2_2.png} }}
-	\caption{Hasil \emph{\emph{heatmap}} dari dataset class 2}
+	\subfloat[\centering Gambar Asli]{{\includegraphics[width=4cm]{gambar/class2_0.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-18 Default Weight]{{\includegraphics[width=4cm]{gambar/2_0_18def.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-18 Class-weighted]{{\includegraphics[width=4cm]{gambar/2_0_18class.png} }}%
+	\subfloat[\centering Gambar \emph{heatmap} dari ResNet-152 Class-weighted]{{\includegraphics[width=4cm]{gambar/2_0_152.png} }}%
+	\caption{Hasil \emph{heatmap} dari dataset \emph{class} 2 (PDR)}
 	\label{fig:GRAD2}
 \end{figure}
 
-Model yang digunakan adalah \emph{ResNet-152 class-weighted}. Pemilihan model ini dikarenakan model ini memiliki akurasi klasifikasi \emph{class} PDR yang tertinggi, tanpa mengorbankan banyak dari akurasi keseluruhan. Model ini juga memiliki nilai Kappa yang cukup tinggi yaitu sekitar 0,74. Model ResNet-18 tidak dipilih dikarenakan meskipun nilai Kappa tertinggi, namun akurasi klasifikasi untuk \emph{class} PDR cukup rendah dibanding ResNet-152, sedangkan akurasi keseluruhan dari ResNet-18 hanya unggul 0,0081 dari ResNet-152.
+Representasi fitur objek gambar lebih tersebar luas karena objek di dalam \emph{frame} adalah pembuluh darah yang memanjang dan bercabang, dibandingkan dengan entitas tunggal seperti manusia atau hewan di dalam \emph{frame} gambar.
+
+ResNet 152 lebih mementingkan berbagai komponen gambar dibandingkan dengan ResNet 18 karena kemampuannya mempelajari representasi secara rumit. Tingkat kompleksitas yang semakin tinggi ini memungkinkan ResNet 152 mengenali fitur-fitur yang mungkin diabaikan oleh ResNet 18. Dengan mengembangkan pemahaman yang lebih luas ke analisis yang lebih mendetail, seperti dalam kasus pengenalan wajah yang mempelajari bentuk wajah hingga fitur wajah tertentu seperti alis dan kerutan, ResNet 152 menunjukkan kapasitas untuk membedakan elemen tertentu dalam sebuah gambar.
