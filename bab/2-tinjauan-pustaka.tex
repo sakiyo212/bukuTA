@@ -22,10 +22,11 @@ Abini dan rekan \parencite{10335079} melakukan studi menggunakan model ResNet, y
 \label{sec:22}
 
 \subsection{Retinopati Diabetik}
-Secara klinis, retinopati diabetik didefinisikan sebagai adanya tanda-tanda mikrovaskular retina yang khas pada seseorang dengan diabetes mellitus. Kehilangan penglihatan berkembang dari gejala sisa dari makulopati (edema makula dan iskemia) dan neovaskularisasi retina (vitreous perdarahan dan ablasi retina) dan iris (glaukoma neovaskular) \parencite{Cheung2010}. 
+Retinopati diabetik adalah komplikasi dari diabetes melitus yang mempengaruhi mata. Secara klinis, retinopati diabetik didefinisikan sebagai adanya tanda-tanda mikrovaskular retina yang khas pada seseorang dengan diabetes mellitus. Kehilangan penglihatan berkembang dari gejala sisa dari makulopati (edema makula dan iskemia) dan neovaskularisasi retina (vitreous perdarahan dan ablasi retina) dan iris (glaukoma neovaskular) \parencite{Cheung2010}. 
+Hal ini disebabkan karena kerusakan pembuluh darah di retina, lapisan jaringan yang peka cahaya di belakang mata. Retinopati diabetik merupakan penyebab utama kebutaan pada populasi usia kerja di banyak negara \parencite{fong2004diabetic}.
 
-Kondisi ini pertama kali diamati oleh Eduard Jaeger pada tahun 1856 pada Jurnalnya berjudul “Beitrage zur Pathologie des Auges” \parencite{jaeger1855}. Sedangkan penamaan Retinopati diabetik sendiri baru pertama kali digunakan pada 1906, oleh 
-Retinopati diabetik adalah komplikasi dari diabetes melitus yang mempengaruhi mata. Ini terjadi karena kerusakan pembuluh darah di retina, lapisan jaringan yang peka cahaya di belakang mata. Retinopati diabetik merupakan penyebab utama kebutaan pada populasi usia kerja di banyak negara \parencite{fong2004diabetic}.
+Kondisi ini pertama kali diamati oleh Eduard Jaeger pada tahun 1856 pada Jurnalnya berjudul “Beitrage zur Pathologie des Auges” \parencite{jaeger1855}. Data lebih lanjut yang terdokumentasi dengan baik yang membuktikan hubungan sebab akibat antara diabetes dan makulopati baru muncul pada tahun 1869, ketika Henry Noyes menerbitkan laporannya di Amerika Serikat yang berjudul "Retinitis in Glycosuria." Pengamatan Noyes dikonfirmasi beberapa tahun kemudian, pada tahun 1872, oleh Edward Nettleship di London, yang mengembangkan lebih lanjut topik ini dalam makalahnya yang berjudul "On Edema or Cystic Diseases of the Retina." \parencite{Wolfensberger2001}.
+%Penamaan Retinopati diabetik sendiri baru pertama kali digunakan pada 1906, oleh 
 
 \subsubsection{Klasifikasi Retinopati Diabetik}
 
@@ -33,7 +34,7 @@ Retinopati diabetik dapat diklasifikasikan menjadi dua tahap utama:
 
 \begin{enumerate}
     \item \textbf{Retinopati Diabetik Non-Proliferatif (RDN):} Pada tahap ini, dinding pembuluh darah di retina melemah. Mikroaneurisma dapat terjadi, yang menyebabkan kebocoran cairan dan darah ke dalam retina. Ini dapat mengakibatkan pembengkakan makula (edema makula) dan kehilangan penglihatan \parencite{aiello1998diabetic}.
-    \item \textbf{Retinopati Diabetik Proliferatif (RDP):} Ini adalah tahap lanjut dari retinopati diabetik. Pada RDP, pembuluh darah baru yang abnormal mulai tumbuh di retina. Pembuluh darah baru ini rapuh dan dapat berdarah ke dalam vitreous, menyebabkan penurunan penglihatan yang signifikan atau bahkan kebutaan \parencite{king1998diabetes}.
+    \item \textbf{Retinopati Diabetik Proliferatif (RDP):} Merupakan tahap lanjut dari retinopati diabetik. Pada RDP, pembuluh darah baru yang abnormal mulai tumbuh di retina. Pembuluh darah baru ini rapuh dan dapat berdarah ke dalam vitreous, menyebabkan penurunan penglihatan yang signifikan atau bahkan kebutaan \parencite{king1998diabetes}.
 \end{enumerate}
 
 \subsubsection{Faktor Risiko dan Patogenesis}
@@ -84,26 +85,86 @@ CNN, atau Convolutional Neural Networks, merupakan bagian dari Deep Neural Netwo
 \subsection{ResNet}
 \label{sec:224}
 
-ResNet adalah salah satu jenis arsitektur CNN yang digunakan untuk pengolahan citra. ResNet memiliki lapisan konvolusi dan lapisan pooling. ResNet memiliki beberapa jenis arsitektur, yaitu ResNet-50, ResNet-101, dan ResNet-152. ResNet-50 memiliki 50 lapisan konvolusi dan lapisan pooling. ResNet-101 memiliki 101 lapisan konvolusi dan lapisan pooling. ResNet-152 memiliki 152 lapisan konvolusi dan lapisan pooling. ResNet-50, ResNet-101, dan ResNet-152 memiliki arsitektur yang sama, yaitu terdiri dari 5 blok. Setiap blok terdiri dari beberapa lapisan konvolusi dan lapisan pooling. ResNet-50, ResNet-101, dan ResNet-152 memiliki lapisan konvolusi dan lapisan pooling yang sama. Perbedaan ResNet-50, ResNet-101, dan ResNet-152 terletak pada jumlah lapisan konvolusi dan lapisan pooling yang dimiliki oleh masing-masing blok \parencite{He2016}.
+ResNet adalah salah satu jenis arsitektur CNN yang digunakan untuk pengolahan citra. ResNet memiliki \emph{convulsion layer} dan \emph{pooling layer}. ResNet memiliki beberapa varian arsitektur berdasarkan \emph{layer}-nya, yaitu ResNet-18, ResNet-34, ResNet-50, ResNet-101, dan ResNet-152. 
+
+ResNet-18, ResNet-34, ResNet-50, ResNet-101, dan ResNet-152 memiliki arsitektur yang sama, yaitu terdiri dari 5 blok. Setiap blok terdiri dari beberapa \emph{convulsion layer} dan \emph{pooling layer}. ResNet-50, ResNet-101, dan ResNet-152 memiliki \emph{convulsion layer} dan \emph{pooling layer} yang sama. Perbedaan ResNet-50, ResNet-101, dan ResNet-152 terletak pada jumlah \emph{convulsion layer} dan \emph{pooling layer} yang dimiliki oleh masing-masing blok.
+
+ResNet-18 memiliki 18 convulsion layer dan \emph{pooling layer}, ResNet-34 memiliki 34 \emph{convulsion layer} dan \emph{pooling layer}, ResNet-50 memiliki 50 \emph{convulsion layer} dan \emph{pooling layer}. ResNet-101 memiliki 101 \emph{convulsion layer} dan \emph{pooling layer}. ResNet-152 memiliki 152 \emph{convulsion layer} dan \emph{pooling layer} \parencite{ResNet}.
+
+%\begin{figure}[hbtp]
+%    \centering
+%    \includegraphics[width=\textwidth]{gambar/Arsitektur Residual Neural network untuk ImageNet.png}
+%	\caption{Arsitektur Residual Neural Network untuk Implementasi ImageNet \parencite{ResNet}}
+%	\label{fig:ArsResNet}
+%\end{figure}
+
+
+\begin{table}[hbtp]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{2pt} % Adjust column separation
+    \renewcommand{\arraystretch}{1.2} % Adjust row separation
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Layer Name} & \textbf{Output Size} & \textbf{18-layer} & \textbf{34-layer} & \textbf{50-layer} & \textbf{101-layer} & \textbf{152-layer} \\
+        \hline
+        conv1 & 112$\times$112 & \multicolumn{5}{c|}{7$\times$7, 64, stride 2} \\
+        \hline
+        && \multicolumn{5}{c|}{3$\times$3 max pool, stride 2} \\
+        \hline
+        conv2\_x & 56$\times$56 & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 64 \\ 3 \times 3, 64 \end{bmatrix} \times 2$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 64 \\ 3 \times 3, 64 \end{bmatrix} \times 3$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 64 \\ 3 \times 3, 64 \\ 1 \times 1, 256 \end{bmatrix} \times 3$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 64 \\ 3 \times 3, 64 \\ 1 \times 1, 256 \end{bmatrix} \times 3$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 64 \\ 3 \times 3, 64 \\ 1 \times 1, 256 \end{bmatrix} \times 3$\end{tabular} \\
+        \hline
+        conv3\_x & 28$\times$28 & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 128 \\ 3 \times 3, 128 \end{bmatrix} \times 2$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 128 \\ 3 \times 3, 128 \end{bmatrix} \times 4$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 128 \\ 3 \times 3, 128 \\ 1 \times 1, 512 \end{bmatrix} \times 4$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 128 \\ 3 \times 3, 128 \\ 1 \times 1, 512 \end{bmatrix} \times 4$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 128 \\ 3 \times 3, 128 \\ 1 \times 1, 512 \end{bmatrix} \times 8$\end{tabular} \\
+        \hline
+        conv4\_x & 14$\times$14 & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 256 \\ 3 \times 3, 256 \end{bmatrix} \times 2$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 256 \\ 3 \times 3, 256 \end{bmatrix} \times 6$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 256 \\ 3 \times 3, 256 \\ 1 \times 1, 1024 \end{bmatrix} \times 6$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 256 \\ 3 \times 3, 256 \\ 1 \times 1, 1024 \end{bmatrix} \times 23$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 256 \\ 3 \times 3, 256 \\ 1 \times 1, 1024 \end{bmatrix} \times 36$\end{tabular} \\
+        \hline
+        conv5\_x & 7$\times$7 & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 512 \\ 3 \times 3, 512 \end{bmatrix} \times 2$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 3 \times 3, 512 \\ 3 \times 3, 512 \end{bmatrix} \times 3$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 512 \\ 3 \times 3, 512 \\ 1 \times 1, 2048 \end{bmatrix} \times 3$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 512 \\ 3 \times 3, 512 \\ 1 \times 1, 2048 \end{bmatrix} \times 3$\end{tabular} & 
+        \begin{tabular}{@{}c@{}}$\begin{bmatrix} 1 \times 1, 512 \\ 3 \times 3, 512 \\ 1 \times 1, 2048 \end{bmatrix} \times 3$\end{tabular} \\
+        \hline
+        & 1$\times$1 & \multicolumn{5}{c|}{average pool, 1000-d fc, softmax} \\
+        \hline
+        & FLOPs & $1.8 \times 10^9$ & $3.6 \times 10^9$ & $3.8 \times 10^9$ & $7.6 \times 10^9$ & $11.3 \times 10^9$ \\
+        \hline
+    \end{tabular}
+    \caption{Arsitektur Residual Neural Network untuk Implementasi ImageNet \parencite{ResNet}}
+	\label{fig:ArsResNet}
+\end{table}
+
 
 \subsection{Confusion Matrix}
 Ketika menilai efektivitas model klasifikasi, \emph{confusion matrix} merupakan komponen yang penting. Hal ini terutama berlaku ketika menganalisis gambar medis untuk tujuan seperti mendeteksi retinopati diabetik. Matriks ini menawarkan analisis menyeluruh tentang perbandingan prediksi model dan hasil aktual, sehingga memungkinkan untuk mengevaluasi keakuratan model dan menunjukkan area yang membutuhkan pengembangan.
 Struktur confusion matrix adalah sebagai berikut:
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        & Predicted Negative & Predicted Positive \\
-        \hline
-        Actual Negative & True Negative (TN) & False Positive (FP) \\
-        \hline
-        Actual Positive & False Negative (FN) & True Positive (TP) \\
-        \hline
-    \end{tabular}
+\begin{longtable}{|c|c|c|}
     \caption{Confusion Matrix}
-    \label{tab:confusion_matrix}
-\end{table}
+    \label{tb:confusion_matrix}                                  \\
+    \hline
+    & Predicted Negative & Predicted Positive \\
+    \hline
+    Actual Negative & True Negative (TN) & False Positive (FP) \\
+    \hline
+    Actual Positive & False Negative (FN) & True Positive (TP) \\
+    \hline
+\end{longtable}
 
 \begin{itemize}
     \item \textbf{True Negative (TN)}: Jumlah instance negatif yang diprediksi dengan benar sebagai negatif.
@@ -140,7 +201,7 @@ QWK dapat dihitung dengan langkah-langkah sebagai berikut:
     
     Matriks ini berisi jumlah pengamatan dari kesepakatan antara dua penguji untuk setiap kelas.
     
-    \item \textbf{Buat Matriks Expected \(E\)}:
+    \item \textbf{Buat Expected Matriks \(E\)}:
      
     Matriks ini berisi jumlah pengamatan yang diharapkan dari kesepakatan antara dua penguji, yang dihitung berdasarkan hasil kali jumlah marginal dari matriks pengamatan \(O\).
     
@@ -169,7 +230,7 @@ Grad-CAM bekerja dengan menggunakan gradien dari kelas yang diinginkan, yang men
     \item \textbf{Menghasilkan \emph{heatmap}:} Buat \emph{heatmap} sebagai kombinasi linier dari fitur map dan bobot yang diperoleh. \emph{heatmap} ini menunjukkan area pada gambar asli yang memiliki pengaruh terbesar terhadap prediksi model.
 \end{enumerate}
 
-Secara matematis, \emph{heatmap} \(L_{\text{Grad-CAM}}^c\) untuk kelas \(c\) dihitung sebagai berikut \parencite{selvaraju2017grad}:
+Secara matematis, \emph{heatmap} \(L_{\text{Grad-CAM}}^c\) untuk kelas \(c\) dihitung sebagai berikut:
 
 \[
 L_{\text{Grad-CAM}}^c = \text{ReLU}\left(\sum_k \alpha_k^c A^k\right)
@@ -188,8 +249,8 @@ Di mana:
 Grad-CAM memiliki beberapa kelebihan yang membuatnya sangat berguna dalam analisis dan interpretasi model pembelajaran mendalam:
 
 \begin{itemize}
-    \item \textbf{Generalisasi:} Grad-CAM dapat digunakan dengan berbagai arsitektur CNN tanpa memerlukan modifikasi khusus pada model \parencite{selvaraju2017grad}.
-    \item \textbf{Keterlihatan:} \emph{heatmap} yang dihasilkan memberikan wawasan visual yang intuitif tentang area gambar yang paling berpengaruh pada keputusan model, membantu dalam diagnosis dan debugging model \parencite{selvaraju2017grad}.
+    \item \textbf{Generalisasi:} Grad-CAM dapat digunakan dengan berbagai arsitektur CNN tanpa memerlukan modifikasi khusus pada model.
+    \item \textbf{Keterlihatan:} \emph{heatmap} yang dihasilkan memberikan wawasan visual yang intuitif tentang area gambar yang paling berpengaruh pada keputusan model, membantu dalam diagnosis dan debugging model.
     \item \textbf{Fleksibilitas:} Grad-CAM dapat diterapkan pada berbagai tugas klasifikasi, termasuk deteksi objek dan segmentasi, dengan memberikan interpretasi yang lebih baik tentang bagaimana model memandang input \parencite{selvaraju2017grad}.
 \end{itemize}
 
@@ -198,10 +259,10 @@ Grad-CAM memiliki beberapa kelebihan yang membuatnya sangat berguna dalam analis
 Grad-CAM telah digunakan dalam berbagai aplikasi di bidang pengolahan citra dan visi komputer, termasuk:
 
 \begin{itemize}
-    \item \textbf{Deteksi Penyakit Medis:} Grad-CAM membantu dalam memahami prediksi model untuk deteksi penyakit dari citra medis, seperti mammografi, radiografi, dan retinografi \parencite{selvaraju2017grad}.
-    \item \textbf{Sistem Pengawasan:} Dalam sistem pengawasan otomatis, Grad-CAM membantu dalam memahami area yang diprioritaskan oleh model dalam mendeteksi aktivitas mencurigakan \parencite{selvaraju2017grad}.
+    \item \textbf{Deteksi Penyakit Medis:} Grad-CAM membantu dalam memahami prediksi model untuk deteksi penyakit dari citra medis, seperti mammografi, radiografi, dan retinografi.
+    \item \textbf{Sistem Pengawasan:} Dalam sistem pengawasan otomatis, Grad-CAM membantu dalam memahami area yang diprioritaskan oleh model dalam mendeteksi aktivitas mencurigakan.
     \item \textbf{Kendaraan Otonom:} Pada kendaraan otonom, Grad-CAM membantu dalam menganalisis bagaimana model memutuskan tindakan berdasarkan citra dari sensor kamera \parencite{selvaraju2017grad}.
 \end{itemize}
 
-Grad-CAM memberikan alat yang kuat untuk interpretasi model pembelajaran mendalam, memberikan kepercayaan lebih dalam penggunaan model ini di aplikasi dunia nyata yang kritis.
+Grad-CAM merupakan alat yang cukup kuat dalam interpretasi model \emph{deepl learning}, memberikan kepercayaan lebih dalam penggunaan model ini pada aplikasi di dunia nyata.
 

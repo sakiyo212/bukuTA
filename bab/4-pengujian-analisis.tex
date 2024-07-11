@@ -19,11 +19,11 @@ Evaluasi dari hasil penelitian ini dilakukan dengan menggunakan beberapa metriks
 
 Untuk setiap model \emph{ResNet} yang digunakan akan dilakukan pelatihan sebanyak 100 epoch pada tiga kelas dataset berbeda, yaitu: \emph{non-diabetic retinopathy} (non-DR), \emph{proliferative diabetic retinopathy} (PDR), dan \emph{non-proliferative diabetic retinopathy} (NPDR).
 
-Data akan diambil dari model dengan nilai training terbaik (\emph{best trained}), validasi terbaik (\emph{best validated}), serta model terakhir yang dilatih (\emph{last trained}).
+%Data akan diambil dari model dengan nilai training terbaik (\emph{best trained}), validasi terbaik (\emph{best validated}), serta model terakhir yang dilatih (\emph{last trained}).
 
-Sebagai kontrol, dilakukan uji coba \emph{training} yang tidak menggunakan penyesuaian \emph{gradient-weighted class activation mapping} pada dataset sesuai pada bagian \ref{sec:32}. Uji coba ini dilakukan pada seluruh variasi model \emph{ResNet} yang digunakan dan sebagai metrik akan digunakan nilai akurasi, precision, recall, dan nilai F1.
+Sebagai kontrol, dilakukan uji coba \emph{training} yang tidak menggunakan penyesuaian kelas pada dataset sesuai pada bagian \ref{sec:32}. Uji coba ini dilakukan pada seluruh variasi model \emph{ResNet} yang digunakan dan sebagai metrik akan digunakan nilai akurasi, precision, recall, dan nilai F1.
 
-Dikarenakan dataset yang dipakai cenderung kecil, dan data untuk testing tidak memiliki label, maka dilakukan satu parameter lain untuk penilaian, yaitu \emph{Quadratic Weighted Kappa} (QWK). Penilaian ini bertujuan untuk meninjau kesetujuan antara model yang didapatkan, dengan model yang ada pada challenge dari DRAC. Hasil pengujian metrik dapat dihilat lebih jelas pada Tabel 4.1, Tabel 4.2, dan Tabel 4.3
+Dikarenakan dataset yang dipakai cenderung kecil, dan data untuk testing tidak memiliki label, maka dilakukan satu parameter lain untuk penilaian, yaitu \emph{Quadratic Weighted Kappa} (QWK). Penilaian ini bertujuan untuk meninjau kesetujuan antara model yang didapatkan, dengan model yang ada pada challenge dari DRAC. Hasil pengujian metrik dapat dihilat lebih jelas pada Tabel \ref{tb:HasilTrainDefault}, Tabel \ref{tb:HasilValDefault}, dan Tabel \ref{tb:HasilLastDefault}
 
 \pagebreak
 
@@ -54,19 +54,19 @@ Dikarenakan dataset yang dipakai cenderung kecil, dan data untuk testing tidak m
 	\end{center}
 \end{table}
 
-Dari model dengan nilai training terbaik didapatkan nilai akurasi terbaik sebesar \textbf{0.7967} dari arsitektur \emph{ResNet-152}.
+Sesuai dengan hasil yang ada pada Tabel \ref{tb:HasilTrainDefault}, yang mana merupakan hasil metrik dari model seluruh arsitektur ResNet dengan nilai training terbaik, didapatkan nilai akurasi terbaik sebesar \textbf{0.7967} dari arsitektur \emph{ResNet-152}.
 
 \begin{itemize}
 
-\item Untuk dataset non-DR didapatkan nilai precision, recall, dan F1 sebesar \textbf{0.878788} dari arsitektur \emph{ResNet-152};
+\item Untuk dataset non-DR didapatkan nilai precision, recall, dan F1 masing - masing sebesar \textbf{0.878788} dari arsitektur \emph{ResNet-152};
 
-\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0.688889} dari arsitektur \emph{ResNet-50}, nilai recall sebesar \textbf{0.790698} dari arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0.731183} dari arsitektur \emph{ResNet-152};
+\item Sementara itu, untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0.688889} dari arsitektur \emph{ResNet-50}, nilai recall sebesar \textbf{0.790698} dari arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0.731183} dari arsitektur \emph{ResNet-152};
 
-\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0.857143} dari arsitektur \emph{ResNet-152}, nilai recall sebesar \textbf{0.714286} dari arsitektur \emph{ResNet-101}, nilai F1 sebesar \textbf{0.714286} dari arsitektur \emph{ResNet-101}.
+\item Terakhir, untuk dataset PDR didapatkan nilai precision sebesar \textbf{0.857143} dari arsitektur \emph{ResNet-152}, nilai recall sebesar \textbf{0.714286} dari arsitektur \emph{ResNet-101}, nilai F1 sebesar \textbf{0.714286} dari arsitektur \emph{ResNet-101}.
 
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7583626695732866} didapatkan dari arsitektur \emph{ResNet-18}. Untuk hasil dari best validated model dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilValDefault}
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai Quadratic Weighted Kappa tertinggi adalah sebesar \textbf{0.7583626695732866} didapatkan dari arsitektur \emph{ResNet-18}. Kemudian untuk hasil dari best validated model atau model dengan akurasi validasi tertinggi dari setiap arsitektur ResNet dapat dilihat pada Tabel \ref{tb:HasilValDefault}
 
 \pagebreak
 
@@ -97,19 +97,19 @@ Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesa
 	\end{center}
 \end{table}
 
-Dari model terakhir yang telah dilatih, arsitektur \emph{ResNet-101} dan \emph{ResNet-34} mendapatkan nilai akurasi yang sama, yaitu sebesar \textbf{0.8049}.
+Sesuai dengan hasil yang ada pada Tabel \ref{tb:HasilValDefault}, yang mana merupakan hasil metrik dari model seluruh arsitektur ResNet dengan nilai validasi terbaik, arsitektur \emph{ResNet-101} dan \emph{ResNet-34} mendapatkan nilai akurasi yang sama, yaitu sebesar \textbf{0.8049}.
 
 \begin{itemize}
 	
 	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,931034} dari arsitektur \emph{ResNet-101}, recall sebesar \textbf{0,954545} dari arsitektur \emph{ResNet-34}, dan F1 sebesar \textbf{0,888889} dari arsitektur \emph{ResNet-152};
 	
-	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,756757} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,883721} dari arsitektur \emph{ResNet-101}, nilai F1 sebesar \textbf{0,770833} dari arsitektur \emph{ResNet-18};
+	\item Sementara itu, untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,756757} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,883721} dari arsitektur \emph{ResNet-101}, nilai F1 sebesar \textbf{0,770833} dari arsitektur \emph{ResNet-18};
 	
-	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{1} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0.571429} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0,695652} dari arsitektur \emph{ResNet-34}.
+	\item Terakhir, untuk dataset PDR didapatkan nilai precision sebesar \textbf{1} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0.571429} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0,695652} dari arsitektur \emph{ResNet-34}.
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7332556875533816} didapatkan dari arsitektur \emph{ResNet-18}. Untuk hasil dari model epoch terakhir dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilLastDefault}
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai Quadratic Weighted Kappa tertinggi adalah sebesar \textbf{0.7332556875533816} didapatkan dari arsitektur \emph{ResNet-18}. Kemudian selanjutnya untuk hasil dari model epoch terakhir dari setiap arsitektur ResNet dapat dilihat pada Tabel \ref{tb:HasilLastDefault}
 \pagebreak
 
 \begin{table}[hbtp]
@@ -139,21 +139,21 @@ Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesa
 	\end{center}
 \end{table}
 
-Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0.8049} dari arsitektur \emph{ResNet-101}.
+Sesuai dengan hasil yang ada pada Tabel \ref{tb:HasilLastDefault}, yang mana merupakan hasil metrik dari model seluruh arsitektur ResNet yang berada pada epoch terakhir, atau epoch yang dilatih paling akhir, didapatkan nilai akurasi terbaik sebesar \textbf{0.8049} dari arsitektur \emph{ResNet-101}.
 
 \begin{itemize}
 	
 	\item Untuk dataset non-DR didapatkan nilai precision, recall, dan F1 sebesar \textbf{0.909091} dari arsitektur \emph{ResNet-101};
 	
-	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0.711111} dari arsitektur \emph{ResNet-101}, nilai recall sebesar \textbf{0.790698} dari arsitektur \emph{ResNet-34}, nilai F1 sebesar \textbf{0.727273} dari arsitektur \emph{ResNet-101};
+	\item Sementara itu, untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0.711111} dari arsitektur \emph{ResNet-101}, nilai recall sebesar \textbf{0.790698} dari arsitektur \emph{ResNet-34}, nilai F1 sebesar \textbf{0.727273} dari arsitektur \emph{ResNet-101};
 	
-	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0.777778} dari arsitektur \emph{ResNet-34} dan \emph{ResNet-152}, nilai recall sebesar \textbf{0.571429} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0.615385} dari arsitektur \emph{ResNet-18}.
+	\item Terakhir, untuk dataset PDR didapatkan nilai precision sebesar \textbf{0.777778} dari arsitektur \emph{ResNet-34} dan \emph{ResNet-152}, nilai recall sebesar \textbf{0.571429} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0.615385} dari arsitektur \emph{ResNet-18}.
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7543612091028568} didapatkan dari arsitektur \emph{ResNet-18}.
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai Quadratic Weighted Kappa tertinggi adalah sebesar \textbf{0.7543612091028568} didapatkan dari arsitektur \emph{ResNet-18}.
 
-Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation accuracy} pada setiap arsitektur yang tidak menggunakan penyesuaian \emph{class weight} dapat dilihat dengan lebih jelas pada Gambar \ref{Fig:GraphTrainingDefPt2} Nilai loss cukup tinggi pada permulaan dikarenakan ukuran \emph{batch} yang cukup kecil, sehingga jumlah training sample yang digunakan dalam satu batch untuk satu iterasi juga kecil. Namun, setelah epoch tertentu, model akan menjaga nilai loss-nya tetap stabil pada nilai yang relatif rendah.
+Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation accuracy} pada setiap arsitektur yang tidak menggunakan penyesuaian \emph{class weight} dapat dilihat dengan lebih jelas pada Gambar \ref{Fig:GraphTrainingDefPt1}, Gambar \ref{Fig:GraphTrainingDefPt2}, dan Gambar \ref{Fig:GraphTrainingDefPt3} Nilai loss cukup tinggi pada permulaan dikarenakan ukuran \emph{batch} yang cukup kecil, sehingga jumlah training sample yang digunakan dalam satu batch untuk satu iterasi juga kecil. Namun, setelah epoch tertentu, model akan menjaga nilai loss-nya tetap stabil pada nilai yang relatif rendah.
 \pagebreak
 \begin{figure}[hbtp]
 	\centering
@@ -169,6 +169,10 @@ Dari grafik Training Loss dari \emph{ResNet-18 Default} dan \emph{ResNet-34 Defa
 Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
 Dari grafik Training Accuracy \emph{ResNet-18 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
+
+Dari grafik Training Loss dari \emph{ResNet-34 Default} dan \emph{ResNet-34 Default}  dapat dilihat bahwa nilai loss mulai dari \textbf{1.0}/mendekati \textbf{1.0} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{20} dengan nilai menjadi fluktuatif di antara \textbf{0.3 dan 0.4}.
+
+Dari grafik Training Accuracy \emph{ResNet-34 Default} dapat dilihat bahwa akurasi training mulai dari nilai \textbf{0.6} dan dengan cepat menjadi stabil mendekati epoch ke-\textbf{10} dimana nilai berada di antara \textbf{0.8 dan 0.9} 
 
 Dari grafik Training Accuracy \emph{ResNet-34 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.5} dan bersifat fluktuatif hingga sebelum epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
@@ -206,7 +210,7 @@ Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akur
 Dari grafik Training Accuracy \emph{ResNet-152 Default} dapat dilihat bahwa akurasi validasi mulai dari nilai \textbf{0.6} dan bersifat fluktuatif hingga epoch ke-\textbf{20} dimana nilai menjadi stabil di antara \textbf{0.7 dan 0.8}.
 
 Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \ref{fig:confRes18}, Gambar \ref{fig:confRes34}, Gambar \ref{fig:confRes50}, Gambar \ref{fig:confRes101}, dan Gambar \ref{fig:confRes152}. Masing - masing gambar terdiri dari tiga \emph{confusion matrix}, yang masing - masing confusion matrix merupakan hasil dari model dengan akurasi \emph{training} terbaik, model dengan akurasi validasi terbaik, dan model terakhir dari 100 \emph{epoch} pada arsitektur tersebut.
-\pagebreak
+
 \begin{figure}[hbtp]
 	\centering
 	\subfloat[\centering Best Train acc ResNet-18]{{\includegraphics[width=7cm]{gambar/confusionMatrixResnet18_bestTrain.png} }}%
@@ -217,6 +221,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\caption{Confusion Matrix ResNet-18 yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes18}
 \end{figure}
+
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
 
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{57 kasus non-DR} dengan akurat, dan 9 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
@@ -238,6 +244,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\label{fig:confRes34}
 \end{figure}
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{63 kasus non-DR} dengan akurat, dan 3 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
@@ -258,6 +266,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\label{fig:confRes50}
 \end{figure}
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{61 kasus non-DR} dengan akurat, dan 5 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
@@ -277,6 +287,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\caption{Confusion Matrix ResNet-101 yang Tidak Dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes101}
 \end{figure}
+
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
 
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model dapat melakukan prediksi \textbf{60 kasus non-DR} dengan akurat, dan 6 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
@@ -299,6 +311,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 \end{figure}
 \FloatBarrier
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model best \emph{validation accuracy}, yang dapat melakukan prediksi \textbf{60 kasus non-DR} dengan akurat, dan 6 kasus diprediksi salah sebagai NDPR tanpa kasus diprediksi sebagai PDR.
 	
@@ -310,7 +324,9 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 
 \subsection{Hasil Pengujian Model dengan Menggunakan Penyesuaian \emph{Class-weight}}
 \label{sec:412}
-Proses testing untuk mendapatkan nilai QWK dilakukan dengan menggunakan data yang tidak dipergunakan saat training sebelumnya. Namun karena dataset testing tidak memiliki label, untuk metrik \emph{precision, recall}, dan \emph{F1-score} digunakan dataset validasi, yang sebesar 10\% dari dataset training. Model yang digunakan adalah model dengan metrik validasi terbaik, training terbaik, dan model terakhir dari setiap arsitektur.  Hasil pengujian metrik yang telah disebutkan dapat dilihat pada tabel \ref{tb:HasilTrainClassWeight}, tabel \ref{tb:HasilValClassWeight}, dan tabel \ref{tb:HasilLastClassWeight}
+Kemudian dilakukan uji coba \emph{training} yang telah dilakukan penyesuaian kelas pada dataset sesuai pada bagian \ref{sec:32}. Uji coba ini dilakukan pada seluruh variasi model \emph{ResNet} yang digunakan dan sebagai metrik akan digunakan nilai akurasi, precision, recall, dan nilai F1.
+
+Proses testing untuk mendapatkan nilai QWK dilakukan dengan menggunakan data yang tidak dipergunakan saat training sebelumnya. Namun karena dataset testing tidak memiliki label, untuk metrik \emph{precision, recall}, dan \emph{F1-score} digunakan dataset validasi, yang memiliki proporsi sebesar 20\% dari dataset training. Model yang digunakan adalah model dengan metrik validasi terbaik, training terbaik, dan model terakhir dari setiap arsitektur.  Hasil pengujian metrik yang telah disebutkan dapat dilihat pada Tabel \ref{tb:HasilTrainClassWeight}, Tabel \ref{tb:HasilValClassWeight}, dan Tabel \ref{tb:HasilLastClassWeight}
 \begin{table}[hbtp]
 	\begin{center}
 		\caption{Hasil best trained model menggunakan Penyesuaian Beban Class}
@@ -338,21 +354,19 @@ Proses testing untuk mendapatkan nilai QWK dilakukan dengan menggunakan data yan
 	\end{center}
 \end{table}
 
-Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0,7886} dari arsitektur \emph{ResNet-18}.
+Sesuai dengan hasil yang ada pada Tabel \ref{tb:HasilTrainClassWeight}, yang mana merupakan hasil metrik dari model seluruh arsitektur ResNet dengan nilai training terbaik, didapatkan nilai akurasi terbaik sebesar \textbf{0,7886} dari arsitektur \emph{ResNet-18}.
 
 \begin{itemize}
 	
 	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,916667} dari arsitektur \emph{ResNet-101}, recall \textbf{0,848485} yang didapatkan pada arsitektur \emph{Resnet-18} dan \emph{ResNet-50}, dan F1 sebesar \textbf{0,873016} dari arsitektur \emph{ResNet-101};
 	
-	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,714286} dari arsitektur \emph{ResNet-152}, nilai recall sebesar \textbf{0,72093} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0,712644} dari arsitektur \emph{ResNet-18};
+	\item Selanjutnya, untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,714286} dari arsitektur \emph{ResNet-152}, nilai recall sebesar \textbf{0,72093} dari arsitektur \emph{ResNet-18}, nilai F1 sebesar \textbf{0,712644} dari arsitektur \emph{ResNet-18};
 	
-	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,667} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,727273} dari arsitektur \emph{ResNet-152}.
+	\item Terakhir, untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,667} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,727273} dari arsitektur \emph{ResNet-152}.
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7526956474324895} didapatkan dari arsitektur \emph{ResNet-18}. Untuk hasil dari best validated model dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilValClassWeight}
-
-\pagebreak
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai Quadratic Weighted Kappa tertinggi adalah sebesar \textbf{0.7526956474324895} didapatkan dari arsitektur \emph{ResNet-18}. Kemudian untuk hasil dari best validated model atau model dengan akurasi validasi tertinggi dari setiap arsitektur ResNet dapat dilihat pada Tabel \ref{tb:HasilValClassWeight}
 
 \begin{table}[H]
 	\begin{center}
@@ -381,19 +395,19 @@ Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesa
 	\end{center}
 \end{table}
 
-Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0,813} dari arsitektur \emph{ResNet-18}.
+Sesuai dengan hasil yang ada pada Tabel \ref{tb:HasilValClassWeight}, yang mana merupakan hasil metrik dari model seluruh arsitektur ResNet dengan nilai validasi terbaik, didapatkan nilai akurasi terbaik sebesar \textbf{0,813} dari arsitektur \emph{ResNet-18}.
 
 \begin{itemize}
 	
 	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,907692} dari arsitektur \emph{ResNet-101}, recall \textbf{0,954545} dari arsitektur \emph{ResNet-34}, dan F1 sebesar \textbf{0,900763} dari arsitektur \emph{ResNet-101};
 	
-	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,88} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,767442} dari arsitektur \emph{ResNet-18} dan \textbf{0,767442}, nilai F1 sebesar \textbf{0,75} dari arsitektur \emph{ResNet-152};
+	\item Selanjutnya, untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,88} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,767442} dari arsitektur \emph{ResNet-18} dan \textbf{0,767442}, nilai F1 sebesar \textbf{0,75} dari arsitektur \emph{ResNet-152};
 	
-	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,875} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-34} dan arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,8} dari arsitektur \emph{ResNet-152}.
+	\item Terakhir, untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,875} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-34} dan arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,8} dari arsitektur \emph{ResNet-152}.
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7084479219119185} didapatkan dari arsitektur \emph{ResNet-50}. Untuk hasil dari model epoch terakhir dari setiap arsitektur ResNet dapat dilihat pada tabel \ref{tb:HasilLastClassWeight}
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai Quadratic Weighted Kappa tertinggi adalah sebesar \textbf{0.7084479219119185} didapatkan dari arsitektur \emph{ResNet-50}. Untuk hasil dari model epoch terakhir dari setiap arsitektur ResNet dapat dilihat pada Tabel \ref{tb:HasilLastClassWeight}
 
 \pagebreak
 
@@ -424,21 +438,21 @@ Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesa
 	\end{center}
 \end{table}
 
-Dari model terakhir yang telah dilatih, didapatkan nilai akurasi terbaik sebesar \textbf{0,7724} dari arsitektur \emph{ResNet-18} dan \emph{ResNet-101}.
+Sesuai dengan hasil yang ada pada Tabel \ref{tb:HasilLastDefault}, yang mana merupakan hasil metrik dari model seluruh arsitektur ResNet yang berada pada epoch terakhir, atau epoch yang dilatih paling akhir, didapatkan nilai akurasi terbaik sebesar \textbf{0,7724} dari arsitektur \emph{ResNet-18} dan \emph{ResNet-101}.
 
 \begin{itemize}
 	
 	\item Untuk dataset non-DR didapatkan nilai precision sebesar \textbf{0,907692} dari arsitektur \emph{ResNet-101}, recall \textbf{0,954545} dari arsitektur \emph{ResNet-34}, dan F1 sebesar \textbf{0,900763} dari arsitektur \emph{ResNet-101};
 	
-	\item Untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,88} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,767442} dari arsitektur \emph{ResNet-18} dan \textbf{0,767442}, nilai F1 sebesar \textbf{0,75} dari arsitektur \emph{ResNet-152};
+	\item Selanjutnya, untuk dataset NPDR didapatkan nilai precision sebesar \textbf{0,88} dari arsitektur \emph{ResNet-34}, nilai recall sebesar \textbf{0,767442} dari arsitektur \emph{ResNet-18} dan \textbf{0,767442}, nilai F1 sebesar \textbf{0,75} dari arsitektur \emph{ResNet-152};
 	
-	\item Untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,875} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-34} dan arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,8} dari arsitektur \emph{ResNet-152}.
+	\item Terakhir, untuk dataset PDR didapatkan nilai precision sebesar \textbf{0,875} dari arsitektur \emph{ResNet-18}, nilai recall sebesar \textbf{0,857143} dari arsitektur \emph{ResNet-34} dan arsitektur \emph{ResNet-152}, nilai F1 sebesar \textbf{0,8} dari arsitektur \emph{ResNet-152}.
 	
 \end{itemize}
 
-Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai QWK tertinggi sebesar \textbf{0.7422994855414904} didapatkan dari arsitektur \emph{ResNet-101}.
+Dari seluruh arsitektur \emph{ResNet} yang digunakan, nilai Quadratic Weighted Kappa tertinggi adalah sebesar \textbf{0.7422994855414904} didapatkan dari arsitektur \emph{ResNet-101}.
 
-Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation accuracy} pada setiap arsitektur tanpa menggunakan penyesuaian \emph{class weight} dapat dilihat dengan lebih jelas pada Gambar \ref{Fig:GraphTrainingDefPt2} Nilai loss cukup tinggi pada permulaan dikarenakan ukuran \emph{batch} yang cukup kecil, sehingga jumlah training sample yang digunakan dalam satu batch untuk satu iterasi juga kecil. Namun, setelah epoch tertentu, model akan menjaga nilai loss-nya tetap stabil pada nilai yang relatif rendah.
+Grafik dari \emph{training loss}, \emph{training accuracy}, dan \emph{validation accuracy} pada setiap arsitektur yang telah dilakukan penyesuaian pada \emph{class weight} dapat dilihat dengan lebih jelas pada Gambar \ref{fig:graphTrainingWeightedPt1}, Gambar \ref{fig:graphTrainingWeightedPt2}, dan Gambar \ref{fig:graphTrainingWeightedPt3}. Nilai loss cukup tinggi pada permulaan dikarenakan ukuran \emph{batch} yang cukup kecil, sehingga jumlah training sample yang digunakan dalam satu batch untuk satu iterasi juga kecil. Namun, setelah epoch tertentu, model akan menjaga nilai loss-nya tetap stabil pada nilai yang relatif rendah.
 \pagebreak
 
 \begin{figure}[hbtp]
@@ -467,7 +481,7 @@ Dari grafik Training Accuracy \emph{ResNet-34} dapat dilihat bahwa akurasi valid
 	\subfloat[\centering Training Loss dan akurasi ResNet-50]{{\includegraphics[height=7cm]{gambar/TrainingGraphResNet50class-weighted.png}}}
 	\qquad
 	\subfloat[\centering Training Loss dan akurasi ResNet-101]{{\includegraphics[height=7cm]{gambar/TrainingGraphResNet101class-weighted.png}}}
-	\caption{Grafik Training Loss dan akurasi ResNet-50, 101 dengan Penyesuaian Beban pada \emph{Class}}
+	\caption{Grafik Training Loss dan akurasi ResNet-50, dan ResNet 101 dengan Penyesuaian Beban pada \emph{Class}}
 	\label{fig:graphTrainingWeightedPt2}
 \end{figure}
 
@@ -509,6 +523,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\label{fig:confRes18Class}
 \end{figure}
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{60 kasus non-DR} dengan akurat, dan 6 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
 	
@@ -529,6 +545,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\label{fig:confRes34Class}
 \end{figure}
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{63 kasus non-DR} dengan akurat, 2 kasus diprediksi salah sebagai NDPR, dan 1 kasus dirediksi sebagai PDR.
 	\item Untuk dataset NPDR dapat dilihat bahwa model terbaik adalah model \emph{last trained}, yang dapat melakukan prediksi \textbf{30 kasus NPDR} dengan akurat, 8 kasus diprediksi sebagai non-DR, dan 5 kasus diprediksi sebagai PDR.
@@ -546,6 +564,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\caption{Confusion Matrix ResNet-50 yang Telah dilakukan Penyesuaian Beban Kelas}
 	\label{fig:confRes50Class}
 \end{figure}
+
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
 
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{58 kasus non-DR} dengan akurat, dan 8 kasus diprediksi salah sebagai NDPR tanpa prediksi untuk PDR.
@@ -567,6 +587,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\label{fig:confRes101Class}
 \end{figure}
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{59 kasus non-DR} dengan akurat, dan 7 kasus diprediksi salah sebagai NDPR. Tidak ada kasus yang diprediksi sebagai PDR.
 	
@@ -587,6 +609,8 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 	\label{fig:confRes152Class}
 \end{figure}
 
+Dari ketiga gambar \emph{confusion matrix} di atas, dapat diketahui performa model terbaik dalam deteksi kelas yang dijabarkan sebagai berikut:
+
 \begin{itemize}
 	\item Untuk dataset non-DR dapat dilihat bahwa model terbaik adalah model \emph{best train} dan \emph{best validation accuracy}, yang dapat melakukan prediksi \textbf{54 kasus non-DR} dengan akurat, dan 11 kasus diprediksi salah sebagai NDPR dan 1 kasus diprediksi sebagai PDR.
 	
@@ -598,7 +622,7 @@ Untuk \emph{confusion matrix} dari setiap arsitektur dapat dilihat pada Gambar \
 \section{Analisis Hasil dan Evaluasi}
 \label{sec:42}
 
-Pengujian dilakukan dengan menggunakan model yang memiliki metrik akurasi tertinggi dalam setiap trainingnya. Terdapat dua skenario pengujian yang dilakukan dalam penelitian ini. Pertama, perbandingan untuk setiap arstitektur model yang digunakan tanpa dilakukan penyesuaian pada class-weight. Kedua, perbandingan untuk setiap arstitektur model yang digunakan dengan penerapan class-weight. Hasil perbandingan tersebut akan dilampirkan pada tabel dan nantinya akan dianalisa pada Tabel \ref{tb:PerbandinganHasilBestTrain}, Tabel \ref{tb:PerbandinganHasilBestVal}, dan Tabel \ref{tb:PerbandinganHasilLastTrained}.
+Pengujian dilakukan dengan menggunakan model yang memiliki metrik akurasi tertinggi dalam setiap trainingnya. Terdapat dua skenario pengujian yang dilakukan dalam penelitian ini. Pertama, perbandingan untuk setiap arstitektur model yang digunakan tanpa dilakukan penyesuaian pada class-weight. Kedua, perbandingan untuk setiap arstitektur model yang digunakan dengan penerapan class-weight. Hasil perbandingan tersebut akan dilampirkan pada Tabel dan nantinya akan dianalisa pada Tabel \ref{tb:PerbandinganHasilBestTrain}, Tabel \ref{tb:PerbandinganHasilBestVal}, dan Tabel \ref{tb:PerbandinganHasilLastTrained}.
 
 \begin{table}[hbtp]
 	\begin{center}
@@ -645,7 +669,7 @@ Dapat dilihat pada Tabel \ref{tb:PerbandinganHasilBestTrain}, akurasi secara umu
 	\end{center}
 \end{table}
 
-Pada tabel \ref{tb:PerbandinganHasilBestVal}, dapat dilihat bahwa akurasi secara umum mengalami penurunan pada semua model, namun akurasi pada class PDR mengalami kenaikan terkecuali pada ResNet-18 yang tidak terdapat kenaikan maupun penurunan. Akurasi PDR pada ResNet-152 kembali mengalami kenaikan yang paling signifikan, yaitu sebesar 0,357143. Pada metrik QWK, hanya resnet 50 dan 101 yang mengalami kenaikan nilai.
+Pada Tabel \ref{tb:PerbandinganHasilBestVal}, dapat dilihat bahwa akurasi secara umum mengalami penurunan pada semua model, namun akurasi pada class PDR mengalami kenaikan terkecuali pada ResNet-18 yang tidak terdapat kenaikan maupun penurunan. Akurasi PDR pada ResNet-152 kembali mengalami kenaikan yang paling signifikan, yaitu sebesar 0,357143. Pada metrik QWK, hanya resnet 50 dan 101 yang mengalami kenaikan nilai.
 \pagebreak
 
 \begin{table}[hbtp]
@@ -670,7 +694,7 @@ Pada tabel \ref{tb:PerbandinganHasilBestVal}, dapat dilihat bahwa akurasi secara
 \end{center}
 \end{table}
 
-Sesuai dengan data yang ada pada tabel \ref{tb:PerbandinganHasilLastTrained}, akurasi model secara umum mengalami penurunan kecuali pada model ResNet-18 dan ResNet-50. Sedangkan sama seperti model pada tabel-tabel sebelumnya, akurasi pada class PDR mengalami kenaikan dengan ResNet-50 mengalami kenaikan yang paling signifikan, yaitu sebesar 0,285715. Pada metrik QWK, hanya ResNet-101 dan ResNet-152 yang mengalami kenaikan nilai.
+Sesuai dengan data yang ada pada Tabel \ref{tb:PerbandinganHasilLastTrained}, akurasi model secara umum mengalami penurunan kecuali pada model ResNet-18 dan ResNet-50. Sedangkan sama seperti model pada tabel-tabel sebelumnya, akurasi pada class PDR mengalami kenaikan dengan ResNet-50 mengalami kenaikan yang paling signifikan, yaitu sebesar 0,285715. Pada metrik QWK, hanya ResNet-101 dan ResNet-152 yang mengalami kenaikan nilai.
 
 Secara umum, temuan yang disajikan pada Tabel \ref{tb:PerbandinganHasilBestTrain}, Tabel \ref{tb:PerbandinganHasilBestVal}, dan \ref{tb:PerbandinganHasilLastTrained} menunjukkan bahwa penyesuaian beban kelas kumpulan data menghasilkan peningkatan akurasi untuk kelas 2 (PDR) dalam banyak kasus, meskipun terdapat pengecualian. Namun penyesuaian ini mengakibatkan penurunan akurasi untuk kelas 0 (Non-DR). Akibatnya, keakuratan model secara keseluruhan juga menurun, karena peningkatan akurasi untuk kelas 2 tidak cukup untuk mengimbangi penurunan akurasi untuk kelas 0, mengingat ukuran kumpulan data kelas 2 yang relatif kecil. Meskipun demikian, penurunan akurasi di semua variasi model sangat kecil, biasanya di bawah 0,05.
 
