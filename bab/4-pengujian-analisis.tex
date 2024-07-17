@@ -670,7 +670,6 @@ Dapat dilihat pada Tabel \ref{tb:PerbandinganHasilBestTrain}, akurasi secara umu
 \end{table}
 
 Pada Tabel \ref{tb:PerbandinganHasilBestVal}, dapat dilihat bahwa akurasi secara umum mengalami penurunan pada semua model, namun akurasi pada class PDR mengalami kenaikan terkecuali pada ResNet-18 yang tidak terdapat kenaikan maupun penurunan. Akurasi PDR pada ResNet-152 kembali mengalami kenaikan yang paling signifikan, yaitu sebesar 0,357143. Pada metrik QWK, hanya resnet 50 dan 101 yang mengalami kenaikan nilai.
-\pagebreak
 
 \begin{table}[hbtp]
 \begin{center}
@@ -700,14 +699,15 @@ Secara umum, temuan yang disajikan pada Tabel \ref{tb:PerbandinganHasilBestTrain
 
 \subsection{GRAD-CAM}
 \label{sec:43}
-Fase ini melibatkan pelaksanaan pengujian menggunakan Grad-CAM, sebuah teknik yang menghasilkan \emph{heatmap} yang ditumpangkan pada gambar asli. \emph{heatmap} mengungkapkan wilayah atau karakteristik tertentu dalam gambar yang dianggap penting untuk proses pengambilan keputusan model. Bagian ini akan menganalisis hasil pengujian menggunakan subset data pelatihan untuk mengidentifikasi area yang disorot yang dianggap penting atau berbeda oleh pengklasifikasi berdasarkan model yang dilatih. 
+Bagian ini memaparkan hasil pengujian menggunakan Grad-CAM, yang menghasilkan \emph{heatmap} yang ditumpangkan pada gambar asli. \emph{heatmap} mengungkapkan wilayah atau karakteristik tertentu dalam gambar yang dianggap penting untuk proses pengambilan keputusan model. Bagian ini akan menganalisis hasil pengujian menggunakan subset data pelatihan untuk mengidentifikasi area yang disorot yang dianggap penting atau berbeda berdasarkan model yang dilatih. 
 
-Subset data pelatihan digunakan untuk menjaga konsistensi dengan kumpulan data yang digunakan selama fase pelatihan model untuk Grad-CAM. Pengujian melibatkan pemilihan satu gambar untuk evaluasi menggunakan Grad-CAM dengan setiap model yang diperoleh.
-
-Model yang dipilih untuk contoh hasil analisis GRAD-CAM adalah \emph{ResNet-18 default weight}, \emph{ResNet-18 class-weighted}, \emph{ResNet-152 class-weighted}. Pemilihan model - model ini dikarenakan model - model ini memiliki akurasi klasifikasi \emph{class} PDR yang tinggi, tanpa mengorbankan banyak dari akurasi keseluruhan. Model ini juga memiliki nilai Kappa yang cukup tinggi yaitu sekitar 0,74. Model ResNet-18 dipilih dikarenakan memiliki nilai Kappa tertinggi, namun akurasi klasifikasi untuk \emph{class} PDR cukup rendah dibanding ResNet-152, sedangkan akurasi keseluruhan dari ResNet-18 sedikit lebih unggul dari ResNet-152 yaitu sebesar 0,0081.
+%Subset data pelatihan digunakan untuk menjaga konsistensi dengan kumpulan data yang digunakan selama fase pelatihan model untuk Grad-CAM. Pengujian melibatkan pemilihan satu gambar untuk evaluasi menggunakan Grad-CAM dengan setiap model yang diperoleh.
+Model yang dipilih untuk contoh hasil analisis GRAD-CAM adalah \emph{ResNet-18 default}, \emph{ResNet-18 class-weighted}, \emph{ResNet-152 class-weighted}. Pemilihan ini dikarenakan model - model ini memiliki akurasi klasifikasi \emph{class} PDR yang tinggi, tanpa mengorbankan banyak dari akurasi keseluruhan. Model ini juga memiliki nilai Kappa yang cukup tinggi yaitu sekitar 0,74. Model ResNet-18 dipilih dikarenakan memiliki nilai Kappa tertinggi, namun akurasi klasifikasi untuk \emph{class} PDR cukup rendah dibanding ResNet-152, sedangkan akurasi keseluruhan dari ResNet-18 sedikit lebih unggul dari ResNet-152 yaitu sebesar 0,0081.
 
 Perbandingan citra gambar pada setiap \emph{class} dan analisis GRAD-CAM dari model-model terpilih dapat dilihat pada Gambar \ref{fig:GRAD0}, Gambar \ref{fig:GRAD1}, dan Gambar \ref{fig:GRAD2}.
+Bagian gambar yang disoroti dengan warna 'hangat' yaitu kuning, oranye, dan merah merupakan bagian yang dianggap penting oleh model dalam pengambilan Keputusan. %Representasi fitur objek gambar lebih tersebar luas karena objek di dalam \emph{frame} adalah pembuluh darah yang memanjang dan bercabang, dibandingkan dengan entitas tunggal seperti manusia atau hewan di dalam \emph{frame} gambar.
 
+\subsection*{Kelas (0) (Non-DR)}
 \begin{figure}[H]
 	\centering
 	\subfloat[\centering Gambar Asli]{{\includegraphics[width=4cm]{gambar/class0_0.png} }}%
@@ -718,6 +718,16 @@ Perbandingan citra gambar pada setiap \emph{class} dan analisis GRAD-CAM dari mo
 	\label{fig:GRAD0}
 \end{figure}
 
+\begin{itemize}
+	\item \textbf{ResNet 18 (Standar)}: Aktivasi signifikan di sekitar area perifer retina, dengan fokus minimal pada area makula pusat.
+	\item \textbf{ResNet 18 (\emph{Class-weighted})}: Fokus yang lebih seimbang dengan peningkatan perhatian pada area perifer, menunjukkan area ini penting dalam pengambilan keputusan model.
+	\item \textbf{ResNet 152 (\emph{Class-weighted})}: Fokus yang sangat terperinci dan terkonsentrasi pada area perifer retina, menunjukkan kapasitas model yang lebih tinggi untuk menangkap dan menekankan fitur-fitur penting di area ini. Area pusat tidak dianggap penting di semua model.
+\end{itemize}
+%    \item \textbf{ResNet-18 (Standar)}: Aktivasi signifikan di sekitar diskus optikus dan daerah perifer, dengan fokus yang luas di seluruh retina.
+%    \item \textbf{ResNet-18 (Penyesuaian Bobot Kelas)}: Fokus yang lebih seimbang dengan peningkatan perhatian pada diskus optikus dan daerah perifer, menekankan fitur struktural.
+%    \item \textbf{ResNet-152 (Penyesuaian Bobot Kelas)}: Fokus yang sangat terperinci dan terkonsentrasi pada diskus optikus dan retina perifer, menunjukkan kapasitas model yang lebih tinggi dan efektivitas penyesuaian bobot kelas.
+
+\subsection*{Kelas (1) (NPDR)}
 \begin{figure}[H]
 	\centering
 	\subfloat[\centering Gambar Asli]{{\includegraphics[width=4cm]{gambar/class1_0.png} }}%
@@ -728,6 +738,13 @@ Perbandingan citra gambar pada setiap \emph{class} dan analisis GRAD-CAM dari mo
 	\label{fig:GRAD1}
 \end{figure}
 
+\begin{itemize}
+	\item \textbf{ResNet 18 (Standar)}: Aktivasi signifikan di sekitar diskus optik dan area perifer, dengan fokus luas di seluruh retina. Area makula pusat menunjukkan beberapa aktivasi tetapi kurang penting.
+	\item \textbf{ResNet 18 (\emph{Class-weighted})}: Fokus yang lebih seimbang dengan peningkatan perhatian pada diskus optik dan area perifer, menekankan fitur-fitur struktural. Area pusat tetap kurang signifikan.
+	\item \textbf{ResNet 152 (\emph{Class-weighted})}: Fokus yang sangat terperinci dan terkonsentrasi pada diskus optik dan retina perifer, dengan beberapa perhatian pada area perifer bawah yang spesifik. Ini menunjukkan kapasitas model yang lebih tinggi dan efektivitas penyesuaian bobot kelas dalam menangkap fitur-fitur relevan untuk klasifikasi NPDR.
+\end{itemize}
+
+\subsection*{Kelas (2) (PDR)}
 \begin{figure}[H]
 	\centering
 	\subfloat[\centering Gambar Asli]{{\includegraphics[width=4cm]{gambar/class2_0.png} }}%
@@ -738,6 +755,10 @@ Perbandingan citra gambar pada setiap \emph{class} dan analisis GRAD-CAM dari mo
 	\label{fig:GRAD2}
 \end{figure}
 
-Representasi fitur objek gambar lebih tersebar luas karena objek di dalam \emph{frame} adalah pembuluh darah yang memanjang dan bercabang, dibandingkan dengan entitas tunggal seperti manusia atau hewan di dalam \emph{frame} gambar.
+\begin{itemize}
+	\item \textbf{ResNet 18 (Standar)}: Aktivasi signifikan di sekitar diskus optik dan area perifer, dengan fokus luas di seluruh retina. Area makula pusat menunjukkan beberapa aktivasi tetapi kurang penting.
+	\item \textbf{ResNet 18 (\emph{Class-weighted})}: Fokus yang lebih seimbang dengan peningkatan perhatian pada diskus optik dan area perifer, menekankan fitur-fitur struktural. Area pusat tetap kurang signifikan.
+	\item \textbf{ResNet 152 (\emph{Class-weighted})}: Fokus yang sangat terperinci dan terkonsentrasi pada diskus optik dan retina perifer, dengan beberapa perhatian pada area perifer bawah yang spesifik. Ini menunjukkan kapasitas model yang lebih tinggi dan efektivitas penyesuaian bobot kelas dalam menangkap fitur-fitur relevan untuk klasifikasi PDR.
+\end{itemize}
 
 ResNet 152 lebih mementingkan berbagai komponen gambar dibandingkan dengan ResNet 18 karena kemampuannya mempelajari representasi secara rumit. Tingkat kompleksitas yang semakin tinggi ini memungkinkan ResNet 152 mengenali fitur-fitur yang mungkin diabaikan oleh ResNet 18. Dengan mengembangkan pemahaman yang lebih luas ke analisis yang lebih mendetail, seperti dalam kasus pengenalan wajah yang mempelajari bentuk wajah hingga fitur wajah tertentu seperti alis dan kerutan, ResNet 152 menunjukkan kapasitas untuk membedakan elemen tertentu dalam sebuah gambar.

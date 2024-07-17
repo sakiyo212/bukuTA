@@ -44,7 +44,7 @@ Beberapa faktor risiko untuk retinopati diabetik termasuk durasi diabetes, kontr
 \subsubsection{Diagnosis dan Pengobatan}
 
 \begin{itemize}
-    \item \textbf{Diagnosis:} Retinopati diabetik biasanya didiagnosis melalui pemeriksaan fundus menggunakan ophthalmoscopy atau fotografi fundus. Fluorescein angiography dan Optical Coherence Tomography (OCT) juga digunakan untuk mengevaluasi tingkat kerusakan retina \parencite{browning2008optical}.
+    \item \textbf{Diagnosis:} Retinopati diabetik biasanya didiagnosis melalui pemeriksaan fundus menggunakan ophthalmoscopy atau fotografi fundus. Fluorescein angiography dan \emph{Optical Coherence Tomography} (OCT) juga digunakan untuk mengevaluasi tingkat kerusakan retina \parencite{browning2008optical}.
     \item \textbf{Pengobatan:} Pengobatan retinopati diabetik mencakup kontrol ketat terhadap kadar gula darah, tekanan darah, dan kadar lipid. Terapi laser (panretinal photocoagulation) digunakan untuk mengatasi RDP dan edema makula. Injeksi intravitreal dari agen anti-VEGF (vascular endothelial growth factor) juga efektif dalam mengurangi edema makula dan mencegah pertumbuhan pembuluh darah baru yang abnormal \parencite{ciulla2003intravitreal}.
 \end{itemize}
 
@@ -53,16 +53,19 @@ Beberapa faktor risiko untuk retinopati diabetik termasuk durasi diabetes, kontr
 
 Pengolahan citra adalah suatu proses yang mengubah citra menjadi citra lain yang lebih baik dan lebih sesuai dengan kebutuhan. Pengolahan citra dibagi menjadi dua, yaitu pengolahan citra analog dan pengolahan citra digital. Pengolahan citra analog adalah pengolahan citra yang dilakukan pada citra analog. Pengolahan citra digital adalah pengolahan citra yang dilakukan pada citra digital. Pengolahan citra digital dilakukan dengan menggunakan komputer. Pengolahan citra digital dibagi menjadi beberapa tahap, yaitu prapemrosesan, segmentasi, ekstraksi fitur, dan klasifikasi.
 
+%\subsection{\emph{Optical Coherence Tomography}}
+
+
 \subsection{OCT Angiography}
 \label{sec:222}
 
-OCT Angiography (OCTA) adalah teknologi pencitraan medis non-invasif yang memanfaatkan prinsip Optical Coherence Tomography (OCT) untuk memvisualisasi aliran darah mikro di retina dan koroid. OCTA memberikan informasi struktural dan fungsional jaringan mata secara simultan, memungkinkan diagnosis dan pemantauan penyakit mata yang lebih komprehensif \parencite{Kashani2017-hn}.
+OCT Angiography (OCTA) adalah teknologi pencitraan medis non-invasif yang memanfaatkan prinsip \emph{Optical Coherence Tomography} (OCT) untuk memvisualisasi aliran darah mikro di retina dan koroid. OCTA memberikan informasi struktural dan fungsional jaringan mata secara simultan, memungkinkan diagnosis dan pemantauan penyakit mata yang lebih komprehensif \parencite{Kashani2017-hn}.
 
 OCTA menggunakan deteksi perubahan temporal dalam reflektivitas untuk membedakan pembuluh darah dari jaringan statis, memungkinkan visualisasi struktur vaskular tanpa memerlukan pewarna kontras seperti fluorescein atau indocyanine green \parencite{jia2012split}.
 
 \subsubsection{Prinsip Kerja}
 
-OCTA bekerja dengan memanfaatkan teknologi Optical Coherence Tomography (OCT), yang menggunakan cahaya koheren untuk menghasilkan gambar resolusi tinggi dari struktur internal mata. Perbedaan utama antara OCT konvensional dan OCTA adalah kemampuan OCTA untuk mendeteksi pergerakan darah dalam pembuluh darah, sehingga memungkinkan pencitraan dinamis dari aliran darah \parencite{spaide2018choriocapillaris}.
+OCTA bekerja dengan memanfaatkan teknologi \emph{Optical Coherence Tomography} (OCT), yang menggunakan cahaya koheren untuk menghasilkan gambar resolusi tinggi dari struktur internal mata. Perbedaan utama antara OCT konvensional dan OCTA adalah kemampuan OCTA untuk mendeteksi pergerakan darah dalam pembuluh darah, sehingga memungkinkan pencitraan dinamis dari aliran darah \parencite{spaide2018choriocapillaris}.
 
 \subsubsection{Aplikasi Klinis}
 
@@ -151,7 +154,7 @@ ResNet-18 memiliki 18 convulsion layer dan \emph{pooling layer}, ResNet-34 memil
 
 
 \subsection{Confusion Matrix}
-Ketika menilai efektivitas model klasifikasi, \emph{confusion matrix} merupakan komponen yang penting. Hal ini terutama berlaku ketika menganalisis gambar medis untuk tujuan seperti mendeteksi retinopati diabetik. Matriks ini menawarkan analisis menyeluruh tentang perbandingan prediksi model dan hasil aktual, sehingga memungkinkan untuk mengevaluasi keakuratan model dan menunjukkan area yang membutuhkan pengembangan.
+Ketika menilai efektivitas dari model klasifikasi, \emph{confusion matrix} merupakan komponen yang penting. Hal ini terutama berlaku ketika menganalisis gambar medis untuk tujuan seperti mendeteksi retinopati diabetik. Matriks ini menawarkan analisis menyeluruh tentang perbandingan prediksi model dan hasil aktual, sehingga memungkinkan untuk mengevaluasi keakuratan model dan menunjukkan area yang membutuhkan pengembangan.
 Struktur confusion matrix adalah sebagai berikut:
 
 \begin{longtable}{|c|c|c|}
@@ -208,9 +211,10 @@ QWK dapat dihitung dengan langkah-langkah sebagai berikut:
     \item \textbf{Hitung QWK}:
     
     QWK kemudian didapatkan dengan:
-    \[
+    \begin{equation}
+        \label{eq:rumusQWK}
     \kappa = 1 - \frac{\sum_{i,j} W_{i,j} O_{i,j}}{\sum_{i,j} W_{i,j} E_{i,j}}
-    \]
+    \end{equation}
 \end{enumerate}
 
 Dengan menggunakan QWK, kita dapat mengevaluasi kesepakatan antara kelas yang diprediksi dan aktual, dengan mempertimbangkan sifat kelas yang terurut, yang mana sangat relevan dalam diagnosis medis di mana tingkat keparahan suatu kondisi sering kali mengikuti urutan.
@@ -232,9 +236,10 @@ Grad-CAM bekerja dengan menggunakan gradien dari kelas yang diinginkan, yang men
 
 Secara matematis, \emph{heatmap} \(L_{\text{Grad-CAM}}^c\) untuk kelas \(c\) dihitung sebagai berikut:
 
-\[
+\begin{equation}
+    \label{eq:heatMap}
 L_{\text{Grad-CAM}}^c = \text{ReLU}\left(\sum_k \alpha_k^c A^k\right)
-\]
+\end{equation}
 
 Di mana:
 
